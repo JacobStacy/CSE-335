@@ -11,7 +11,7 @@
 
 using namespace std;
 /**
- * Main entry point.   
+ * Main entry point.
  *
  * This is where the program starts.
  * @return 0
