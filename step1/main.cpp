@@ -8,6 +8,7 @@
 #include "Farm.h"
 #include "Cow.h"
 #include "Chicken.h"
+#include "Ant.h"
 
 using namespace std;
 /**
@@ -29,6 +30,8 @@ int main()
         cout << "Farm management" << endl;
         cout << "1 - Add cow" << endl;
         cout << "2 - Add Chicken" << endl;
+        cout << "3 - Add Ant" << endl;
+        cout << "8 - Number of defenders" << endl;
         cout << "9 - List inventory" << endl;
         cout << "99 - Exit" << endl;
         cout << "Select Option: ";
@@ -53,6 +56,7 @@ int main()
                 cout << "Adding cow" << endl;
                 Cow *cow = new Cow();
                 cow->ObtainCowInformation();
+                farm.AddAnimal(cow);
             }
             break;
 
@@ -61,10 +65,22 @@ int main()
             cout << "Adding chicken" << endl;
             Chicken *chicken = new Chicken();
             chicken->ObtainChickenInformation();
-            // farm.AddAnimal(chicken);
+            farm.AddAnimal(chicken);
         }
             break;
 
+        case 3:
+        {
+            cout << "Adding ant" << endl;
+            Ant *ant = new Ant();
+            ant->ObtainAntInformation();
+            farm.AddAnimal(ant);
+        }
+            break;
+
+        case 8:
+            farm.DisplayDefenders();
+            break;
         case 9:
             farm.DisplayInventory();
             break;

@@ -11,16 +11,17 @@
 
 
 #include <vector>
-#include "Cow.h"
+#include "Animal.h"
 
 class Farm {
 private:
     /// A list with the inventory of all animals on the farm
-    std::vector<Cow *> mInventory;
+    std::vector<Animal *> mInventory;
 
 public:
-    void AddAnimal(Cow *cow);
+    void AddAnimal(Animal *animal);
     void DisplayInventory();
+    void DisplayDefenders();
     ~Farm();
 
 };

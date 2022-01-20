@@ -1,5 +1,6 @@
 /**
  * @file Cow.h
+ *
  * @author Jacob R. Stacy
  *
  *
@@ -12,12 +13,11 @@
 
 #include <string>
 #include <vector>
+#include "Animal.h"
 
 
-class Cow {
+class Cow : public Animal {
 private:
-    /// A list with the inventory of all animals on the farm
-    std::vector<Cow *> mInventory;
 
     /// The types of cow we can have on our farm
     enum class Type {Bull, BeefCow, MilkCow};

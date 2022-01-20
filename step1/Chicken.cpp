@@ -24,6 +24,14 @@ void Chicken::ObtainChickenInformation()
     cin >> mId;
 }
 
+/*
+ * Returns that the chicken is a defender.
+ * */
+bool Chicken::IsDefender()
+{
+    return true;
+}
+
 /**
  * Display the chicken.
  */

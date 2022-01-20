@@ -10,10 +10,11 @@
 #define STEP1_CHICKEN_H
 
 #include <string>
+#include "Animal.h"
 
 /** Class that describes a chicken.
 */
-class Chicken
+class Chicken : public Animal
 {
 private:
     /// The chicken's ID
@@ -23,6 +24,7 @@ public:
 
     void ObtainChickenInformation();
     void DisplayAnimal();
+    bool IsDefender();
 
 };
 

@@ -77,6 +77,20 @@ build CMakeFiles\step1.dir\Chicken.cpp.obj: CXX_COMPILER__step1_Debug C$:\Users\
   TARGET_COMPILE_PDB = CMakeFiles\step1.dir\
   TARGET_PDB = step1.pdb
 
+build CMakeFiles\step1.dir\Animal.cpp.obj: CXX_COMPILER__step1_Debug C$:\Users\jaket\Documents\GitHub\CSE-335\step1\Animal.cpp || cmake_object_order_depends_target_step1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = CMakeFiles\step1.dir
+  OBJECT_FILE_DIR = CMakeFiles\step1.dir
+  TARGET_COMPILE_PDB = CMakeFiles\step1.dir\
+  TARGET_PDB = step1.pdb
+
+build CMakeFiles\step1.dir\Ant.cpp.obj: CXX_COMPILER__step1_Debug C$:\Users\jaket\Documents\GitHub\CSE-335\step1\Ant.cpp || cmake_object_order_depends_target_step1
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  OBJECT_DIR = CMakeFiles\step1.dir
+  OBJECT_FILE_DIR = CMakeFiles\step1.dir
+  TARGET_COMPILE_PDB = CMakeFiles\step1.dir\
+  TARGET_PDB = step1.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target step1
@@ -85,7 +99,7 @@ build CMakeFiles\step1.dir\Chicken.cpp.obj: CXX_COMPILER__step1_Debug C$:\Users\
 #############################################
 # Link the executable step1.exe
 
-build step1.exe: CXX_EXECUTABLE_LINKER__step1_Debug CMakeFiles\step1.dir\main.cpp.obj CMakeFiles\step1.dir\Farm.cpp.obj CMakeFiles\step1.dir\Cow.cpp.obj CMakeFiles\step1.dir\Chicken.cpp.obj
+build step1.exe: CXX_EXECUTABLE_LINKER__step1_Debug CMakeFiles\step1.dir\main.cpp.obj CMakeFiles\step1.dir\Farm.cpp.obj CMakeFiles\step1.dir\Cow.cpp.obj CMakeFiles\step1.dir\Chicken.cpp.obj CMakeFiles\step1.dir\Animal.cpp.obj CMakeFiles\step1.dir\Ant.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

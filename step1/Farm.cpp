@@ -1,5 +1,5 @@
 /**
- * @file main.cpp
+ * @file Farm.cpp
  *
  * @author Jacob R. Stacy
  *
@@ -8,15 +8,16 @@
  *
  */
 
+#include <iostream>
 #include "Farm.h"
 
 /** Add an animal to the farm inventory.
  *
  * @param cow A cow to add to the inventory
  */
-void Farm::AddAnimal(Cow *cow)
+void Farm::AddAnimal(Animal *animal)
 {
-    mInventory.push_back(cow);
+    mInventory.push_back(animal);
 }
 
 /**
@@ -28,6 +29,23 @@ void Farm::DisplayInventory()
     {
         animal->DisplayAnimal();
     }
+}
+
+/**
+ * Output number of defenders.
+ */
+void Farm::DisplayDefenders()
+{
+    int count = 0;
+
+    for (auto animal : mInventory)
+    {
+        if (animal->IsDefender()) {
+            count++;
+        }
+    }
+
+    std::cout << "There are " << count << " defenders" << std::endl;
 }
 
 /**
