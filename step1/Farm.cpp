@@ -40,7 +40,8 @@ void Farm::DisplayDefenders()
 
     for (auto animal : mInventory)
     {
-        if (animal->IsDefender()) {
+        if (animal->IsDefender())
+        {
             count++;
         }
     }

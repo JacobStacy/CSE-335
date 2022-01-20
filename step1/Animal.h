@@ -8,8 +8,8 @@
 #ifndef STEP1_ANIMAL_H
 #define STEP1_ANIMAL_H
 
-class Animal
-{
+
+class Animal {
 public:
     virtual ~Animal();
     /** Display an animal. */

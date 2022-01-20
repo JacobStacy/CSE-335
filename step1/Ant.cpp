@@ -27,18 +27,21 @@ void Ant::ObtainAntInformation()
     {
         cout << "Code: ";
         cin >> mCode;
-        if (!cin){
+        if (!cin)
+        {
             // We have an error. Clear the input and try again
             cin.clear();
             cin.ignore();
             continue;
         }
 
-        if (mCode.length() == 3){
+        if (mCode.length() == 3)
+        {
             valid = true;
             for (auto c : mCode)
             {
-                if (!isupper(c)) {
+                if (!isupper(c))
+                {
                     valid = false;
                 }
             }
@@ -113,14 +116,17 @@ void Ant::ObtainAntInformation()
     }
 }
 
-/*
+/**
  * Returns if the ant is a defender.
- * */
+ * 
+ */
 bool Ant::IsDefender()
 {
-    if (mType == Type::Soldier) {
+    if (mType == Type::Soldier)
+    {
         return true;
-    } else {
+    } else
+    {
         return false;
     }
 }
