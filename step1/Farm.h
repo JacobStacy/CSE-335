@@ -13,6 +13,8 @@
 #include <vector>
 #include "Animal.h"
 
+/** This class describes a farm
+ */
 class Farm {
 private:
     /// A list with the inventory of all animals on the farm

@@ -15,7 +15,8 @@
 #include <vector>
 #include "Animal.h"
 
-
+/** This class describes a cow.
+ */
 class Cow : public Animal {
 private:
 

@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['_7eanimal_0',['~Animal',['../class_animal.html#a476af25adde5f0dfa688129c8f86fa5c',1,'Animal']]],
-  ['_7efarm_1',['~Farm',['../class_farm.html#a551fad409c44962866226b3eb4d4b518',1,'Farm']]]
+  ['obtainantinformation_0',['ObtainAntInformation',['../class_ant.html#a00c9eebea680bc9906c07b2a01860c69',1,'Ant']]],
+  ['obtainchickeninformation_1',['ObtainChickenInformation',['../class_chicken.html#aba51fdb4a8e42474cf55f77bf21352a9',1,'Chicken']]],
+  ['obtaincowinformation_2',['ObtainCowInformation',['../class_cow.html#af62471383d151fd32ca07cd4033838c2',1,'Cow']]]
 ];

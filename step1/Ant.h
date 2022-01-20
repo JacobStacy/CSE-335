@@ -11,6 +11,9 @@
 #include <string>
 #include "Animal.h"
 
+/**
+ * This class describes an Ant
+ */
 class Ant : public Animal {
 private:
     /// The types of ants we can have on the farm

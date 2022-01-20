@@ -13,7 +13,7 @@
 
 /** Add an animal to the farm inventory.
  *
- * @param cow A cow to add to the inventory
+ * @param animal A cow to add to the inventory
  */
 void Farm::AddAnimal(Animal *animal)
 {

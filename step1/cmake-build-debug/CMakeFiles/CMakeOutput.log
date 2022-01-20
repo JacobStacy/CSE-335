@@ -6,11 +6,11 @@ Id flags:
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30709 for x64
+Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30706 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCCompilerId.c
-Microsoft (R) Incremental Linker Version 14.30.30709.0
+Microsoft (R) Incremental Linker Version 14.30.30706.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCCompilerId.exe 
@@ -21,7 +21,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
 
-The C compiler identification is MSVC, found in "C:/Users/jaket/Documents/GitHub/CSE-335/step1/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.exe"
+The C compiler identification is MSVC, found in "E:/Work/Class/CSE-335/step1/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64/cl.exe 
@@ -30,11 +30,11 @@ Id flags:
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30709 for x64
+Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30706 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCXXCompilerId.cpp
-Microsoft (R) Incremental Linker Version 14.30.30709.0
+Microsoft (R) Incremental Linker Version 14.30.30706.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 /out:CMakeCXXCompilerId.exe 
@@ -45,21 +45,29 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
 
-The CXX compiler identification is MSVC, found in "C:/Users/jaket/Documents/GitHub/CSE-335/step1/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
+The CXX compiler identification is MSVC, found in "E:/Work/Class/CSE-335/step1/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/jaket/Documents/GitHub/CSE-335/step1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: E:/Work/Class/CSE-335/step1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe cmTC_eecb1 && [1/2] Building C object CMakeFiles\cmTC_eecb1.dir\CMakeCCompilerABI.c.obj
-[2/2] Linking C executable cmTC_eecb1.exe
+Run Build Command(s):nmake -f Makefile /nologo cmTC_c8eaf\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_c8eaf.dir\build.make /nologo -L                  CMakeFiles\cmTC_c8eaf.dir\build
+Building C object CMakeFiles/cmTC_c8eaf.dir/CMakeCCompilerABI.c.obj
+	"D:\Jetbrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_c8eaf.dir\CMakeCCompilerABI.c.obj.d --working-dir=E:\Work\Class\CSE-335\step1\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1430~1.307\bin\Hostx64\x64\cl.exe @C:\Users\JACOBS~1\AppData\Local\Temp\nm5AB0.tmp
+CMakeCCompilerABI.c
+Linking C executable cmTC_c8eaf.exe
+	"D:\Jetbrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_c8eaf.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1430~1.307\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_c8eaf.dir\objects1.rsp @C:\Users\JACOBS~1\AppData\Local\Temp\nm5DAE.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/jaket/Documents/GitHub/CSE-335/step1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: E:/Work/Class/CSE-335/step1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/JetBrains/CLion 2021.3.2/bin/ninja/win/ninja.exe cmTC_81c1c && [1/2] Building CXX object CMakeFiles\cmTC_81c1c.dir\CMakeCXXCompilerABI.cpp.obj
-[2/2] Linking CXX executable cmTC_81c1c.exe
+Run Build Command(s):nmake -f Makefile /nologo cmTC_d92b6\fast && 	"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_d92b6.dir\build.make /nologo -L                  CMakeFiles\cmTC_d92b6.dir\build
+Building CXX object CMakeFiles/cmTC_d92b6.dir/CMakeCXXCompilerABI.cpp.obj
+	"D:\Jetbrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_d92b6.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir=E:\Work\Class\CSE-335\step1\cmake-build-debug\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1430~1.307\bin\Hostx64\x64\cl.exe @C:\Users\JACOBS~1\AppData\Local\Temp\nm631C.tmp
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_d92b6.exe
+	"D:\Jetbrains\CLion 2021.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d92b6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\mt.exe --manifests -- C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1430~1.307\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_d92b6.dir\objects1.rsp @C:\Users\JACOBS~1\AppData\Local\Temp\nm64C3.tmp
 
 
 
