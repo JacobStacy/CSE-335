@@ -1,8 +1,9 @@
 /**
  * @file Animal.h
+ *
  * @author Jacob R. Stacy
  *
- * This is the class that handles animals.
+ * Declaration of the Animal class.
  *
  */
 

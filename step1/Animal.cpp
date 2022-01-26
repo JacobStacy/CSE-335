@@ -1,5 +1,6 @@
 /**
  * @file Animal.cpp
+ *
  * @author Jacob R. Stacy
  */
 

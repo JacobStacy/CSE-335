@@ -2,6 +2,8 @@
  * @file main.cpp
  *
  * @author Jacob R. Stacy
+ *
+ * This file handles the menus of the program
  */
 
 #include <iostream>

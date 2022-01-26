@@ -3,7 +3,9 @@
  *
  * @author Jacob R. Stacy
  *
- * */
+ * Declaration of the Ant class.
+ *
+ */
 
 #ifndef STEP1_ANT_H
 #define STEP1_ANT_H

@@ -3,6 +3,7 @@
  *
  * @author Jacob R. Stacy
  *
+ * Declaration of the Farm class.
  *
  */
 

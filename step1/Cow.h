@@ -3,9 +3,7 @@
  *
  * @author Jacob R. Stacy
  *
- *
- * Moo
- *
+ * Declaration of the Cow class.
  */
 
 #ifndef STEP1_COW_H

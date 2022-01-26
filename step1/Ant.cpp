@@ -35,7 +35,8 @@ void Ant::ObtainAntInformation()
             continue;
         }
 
-        if (mCode.length() == 3)
+        int lengthOfCode = 3;
+        if (mCode.length() == lengthOfCode)
         {
             valid = true;
             for (auto c : mCode)
