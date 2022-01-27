@@ -15,6 +15,24 @@
 ########################
 
 //Value Computed by CMake
+AquariumL_BINARY_DIR:STATIC=E:/Work/Class/CSE-335/step2/Aquarium/cmake-build-debug
+
+//Value Computed by CMake
+AquariumL_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+AquariumL_SOURCE_DIR:STATIC=E:/Work/Class/CSE-335/step2/Aquarium
+
+//Value Computed by CMake
+AquariumLib_BINARY_DIR:STATIC=E:/Work/Class/CSE-335/step2/Aquarium/cmake-build-debug/AquariumLib
+
+//Value Computed by CMake
+AquariumLib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+AquariumLib_SOURCE_DIR:STATIC=E:/Work/Class/CSE-335/step2/Aquarium/AquariumLib
+
+//Value Computed by CMake
 Aquarium_BINARY_DIR:STATIC=E:/Work/Class/CSE-335/step2/Aquarium/cmake-build-debug
 
 //Value Computed by CMake
@@ -358,7 +376,7 @@ WX_zlib:FILEPATH=C:/wxWidgets/lib/vc_x64_lib/wxzlib.lib
 //Cleared.
 WX_zlibd:FILEPATH=C:/wxWidgets/lib/vc_x64_lib/wxzlibd.lib
 
-//Set wxWidgets configuration (mswud;mswu)
+//Set wxWidgets configuration (mswud;mswu;mswud;mswu)
 wxWidgets_CONFIGURATION:STRING=mswu
 
 //Cleared.
@@ -464,7 +482,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib

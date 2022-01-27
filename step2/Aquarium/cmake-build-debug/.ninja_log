@@ -1,3 +1,15 @@
 # ninja log v5
-1	559	6649378477454316	CMakeFiles/Aquarium.dir/main.cpp.obj	a5061d0e62342b83
-353	576	6649370930393120	Aquarium.exe	c00b3a444384a2b3
+2356	2408	6649454107052499	CMakeFiles/Aquarium.dir/AquariumApp.cpp.obj	b0f8495c9a07972c
+2355	2402	6649454106952415	CMakeFiles/Aquarium.dir/main.cpp.obj	1dd95cfe3e0f2b76
+2431	2754	6649454110115132	Aquarium.exe	5921e7e163d632d0
+0	14	0	clean	754a561890b52d58
+2397	2431	6649454107247671	AquariumLib/AquariumLib.lib	46a95f77cefd2f72
+1	2355	6649454106426967	CMakeFiles/Aquarium.dir/cmake_pch.cxx.obj	42ac58b58f64f06d
+0	214	6649455320977573	build.ninja	1802d0e61517185d
+2350	2397	6649454106947410	AquariumLib/CMakeFiles/AquariumLib.dir/MainFrame.cpp.obj	f06a9b6b339e2283
+10	2350	6649454106426967	AquariumLib/CMakeFiles/AquariumLib.dir/cmake_pch.cxx.obj	46cb56c4a8c9eaee
+2421	2467	6649422743490732	AquariumLib/CMakeFiles/AquariumLib.dir/AquariumView.cpp.obj	673c23907a0c875d
+12	158	6649457837068319	AquariumLib/CMakeFiles/AquariumLib.dir/AquariumView.cpp.obj	673c23907a0c875d
+2	164	6649457837118363	AquariumLib/CMakeFiles/AquariumLib.dir/MainFrame.cpp.obj	f06a9b6b339e2283
+164	196	6649457837403606	AquariumLib/AquariumLib.lib	3f24e1e7d915690c
+196	391	6649457839080041	Aquarium.exe	5921e7e163d632d0
