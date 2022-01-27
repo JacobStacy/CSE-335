@@ -37,6 +37,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("E:/Work/Class/CSE-335/step2/Aquarium/cmake-build-debug/AquariumLib/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("E:/Work/Class/CSE-335/step2/Aquarium/cmake-build-debug/Tests/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
