@@ -39,6 +39,19 @@ public:
      */
     void SetLocation(double x, double y) { mX = x; mY = y; }
 
+protected:
+    Item(Aquarium *aquarium);
+
+public:
+    /// Default constructor (disabled)
+    Item() = delete;
+
+    /// Copy constructor (disabled)
+    Item(const Item &) = delete;
+
+    /// Assignment operator
+    void operator=(const Item &) = delete;
+
 };
 
 #endif //AQUARIUM_ITEM_H
