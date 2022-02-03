@@ -11,7 +11,7 @@
 using namespace std;
 
 /// Fish filename
-const wstring FishMosquitoImageName = L"images/mosquito.png";
+const wstring FishMosquitoImageName = L"images/mosquito-fish.png";
 
 /**
  * Constructor
@@ -64,4 +64,23 @@ bool FishMosquito::HitTest(int x, int y)
     // If the location is transparent, we are not in the drawn
     // part of the image
     return !mFishImage->IsTransparent((int)testX, (int)testY);
+}
+
+
+/**
+ * Handles the Mosquito Fish's breeding
+ * @param mate
+ * @return
+ */
+bool FishMosquito::Breed(std::shared_ptr<Item> mate)
+{
+    if (mate != mEx)
+    {
+        mEx = mate;
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }

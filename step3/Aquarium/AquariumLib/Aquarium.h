@@ -25,6 +25,8 @@ public:
 
     std::shared_ptr<Item> HitTest(int x, int y);
 
+    std::shared_ptr<Item> GetClosestTo(std::shared_ptr<Item> item);
+
     void Top(std::shared_ptr<Item> item);
 };
 

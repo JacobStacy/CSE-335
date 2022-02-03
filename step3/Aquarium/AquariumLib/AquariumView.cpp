@@ -119,6 +119,9 @@ void AquariumView::OnLeftUp(wxMouseEvent &event)
     OnMouseMove(event);
 }
 
+/// distance items will breed at
+const double breedingDistance = 30;
+
 /**
 * Handle the mouse move event
 * @param event
@@ -133,6 +136,26 @@ void AquariumView::OnMouseMove(wxMouseEvent &event)
         if (event.LeftIsDown())
         {
             mGrabbedItem->SetLocation(event.GetX(), event.GetY());
+
+            auto closest = mAquarium.GetClosestTo(mGrabbedItem);
+
+
+            if (closest != nullptr)
+            {
+                double distance = mGrabbedItem->DistanceTo(closest);
+                if (distance < breedingDistance)
+                {
+                    if(mGrabbedItem->Breed(closest))
+                    {
+                        closest->Spawn(&mAquarium);
+                    }
+                } else
+                {
+                    mGrabbedItem->Breed(nullptr);
+                }
+            }
+
+
         }
         else
         {

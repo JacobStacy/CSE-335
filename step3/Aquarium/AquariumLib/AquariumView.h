@@ -25,9 +25,11 @@ private:
 
 public:
     void Initialize(wxFrame*);
+
     void OnAddFishBetaFish(wxCommandEvent& event);
     void OnAddFishCarpFish(wxCommandEvent& event);
     void OnAddFishNemoFish(wxCommandEvent& event);
+    void OnAddFishMosquitoFish(wxCommandEvent& event);
 
     void OnMouseMove(wxMouseEvent& event);
 
@@ -35,7 +37,6 @@ public:
 
     void OnLeftDown(wxMouseEvent& event);
 
-    void OnAddFishMosquitoFish(wxCommandEvent& event);
 };
 
 #endif //AQUARIUM_AQUARIUMVIEW_H

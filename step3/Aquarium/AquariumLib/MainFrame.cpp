@@ -47,7 +47,7 @@ void MainFrame::Initialize()
     fishMenu->Append(IDM_ADDFISHBETA, L"&Beta Fish", L"Add a Beta Fish");
     fishMenu->Append(IDM_ADDFISHCARP, L"&Carp Fish", L"Add a Carp Fish");
     fishMenu->Append(IDM_ADDFISHNEMO, L"&Nemo Fish", L"Add a Nemo Fish");
-    fishMenu->Append(IDM_ADDFISHNEMO, L"&Mosquito Fish", L"Add a Mosquito Fish");
+    fishMenu->Append(IDM_ADDFISHMOSQUITO, L"&Mosquito Fish", L"Add a Mosquito Fish");
 
     SetMenuBar( menuBar );
 

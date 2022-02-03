@@ -33,6 +33,8 @@ public:
     void FishNemo::Draw(wxDC* dc) override;
 
     bool HitTest(int x, int y) override;
+
+    void Spawn(Aquarium*) override;
 };
 
 #endif //AQUARIUM_FISHNEMO_H

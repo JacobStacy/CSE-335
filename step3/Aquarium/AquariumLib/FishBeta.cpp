@@ -65,3 +65,13 @@ bool FishBeta::HitTest(int x, int y)
     // part of the image
     return !mFishImage->IsTransparent((int)testX, (int)testY);
 }
+
+/**
+ * Spawns a copy of the fish
+ * @param aquarium The aquarium the copy is added to
+ */
+void FishBeta::Spawn(Aquarium* aquarium)
+{
+    auto fish = make_shared<FishBeta>(aquarium);
+    aquarium->Add(fish);
+}

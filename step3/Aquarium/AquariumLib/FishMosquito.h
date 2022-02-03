@@ -19,7 +19,7 @@ private:
     std::unique_ptr<wxBitmap> mFishBitmap;
 
     /// The last fish the fish has mated with
-    std::unique_ptr<wxImage> mEx;
+    std::shared_ptr<Item> mEx;
 
 public:
     /// Default constructor (disabled)
@@ -36,6 +36,10 @@ public:
     void FishMosquito::Draw(wxDC* dc) override;
 
     bool HitTest(int x, int y) override;
+
+//    void SetLocation(double x, double y) override;
+
+    bool Breed(std::shared_ptr<Item> mate) override;
 };
 
 #endif //AQUARIUM_FISHMOSQUITO_H

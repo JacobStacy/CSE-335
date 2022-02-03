@@ -105,8 +105,10 @@ std::shared_ptr<Item> Aquarium::HitTest(int x, int y)
 
 /**
 * Moves Item to the top of mItems
+ * @param item Item that is moved
 */
-void Aquarium::Top(shared_ptr<Item> item){
+void Aquarium::Top(shared_ptr<Item> item)
+{
     auto loc = find(begin(mItems), end(mItems), item);
 
     if (loc != end(mItems))
@@ -115,4 +117,27 @@ void Aquarium::Top(shared_ptr<Item> item){
     }
 
     mItems.push_back(item);
+}
+
+/**
+ * Gets the closest item to an item
+ */
+std::shared_ptr<Item> Aquarium::GetClosestTo(std::shared_ptr<Item> item)
+{
+    double distance = 0;
+    std::shared_ptr<Item> closest = nullptr;
+    for (const auto & currentItem : mItems)
+    {
+        if (currentItem != item)
+        {
+            double distanceFrom = item->DistanceTo(currentItem);
+            if (distanceFrom <= distance || closest == nullptr)
+            {
+                distance = distanceFrom;
+                closest = currentItem;
+            }
+        }
+    }
+
+    return closest;
 }

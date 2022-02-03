@@ -65,3 +65,14 @@ bool FishCarp::HitTest(int x, int y)
     // part of the image
     return !mFishImage->IsTransparent((int)testX, (int)testY);
 }
+
+
+/**
+ * Spawns a copy of the fish
+ * @param aquarium The aquarium the copy is added to
+ */
+void FishCarp::Spawn(Aquarium* aquarium)
+{
+    auto fish = make_shared<FishCarp>(aquarium);
+    aquarium->Add(fish);
+}

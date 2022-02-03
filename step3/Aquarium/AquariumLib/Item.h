@@ -8,6 +8,7 @@
 #ifndef AQUARIUM_ITEM_H
 #define AQUARIUM_ITEM_H
 
+
 class Aquarium;
 
 /**
@@ -38,7 +39,6 @@ public:
     void operator=(const Item &) = delete;
 
 
-
     /**
      * The X location of the item
      * @return X location in pixels
@@ -56,7 +56,7 @@ public:
      * @param x X location in pixels
      * @param y Y location in pixels
      */
-    void SetLocation(double x, double y) { mX = x; mY = y; }
+    virtual void SetLocation(double x, double y) { mX = x; mY = y; }
 
     /**
      * Draw this item
@@ -71,6 +71,19 @@ public:
      * @return true if clicked on
      */
     virtual bool HitTest(int x, int y) = 0;
+
+    /**
+     * Breeds Item with other item
+     * @param item
+     * @return
+     */
+    virtual bool Breed (std::shared_ptr<Item> mate) { return false; }
+
+    /**
+     * Spawns a copy of the fish
+     * @param aquarium The aquarium the copy is added to
+     */
+    virtual void Spawn(Aquarium* aquarium) {}
 
     double DistanceTo(std::shared_ptr<Item> item);
 };
