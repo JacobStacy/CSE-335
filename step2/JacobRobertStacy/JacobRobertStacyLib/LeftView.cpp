@@ -3,8 +3,8 @@
  * @author Jacob Stacy
  */
 
-#include "LeftView.h"
 #include "pch.h"
+#include "LeftView.h"
 
 /**
  * Initialize the left view class.

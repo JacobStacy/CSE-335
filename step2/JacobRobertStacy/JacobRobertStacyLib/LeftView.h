@@ -2,6 +2,7 @@
  * @file LeftView.h
  * @author Jacob Stacy
  *
+ *Declaration of the LeftView class.
  *
  */
 

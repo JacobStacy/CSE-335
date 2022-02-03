@@ -3,7 +3,11 @@
  * @author Jacob R. Stacy
  */
 
-#include "JacobRobertStacyApp.h"
 #include "pch.h"
+#include "JacobRobertStacyApp.h"
 
+
+/**
+ * Implements the app
+ */
 wxIMPLEMENT_APP(JacobRobertStacyApp);

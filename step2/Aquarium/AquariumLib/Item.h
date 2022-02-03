@@ -2,6 +2,7 @@
  * @file Item.h
  * @author Jacob Stacy
  *
+ * Declaration of the Item class.
  *
  */
 

@@ -2,7 +2,7 @@
  * @file JacobRobertStacyApp.h
  * @author Jacob Stacy
  *
- *Declaration of JacobRobertStacyApp
+ * Declaration of JacobRobertStacyApp
  */
 
 #ifndef JACOBROBERTSTACY_JACOBROBERTSTACYAPP_H

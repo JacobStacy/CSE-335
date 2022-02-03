@@ -2,6 +2,7 @@
  * @file MainFrame.h
  * @author Jacob Stacy
  *
+ * Declaration of the MainFrame class.
  *
  */
 

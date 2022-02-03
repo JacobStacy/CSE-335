@@ -2,6 +2,7 @@
  * @file AquariumView.h
  * @author Jacob R. Stacy
  *
+ * Declaration of the AquariumView class.
  *
  */
 

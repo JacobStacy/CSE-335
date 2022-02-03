@@ -3,8 +3,8 @@
  * @author Jacob Stacy
  */
 
-#include "MainFrame.h"
 #include "pch.h"
+#include "MainFrame.h"
 #include "JacobRobertStacyView.h"
 #include "LeftView.h"
 
@@ -13,7 +13,7 @@
  */
 void MainFrame::Initialize()
 {
-    Create(nullptr, wxID_ANY, L"Jacob Robert Stacy", wxDefaultPosition,  wxSize( 1000,800 ));
+    Create(nullptr, wxID_ANY, L"Jacob Robert Stacy", wxDefaultPosition,  wxSize( 1000,600 ));
 
     // Create a sizer that will lay out child windows vertically
     // one above each other

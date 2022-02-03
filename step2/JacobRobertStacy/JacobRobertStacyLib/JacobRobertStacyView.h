@@ -2,6 +2,7 @@
  * @file JacobRobertStacyView.h
  * @author Jacob Stacy
  *
+ *Declaration of the JacobRobertStacyView class.
  *
  */
 
@@ -9,6 +10,8 @@
 #define JACOBROBERTSTACY_JACOBROBERTSTACYVIEW_H
 
 class JacobRobertStacyView : public wxWindow {
+private:
+    void OnPaint(wxPaintEvent& event);
 public:
     void Initialize(wxFrame*);
 };

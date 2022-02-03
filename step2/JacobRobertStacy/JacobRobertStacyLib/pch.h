@@ -2,6 +2,7 @@
  * @file pch.h
  * @author Jacob Stacy
  *
+ * Declaration of the Precompiled Header
  *
  */
 

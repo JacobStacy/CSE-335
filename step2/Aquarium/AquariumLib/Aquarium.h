@@ -2,6 +2,7 @@
  * @file Aquarium.h
  * @author Jacob Stacy
  *
+ * Declaration of the Aquarium class.
  *
  */
 

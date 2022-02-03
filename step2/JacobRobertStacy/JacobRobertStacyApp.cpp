@@ -3,8 +3,8 @@
  * @author Jacob R. Stacy
  */
 
-#include "JacobRobertStacyApp.h"
 #include "pch.h"
+#include "JacobRobertStacyApp.h"
 #include "JacobRobertStacyLib/MainFrame.h"
 
 
