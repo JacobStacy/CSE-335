@@ -27,6 +27,12 @@ public:
     void operator=(const TileWater &) = delete;
 
     virtual wxXmlNode* XmlSave(wxXmlNode* node) override;
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     */
+    void Accept(TileVisitor* visitor) override { visitor->VisitWater(this); }
 };
 
 #endif //CITY_TILEWATER_H

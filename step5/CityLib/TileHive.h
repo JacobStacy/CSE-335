@@ -44,6 +44,12 @@ public:
     void ReleaseTVirus();
 
     void Reset();
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     */
+    void Accept(TileVisitor* visitor) override { visitor->VisitHive(this); }
 };
 
 #endif //CITY_TILEHIVE_H

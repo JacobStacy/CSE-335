@@ -23,6 +23,12 @@ public:
 
     ///  Copy constructor (disabled)
     TileMock(const TileMock &) = delete;
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     * */
+    virtual void Accept(TileVisitor* visitor) override { }
 };
 
 TEST(TileTest, Constructor)

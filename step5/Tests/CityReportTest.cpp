@@ -75,6 +75,70 @@ protected:
     }
 };
 
+TEST_F(CityReportTest, Iterator)
+{
+    // We need a city
+    City city;
+
+    // The report class under test
+    CityReportStub report(&city);
+
+    // Test to ensure the collection is initially empty
+    auto results = report.GetReports();
+    ASSERT_FALSE(report.begin() != report.end());
+
+    // Add one landscape tile
+    AddLandscape(&city, &report, 100, 210);
+
+    // Test that the iterator works with one item in the collection
+    results = report.GetReports();
+    // Get an iterator
+    auto iter = report.begin();
+    // Ensure the iterator points to the same thing as the know first
+    // item in the collection.
+    ASSERT_EQ(results[0]->Report(), (*iter)->Report());
+    // Ensure the iterator things it is not at the end yet
+    ASSERT_TRUE(iter != report.end());
+    // Increment, should increment to the end
+    ++iter;
+    ASSERT_FALSE(iter != report.end());
+
+    // Add one building tile
+    AddBuilding(&city, &report, 30, 109, L"market.png");
+
+    // Test that the iterator works with two items in the collection
+    results = report.GetReports();
+    iter = report.begin();
+    ASSERT_EQ(results[0]->Report(), (*iter)->Report());
+    ASSERT_TRUE(iter != report.end());
+    ++iter;
+    ASSERT_EQ(results[1]->Report(), (*iter)->Report());
+    ASSERT_TRUE(iter != report.end());
+    ++iter;
+    ASSERT_FALSE(iter != report.end());
+
+    // Test with varying numbers of items in the collection
+    for (int i = 0; i < 100; i++)
+    {
+        // Add two tiles
+        AddLandscape(&city, &report, 100 + i, 210);
+        AddBuilding(&city, &report, 130, 200 + i, L"market.png");
+
+        // Test the iterator
+        results = report.GetReports();
+        size_t cnt = 0;
+        for (auto memberReport : report)
+        {
+            ASSERT_TRUE(cnt < results.size());
+            ASSERT_EQ(results[cnt]->Report(), memberReport->Report());
+
+            cnt++;
+        }
+
+        ASSERT_EQ(results.size(), cnt);
+    }
+}
+
 TEST_F(CityReportTest, Add)
 {
     City city;     // We need a city

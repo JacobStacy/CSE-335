@@ -72,6 +72,8 @@ public:
     void Save(wxString filename);
 
     void Load(wxString filename);
+
+    void OnBuildingsCount(wxCommandEvent& event);
 };
 
 #endif //CITY_EXAMPLEVIEW_H

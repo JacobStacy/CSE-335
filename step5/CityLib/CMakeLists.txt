@@ -10,7 +10,7 @@ set(SOURCE_FILES
         TileGarden.h TileGarden.cpp
         TileLandscape.h TileLandscape.cpp
         MainFrame.cpp MainFrame.h
-        CityReport.cpp CityView.cpp CityView.h ids.h GrayCode.cpp GrayCode.h TileHive.cpp TileHive.h Population.cpp Population.h PopulationSegment.cpp PopulationSegment.h TileWater.cpp TileWater.h)
+        CityReport.cpp CityView.cpp CityView.h ids.h GrayCode.cpp GrayCode.h TileHive.cpp TileHive.h Population.cpp Population.h PopulationSegment.cpp PopulationSegment.h TileWater.cpp TileWater.h TileVisitor.cpp TileVisitor.h BuildingCounter.cpp BuildingCounter.h)
 
 add_library(${PROJECT_NAME} STATIC ${SOURCE_FILES})
 

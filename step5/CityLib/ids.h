@@ -62,14 +62,17 @@ enum IDs {
     /// Buildings>Hospital menu option
     IDM_BUILDINGS_HOSPITAL,
 
-    /// Buildines>Market menu option
+    /// Buildings>Market menu option
     IDM_BUILDINGS_MARKET,
 
     /// Buildings>Condos menu option
     IDM_BUILDINGS_CONDOS,
 
     /// Buisiness>Umbrella Corp Hive
-    IDM_BUSINESS_HIVE
+    IDM_BUSINESS_HIVE,
+
+    /// Buildings>Button to count buildings
+    IDM_BUILDINGS_COUNT
 
 };
 

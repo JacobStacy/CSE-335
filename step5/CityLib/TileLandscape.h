@@ -41,5 +41,11 @@ public:
     void Infect();
 
     void Update(double elapsed) override;
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     */
+    void Accept(TileVisitor* visitor) override { visitor->VisitLandscape(this); }
 };
 

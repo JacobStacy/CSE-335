@@ -42,5 +42,67 @@ public:
     explicit CityReport(City* city);
 
     void Add(std::shared_ptr<MemberReport> report);
+
+    /** Iterator that iterates over some collection */
+    class Iter
+    {
+    public:
+        /**
+         * Constructor
+         * @param collection The collection we are iterating over
+         */
+        Iter(CityReport *cityReport, int pos) : mCityReport(cityReport), mPos(pos) {}
+
+        /**
+         * Compare two iterators
+         * @param other The other iterator we are comparing to
+         * @return  true if this position is not equal to the other position
+        */
+        bool operator!=(const Iter &other) const
+        {
+            return mPos != other.mPos;
+        }
+
+        /**
+         * Get value at current position
+         * @return Value at mPos in the collection
+         */
+        std::shared_ptr<MemberReport> operator *() const { return mCityReport->mReports[mPos]; }
+
+        /**
+         * Increment the iterator, moving to the next item in the collection
+         * @return Reference to this iterator
+         */
+        const Iter& operator++()
+        {
+            mPos = GrayCode::Increment(mPos);
+            return *this;
+        }
+
+
+    private:
+        CityReport *mCityReport;   ///< Collection we are iterating over
+        int mPos;                  ///< Position in the collection
+    };
+
+    /**
+     * Get an iterator for the beginning of the collection
+     * @return Iter object at position 0
+     */
+    Iter begin() { return Iter(this, 0); }
+
+    /**
+     * Get an iterator for the end of the collection
+     * @return Iter object at position past the end
+     */
+    Iter end()
+    {
+        if (mNoReports)
+        {
+            return Iter(this, 0);
+        }
+        return Iter(this, GrayCode::Increment(mLast));
+    }
+
 };
 

@@ -44,5 +44,11 @@ public:
     void Draw(wxDC* dc) override;
 
     bool Infect();
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     */
+    void Accept(TileVisitor* visitor) override { visitor->VisitBuilding(this); }
 };
 

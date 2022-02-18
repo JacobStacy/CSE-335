@@ -30,5 +30,11 @@ public:
 
     /// The supported pruning states
     enum class PruningStates { Pruned, Overgrown1, Overgrown2, Overgrown3, Overgrown4 };
+
+    /**
+     * Accept a visitor
+     * @param visitor The visitor we accept
+     */
+    void Accept(TileVisitor* visitor) override { visitor->VisitGarden(this); }
 };
 

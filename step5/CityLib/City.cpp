@@ -385,3 +385,15 @@ std::shared_ptr<CityReport> City::GenerateCityReport()
 
     return report;
 }
+
+/**
+ * Accept a visitor for the collection
+ * @param visitor The visitor for the collection
+ */
+void City::Accept(TileVisitor* visitor)
+{
+    for (auto tile : mTiles)
+    {
+        tile->Accept(visitor);
+    }
+}

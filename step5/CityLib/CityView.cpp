@@ -19,6 +19,7 @@
 
 #include "CityReport.h"
 #include "MemberReport.h"
+#include "BuildingCounter.h"
 
 using namespace std;
 
@@ -119,6 +120,11 @@ void CityView::AddMenus(wxFrame* mainFrame, wxMenuBar *menuBar, wxMenu* fileMenu
     AddTileMenuOption(mainFrame, buildingsMenu, IDM_BUILDINGS_MARKET, L"M&arket", L"Add a Market Tile");
     AddTileMenuOption(mainFrame, buildingsMenu, IDM_BUILDINGS_CONDOS, L"&Condos", L"Add a Condos Tile");
 
+
+    buildingsMenu->AppendSeparator();
+    buildingsMenu->Append(IDM_BUILDINGS_COUNT, L"&Count", L"Count the buildings");
+    mainFrame->Bind(wxEVT_COMMAND_MENU_SELECTED, &CityView::OnBuildingsCount, this, IDM_BUILDINGS_COUNT);
+
     //
     // Businesses menu options
     //
@@ -211,12 +217,12 @@ void CityView::OnPaint(wxPaintEvent& event)
         // Commented out until the iterator is available
         //
 
-//        for (auto tile : mCity)
-//        {
-//            wxPen pen(wxColour(0, 255, 0), 2);
-//            dc.SetPen(pen);
-//            tile->DrawBorder(&dc);
-//        }
+        for (auto tile : mCity)
+        {
+            wxPen pen(wxColour(0, 255, 0), 2);
+            dc.SetPen(pen);
+            tile->DrawBorder(&dc);
+        }
     }
 
     if (mReport)
@@ -245,14 +251,14 @@ void CityView::OnPaint(wxPaintEvent& event)
         // Commented out until the iterator is available
         //
 
-//        for (auto memberReport : *report)
-//        {
-//            dc.DrawText(memberReport->Report().c_str(),
-//                        x,     // x coordinate for the left size of the text
-//                        y);    // y coordinate for the top of the text
-//
-//            y += dy;
-//        }
+        for (auto memberReport : *report)
+        {
+            dc.DrawText(memberReport->Report().c_str(),
+                        x,     // x coordinate for the left size of the text
+                        y);    // y coordinate for the top of the text
+
+            y += dy;
+        }
 
     }
 }
@@ -499,6 +505,21 @@ void CityView::OnUpdateViewPopulation(wxUpdateUIEvent& event)
 void CityView::OnTimer(wxTimerEvent& event)
 {
     Refresh();
+}
+
+/**
+ * Handle the Buildines>Count menu option
+ * @param event Menu event
+ */
+void CityView::OnBuildingsCount(wxCommandEvent& event)
+{
+    BuildingCounter visitor;
+    mCity.Accept(&visitor);
+    int cnt = visitor.GetNumBuildings();
+
+    wstringstream str;
+    str << L"There are " << cnt << L" buildings.";
+    wxMessageBox(str.str().c_str(), L"Building Counter");
 }
 
 

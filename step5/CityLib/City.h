@@ -87,6 +87,58 @@ public:
 
     std::shared_ptr<CityReport> GenerateCityReport();
 
+    /** Iterator that iterates over the city tiles */
+    class Iter
+    {
+    public:
+        /** Constructor
+         * @param city The city we are iterating over
+         * @param pos Position in the collection
+         */
+        Iter(City* city, int pos) : mCity(city), mPos(pos) {}
+
+        /**
+         * Compare two iterators
+         * @param other The other iterator we are comparing to
+         * @return  true if this position is not equal to the other position
+        */
+        bool operator!=(const Iter& other) const
+        {
+            return mPos != other.mPos;
+        }
+
+        /**
+         * Get value at current position
+         * @return Value at mPos in the collection
+         */
+        std::shared_ptr<Tile> operator *() const { return mCity->mTiles[mPos]; }
+
+        /**
+         * Increment the iterator
+         * @return Reference to this iterator */
+        const Iter& operator++()
+        {
+            mPos++;
+            return *this;
+        }
+
+    private:
+        City* mCity;   ///< City we are iterating over
+        int mPos;       ///< Position in the collection
+    };
+
+    /**
+     * Get an iterator for the beginning of the collection
+     * @return Iter object at position 0
+     */
+    Iter begin() { return Iter(this, 0); }
+
+    /**
+     * Get an iterator for the end of the collection
+     * @return Iter object at position past the end
+     */
+    Iter end() { return Iter(this, mTiles.size()); }
+
     /**
      * Is the option to view the population enabled?
      * @return True if enabled
@@ -97,5 +149,7 @@ public:
      * Flip the true/false status of population viewing
      */
     void FlipViewPopulation() { mViewPopulation = !mViewPopulation; }
+
+    void Accept(TileVisitor* visitor);
 };
 
