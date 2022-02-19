@@ -43,6 +43,9 @@ private:
     /// Any item we are currently dragging
     std::shared_ptr<Tile> mGrabbedItem;
 
+    /// Item that was double clicked
+    std::shared_ptr<Tile> mDCdItem;
+
     /// The timer that allows for animation
     wxTimer mTimer;
 
@@ -74,6 +77,8 @@ public:
     void Load(wxString filename);
 
     void OnBuildingsCount(wxCommandEvent& event);
+
+    void OnReset(wxCommandEvent& event);
 };
 
 #endif //CITY_EXAMPLEVIEW_H

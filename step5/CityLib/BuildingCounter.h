@@ -10,6 +10,9 @@
 
 #include "TileVisitor.h"
 
+/**
+ * Concrete visitor that counter the number of buildings
+ */
 class BuildingCounter : public TileVisitor {
 private:
     /// Buildings counter
@@ -26,10 +29,7 @@ public:
      * Visit a TileBuilding object
      * @param building Building we are visiting
      */
-    void VisitBuilding(TileBuilding* building) override
-    {
-        mNumBuildings++;
-    }
+    void VisitBuilding(TileBuilding* building) override { mNumBuildings++; }
 
 };
 

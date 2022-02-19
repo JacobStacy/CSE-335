@@ -8,6 +8,7 @@
 #include "TileLandscape.h"
 #include "City.h"
 #include "MemberReport.h"
+#include "ZombieDistributor.h"
 
 /// Rate we distribute zombies in zombies per second
 const double DistributionRate = 40;
@@ -76,8 +77,12 @@ void TileLandscape::Update(double elapsed)
         // We can distribute zombies
         auto available = zombies->Remove(elapsed);
 
-        // Distribute available zombies to neighboring tiles
+        ZombieDistributor distributor(&available);
 
+        // Distribute available zombies to neighboring tiles
+        NeighborsAccept(&distributor);
+
+        distributor.DistributeLandscapes();
         // This line will be replaced:
         int undistributable = available;
 

@@ -4,11 +4,12 @@
  */
 
 #include "pch.h"
-#include <sstream>
-#include <iostream>
 #include "TileHive.h"
 #include "City.h"
 #include "MemberReport.h"
+#include "ZombieDistributor.h"
+#include <sstream>
+#include <iostream>
 
 using namespace std;
 
@@ -89,8 +90,12 @@ void TileHive::Update(double elapsed)
         // We can distribute zombies
         auto available = zombies->Remove(elapsed);
 
-        // Distribute available zombies to neighboring tiles
+        ZombieDistributor distributor(&available);
 
+        // Distribute available zombies to neighboring tiles
+        NeighborsAccept(&distributor);
+
+        distributor.DistributeLandscapes();
         // This line will be replaced:
         int undistributable = available;
 
@@ -118,3 +123,23 @@ void TileHive::ReleaseTVirus()
 {
     mPopulation.SetInfected(true);
 }
+
+///**
+// * Send a visitor to Neighbors
+// * @param visitor The visitor we accept
+// * @return Left over zombies
+// */
+//void TileHive::NeighborsAccept(ZombieDistributor* visitor)
+//{
+//    auto ul = GetAdjacent(-1, -1);
+//    ul->Accept(visitor);
+//    auto ur = GetAdjacent(1, -1);
+//    ur->Accept(visitor);
+//    auto ll = GetAdjacent(-1, 1);
+//    ll->Accept(visitor);
+//    auto lr = GetAdjacent(1, 1);
+//    lr->Accept(visitor);
+//
+//
+//}
+

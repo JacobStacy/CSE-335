@@ -50,6 +50,10 @@ public:
      * @param visitor The visitor we accept
      */
     void Accept(TileVisitor* visitor) override { visitor->VisitHive(this); }
+
+
+//    void NeighborsAccept(ZombieDistributor* visitor) override;
+
 };
 
 #endif //CITY_TILEHIVE_H

@@ -136,8 +136,14 @@ public:
 
     /**
      * Accept a visitor
-      * @param visitor The visitor we accept
-      */
+     * @param visitor The visitor we accept
+     */
     virtual void Accept(TileVisitor* visitor) = 0;
+
+    /**
+     * Send a visitor to Neighbors
+     * @param visitor The visitor we accept
+     */
+    void NeighborsAccept(TileVisitor* visitor);
 };
 

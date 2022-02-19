@@ -37,7 +37,9 @@ void MainFrame::Initialize()
 
     fileMenu->Append(wxID_SAVEAS, "Save &As...\tCtrl-S", L"Save city as...");
     fileMenu->Append(wxID_OPEN, "Open &File...\tCtrl-F", L"Open city file...");
+    fileMenu->Append(wxID_RESET, L"Reset", L"Reset's the city");
     fileMenu->Append(wxID_EXIT, "E&xit\tAlt-X", "Quit this program");
+
     helpMenu->Append(wxID_ABOUT, "&About\tF1", "Show about dialog");
 
     // Recently used files
@@ -144,4 +146,5 @@ void MainFrame::OnClose(wxCloseEvent& event)
     mCityView->Stop();
     Destroy();
 }
+
 

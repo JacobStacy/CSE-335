@@ -36,6 +36,7 @@ private:
 
 public:
     void Initialize();
+
 };
 
 #endif //_MAINFRAME_H_

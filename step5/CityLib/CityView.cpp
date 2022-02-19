@@ -20,6 +20,8 @@
 #include "CityReport.h"
 #include "MemberReport.h"
 #include "BuildingCounter.h"
+#include "VirusReleaser.h"
+#include "TileReseter.h"
 
 using namespace std;
 
@@ -61,6 +63,7 @@ void CityView::Initialize(wxFrame* mainFrame)
     Bind(wxEVT_TIMER, &CityView::OnTimer, this);
 
 
+
     mTimer.SetOwner(this);
     mTimer.Start(FrameDuration);
     mStopWatch.Start();
@@ -81,6 +84,11 @@ void CityView::AddMenus(wxFrame* mainFrame, wxMenuBar *menuBar, wxMenu* fileMenu
     //  fileMenu->Append(...)
     //  viewMenu->Append(...)
 
+    //
+    // File menu options
+    //
+    fileMenu->Bind(wxEVT_COMMAND_MENU_SELECTED, &CityView::OnReset, this, wxID_RESET);
+
     auto landscapingMenu = new wxMenu();
     auto buildingsMenu = new wxMenu();
     auto businessesMenu = new wxMenu();
@@ -95,6 +103,7 @@ void CityView::AddMenus(wxFrame* mainFrame, wxMenuBar *menuBar, wxMenu* fileMenu
     mainFrame->Bind(wxEVT_UPDATE_UI, &CityView::OnUpdateViewCityReport, this, IDM_VIEW_CITYREPORT);
     mainFrame->Bind(wxEVT_COMMAND_MENU_SELECTED, &CityView::OnViewPopulation, this, IDM_VIEW_POPULATION);
     mainFrame->Bind(wxEVT_UPDATE_UI, &CityView::OnUpdateViewPopulation, this, IDM_VIEW_POPULATION);
+
 
     //
     // Landscaping menu options
@@ -136,6 +145,7 @@ void CityView::AddMenus(wxFrame* mainFrame, wxMenuBar *menuBar, wxMenu* fileMenu
     menuBar->Append(landscapingMenu, L"&Landscaping" );
     menuBar->Append(buildingsMenu, L"&Buildings");
     menuBar->Append(businessesMenu, L"B&usinesses");
+
 }
 
 /**
@@ -336,7 +346,10 @@ void CityView::OnLeftDoubleClick(wxMouseEvent &event)
 {
     // The city has been double-clicked on.
     // The double-click location is in (event.GetX(), event.GetY())
+    mDCdItem = mCity.HitTest(event.GetX(), event.GetY());
 
+    VirusReleaser visitor;
+    mDCdItem->Accept(&visitor);
 
 }
 
@@ -520,6 +533,22 @@ void CityView::OnBuildingsCount(wxCommandEvent& event)
     wstringstream str;
     str << L"There are " << cnt << L" buildings.";
     wxMessageBox(str.str().c_str(), L"Building Counter");
+}
+
+
+/**
+ * Handles the File>Reset menu option
+ * @param event menu event
+ */
+void CityView::OnReset(wxCommandEvent& event)
+{
+    TileReseter visitor;
+    mCity.Accept(&visitor);
+
+    wstringstream str;
+    str << L"City has been reset!";
+    wxMessageBox(str.str().c_str(), L"Reset");
+
 }
 
 

@@ -182,3 +182,19 @@ std::shared_ptr<Tile> Tile::GetAdjacent(int dx, int dy)
 {
     return mCity->GetAdjacent(this, dx, dy);
 }
+
+void Tile::NeighborsAccept(TileVisitor* visitor)
+{
+    auto ul = GetAdjacent(-1, -1);
+    if (ul != nullptr)
+        ul->Accept(visitor);
+    auto ur = GetAdjacent(1, -1);
+    if (ur != nullptr)
+        ur->Accept(visitor);
+    auto ll = GetAdjacent(-1, 1);
+    if (ll != nullptr)
+        ll->Accept(visitor);
+    auto lr = GetAdjacent(1, 1);
+    if (lr != nullptr)
+        lr->Accept(visitor);
+}

@@ -49,7 +49,8 @@ public:
     public:
         /**
          * Constructor
-         * @param collection The collection we are iterating over
+         * @param cityReport The city we are iterating over
+         * @param pos the position in the collection
          */
         Iter(CityReport *cityReport, int pos) : mCityReport(cityReport), mPos(pos) {}
 

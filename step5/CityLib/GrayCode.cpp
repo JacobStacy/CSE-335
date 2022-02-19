@@ -3,6 +3,7 @@
  * @author Charles Owen
  */
 
+#include "pch.h"
 #include "GrayCode.h"
 
 /**

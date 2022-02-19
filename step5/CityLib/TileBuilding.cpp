@@ -9,6 +9,7 @@
 #include "TileBuilding.h"
 #include "City.h"
 #include "MemberReport.h"
+#include "ZombieDistributor.h"
 
 /// The initial infection rate in people per second
 const double InitialInfectionRate = 1;
@@ -71,8 +72,12 @@ void TileBuilding::Update(double elapsed)
         // We can distribute zombies
         auto available = zombies->Remove(elapsed);
 
-        // Distribute available zombies to neighboring tiles
+        ZombieDistributor distributor(&available);
 
+        // Distribute available zombies to neighboring tiles
+        NeighborsAccept(&distributor);
+
+        distributor.DistributeLandscapes();
         // This line will be replaced:
         int undistributable = available;
 
