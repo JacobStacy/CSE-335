@@ -1,9 +1,8 @@
 project(Tests)
 
 set(TEST_FILES
-    ../../../Project1/Tests/gtest_main.cpp
-    EmptyTest.cpp
-        AquariumTest.cpp ItemTest.cpp FishBetaTest.cpp)
+        ../../../Project1/Tests/gtest_main.cpp
+        ItemTest.cpp GameTest.cpp)
 
 # Get Google tests
 include(FetchContent)

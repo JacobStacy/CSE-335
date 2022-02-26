@@ -2,34 +2,28 @@
  * @file Item.h
  * @author Jacob Stacy
  *
- * Base class for any item in our aquarium.
+ * Base class for items in our game.
  */
 
-#ifndef AQUARIUM_ITEM_H
-#define AQUARIUM_ITEM_H
+#ifndef PROJECT1_ITEM_H
+#define PROJECT1_ITEM_H
 
+class Game;
 
-class Aquarium;
-
-/**
- * Base class for any item in our aquarium.
- */
 class Item {
 private:
-    /// The aquarium this item is contained in
-    Aquarium   *mAquarium;
+    /// The game this item is contained in
+    Game *mGame;
 
-    // Item location in the aquarium
-    double  mX = 0;     ///< X location for the center of the item
-    double  mY = 0;     ///< Y location for the center of the item
+    // Item Location game
+    double mX = 0; ///< X location for the center of the item
+    double mY = 0; ///< Y location for the center of the item
 
     /// The underlying item image
     std::unique_ptr<wxImage> mItemImage;
 
-    /// The bitmap we can display for this item
+    /// The bitmap we display for the item
     std::unique_ptr<wxBitmap> mItemBitmap;
-
-    bool mMirror = false;   ///< True mirrors the item image
 
 protected:
     /**
@@ -45,9 +39,9 @@ protected:
     double GetImageHeight (){ return mItemBitmap->GetHeight();}
 
 public:
-    Item(Aquarium *aquarium, const std::wstring &filename);
+    Item(Game *game, const std::wstring &filename);
 
-    virtual ~Item();
+    virtual  ~Item();
 
     /// Default constructor (disabled)
     Item() = delete;
@@ -57,7 +51,6 @@ public:
 
     /// Assignment operator
     void operator=(const Item &) = delete;
-
 
     /**
      * The X location of the item
@@ -78,30 +71,9 @@ public:
      */
     virtual void SetLocation(double x, double y) { mX = x; mY = y; }
 
-
     void Draw(wxDC *dc);
 
 
-    bool HitTest(int x, int y);
-
-    /**
-     * Breeds Item with other item
-     * @param mate the item breading with the item
-     * @return
-     */
-    virtual bool Breed (std::shared_ptr<Item> mate) { return false; }
-
-    /**
-     * Spawns a copy of the fish
-     * @param aquarium The aquarium the copy is added to
-     */
-    virtual void Spawn(Aquarium* aquarium) {}
-
-    double DistanceTo(std::shared_ptr<Item> item);
-
-    virtual wxXmlNode* XmlSave(wxXmlNode* node);
-
-    virtual void XmlLoad(wxXmlNode* node);
 
     /**
     * Handle updates for animation
@@ -110,13 +82,11 @@ public:
     virtual void Update(double elapsed) {}
 
     /**
-     * Get the pointer to the Aquarium object
-     * @return Pointer to Aquarium object
+     * Get the pointer to the Game object
+     * @return Pointer to Game object
      */
-    Aquarium *GetAquarium() { return mAquarium;  }
-
-    void SetMirror(bool m);
+    Game *GetGame() { return mGame;  }
 
 };
 
-#endif //AQUARIUM_ITEM_H
+#endif //PROJECT1_ITEM_H
