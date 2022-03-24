@@ -1,12 +1,16 @@
 /**
  * @file CanadianExperienceApp.cpp
  * @author Charles B. Owen
+ * @author Jacob Stacy
  */
 
 #include "pch.h"
 
 #include "CanadianExperienceApp.h"
 #include "MainFrame.h"
+
+#include <wx/xrc/xmlres.h>
+#include <wx/stdpaths.h>
 
 /**
  * Initialize the application.
@@ -22,6 +26,19 @@ bool CanadianExperienceApp::OnInit()
 
     // Do not remove this line...
     wxSetWorkingDirectory(L"..");
+
+    // Get pointer to XML resource system
+    auto xmlResource = wxXmlResource::Get();
+
+    // Initialize XRC handlers
+    xmlResource->InitAllHandlers();
+
+    // Load all XRC resources from the program resources
+    wxStandardPaths& standardPaths = wxStandardPaths::Get();
+    if (!wxXmlResource::Get()->LoadAllFiles(standardPaths.GetResourcesDir() + "/xrc"))
+    {
+        return false;
+    }
 
     auto frame = new MainFrame();
     frame->Initialize();

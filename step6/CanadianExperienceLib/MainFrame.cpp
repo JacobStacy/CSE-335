@@ -1,10 +1,13 @@
 /**
  * @file MainFrame.cpp
  * @author Charles B. Owen
+ * @author Jacob Stacy
  */
 #include "pch.h"
 
 #include "MainFrame.h"
+
+#include <wx/xrc/xmlres.h>
 
 /// Directory within the resources that contains the images.
 const std::wstring ImagesDirectory = L"/images";
@@ -24,7 +27,7 @@ MainFrame::MainFrame()
  */
 void MainFrame::Initialize()
 {
-    Create(NULL, wxID_ANY, L"Canadian Experience Starter");
+    wxXmlResource::Get()->LoadFrame(this, nullptr, L"MainFrame");
 
 #ifdef WIN32
     // This sets the frame icon on Windows systems
