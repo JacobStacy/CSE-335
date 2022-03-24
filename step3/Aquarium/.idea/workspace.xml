@@ -18,56 +18,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1a675f4-f896-4c34-bfc7-280b78be2f36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Game.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Game.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/GameView.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/GameView.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Item.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Item.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/ids.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/pch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/Tests/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/Tests/GameTest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/Tests/ItemTest.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/Tests/gtest_main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/UofM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/backgroundColorDesert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/backgroundColorGrass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/backgroundForest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome-sad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome-walk-left-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome-walk-left-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome-walk-right-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome-walk-right-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/gnome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/grassLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/grassMid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/grassRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/money100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/money1000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/platformIndustrial_057.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/platformIndustrial_059.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/platformIndustrial_060.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/platformIndustrial_061.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/snow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/snowLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/snowMid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/snowRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/stanley.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/wall1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/wall2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Project1/images/wisc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project1/Doxyfile.doxy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Money.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Money.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Platform.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Project1/GameLib/Platform.h" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d1c4836d05fa33bfa9a8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7f0ff6f7ac4d9318c29c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-d5ec94adca61117fcda3.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-899c5e74581ccd75d10e.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-AquariumLib-Debug-cdad579348401f972c7e.json" afterDir="false" />
@@ -75,7 +32,7 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-_deps.googletest-build-Debug-ded26adebee9516e95c3.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-_deps.googletest-build.googlemock-Debug-095691742c918c8ff0bc.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-_deps.googletest-build.googletest-Debug-b4bde9edcaef200c4983.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-25T23-20-22-0270.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-02-26T20-50-24-0391.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Aquarium-Debug-01feab7c9bd54536e812.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-AquariumLib-Debug-53a6078739a49d58fd47.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Tests_run-Debug-da2a98fa833ea797e729.json" afterDir="false" />
@@ -84,20 +41,47 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gtest-Debug-fb2353b25198991e07c4.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gtest_main-Debug-aa44e70b3bd6223b0b2c.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-30b88c6df5a4952bb5b2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Aquarium.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Aquarium.ilk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Aquarium.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/AquariumLib.lib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/Aquarium.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/AquariumLib.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/AquariumView.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/FishBeta.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/FishCarp.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/FishMosquito.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/FishNemo.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/Item.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/MainFrame.cpp.obj" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/cmake_pch.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/cmake_pch.cxx.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/cmake_pch.cxx.pch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/CMakeFiles/AquariumLib.dir/cmake_pch.hxx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/AquariumLib/cmake_install.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Aquarium.dir/cmake_pch.cxx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Aquarium.dir/cmake_pch.hxx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/AquariumTest.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/E_/Work/Class/CSE-335/Project1/Tests/gtest_main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/EmptyTest.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/FishBetaTest.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/ItemTest.cpp.obj" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/cmake_pch.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/cmake_pch.cxx.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/cmake_pch.cxx.pch" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/cmake_pch.hxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/embed.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/intermediate.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/manifest.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/manifest.res" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/CMakeFiles/Tests_run.dir/vc140.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/Tests_run.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/Tests_run.ilk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/Tests_run.pdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/Tests/cmake_install.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/CTestTestfile.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/cmake_install.cmake" afterDir="false" />
@@ -105,6 +89,7 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googlemock/cmake_install.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets-debug.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/CTestTestfile.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/cmake_install.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/generated/GTestConfig.cmake" afterDir="false" />
@@ -113,7 +98,6 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/generated/gmock_main.pc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest.pc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-build/googletest/generated/gtest_main.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-src" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/.ninja_log" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/CMakeCache.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/3.21.1/CMakeSystem.cmake" afterDir="false" />
@@ -141,27 +125,9 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt.in" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/bin/gtestd.pdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/7-zip.chm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/7z.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/7z.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/7z.sfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/7zCon.sfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/addr2line.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/ar.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/as.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/c++filt.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/cpp.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/dlltool.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/dllwrap.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/elfedit.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/g++.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcc-ar.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcc-nm.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcc-ranlib.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcc.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcov-dump.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcov-tool.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gcov.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/bin/gdb.exe" afterDir="false" />
@@ -3186,329 +3152,33 @@
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/include/boost/fusion/container/list/cons_fwd.hpp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/include/glm/detail/func_trigonometric_simd.inl" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/MinGW/include/glm/gtc/quaternion_simd.inl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/background1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/beta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/carp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/magikarp.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/mingw-w64-install.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/mingw.exe" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/mosquito-fish.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/cmake-build-debug/images/nemo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/lib/gtestd.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameApp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameApp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameApp.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameApp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/GameView.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/GameView.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/GameView.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/GameView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/Item.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/Item.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/Item.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/Item.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/MainFrame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/SpartyGnome.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/SpartyGnome.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/SpartyGnome.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/SpartyGnome.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/ids.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/ids.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/GameLib/pch.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/GameLib/pch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/Tests/GameTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/Tests/GameTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/Tests/ItemTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/Tests/ItemTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Project1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../Project1/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../step2/Aquarium/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../step2/Aquarium/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../step2/Aquarium/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../step2/Aquarium/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/gtest_main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/AquariumLib/Item.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../step4/Aquarium/AquariumLib/Item.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/_fish_beta_test_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/_item_test_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/annotated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/bc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/bdwn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/class_item_mock-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/class_item_mock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/class_item_mock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/doxygen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/doxygen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/dynsections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/files.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/folderclosed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/folderopen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/hierarchy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/menudata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/nav_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/nav_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/nav_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/all_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/all_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/all_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/all_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/classes_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/classes_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/files_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/files_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/files_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/files_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/mag_sel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/nomatches.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/search_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/search_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/search_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/search/searchdata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/splitbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/sync_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/sync_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/tab_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/tab_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/tab_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/tab_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/html/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/_fish_beta_test_8cpp.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/_item_test_8cpp.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/annotated.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/class_item_mock.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/class_item_mock.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/files.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/hierarchy.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/longtable_doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/make.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/refman.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/Tests/latex/tabu_doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_app_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_app_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_app_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_view_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_view_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_view_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_aquarium_view_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_decor_castle_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_decor_castle_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_decor_castle_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_decor_castle_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_beta_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_beta_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_beta_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_beta_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_carp_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_carp_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_carp_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_carp_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_nemo_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_nemo_8cpp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_nemo_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_fish_nemo_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_item_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_item_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_item_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_main_frame_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/_main_frame_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/annotated.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/annotated_dup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/bc_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/bdwn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_app-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_app.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_app.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_view-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_aquarium_view.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_decor_castle-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_decor_castle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_decor_castle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_beta-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_beta.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_beta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_carp-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_carp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_carp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_nemo-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_nemo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_fish_nemo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_item-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_item.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_main_frame-members.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_main_frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/class_main_frame.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/closed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/dir_379cbb85f8ba848a6e93efc66eec86f7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/dir_379cbb85f8ba848a6e93efc66eec86f7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/doc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/doxygen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/doxygen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/dynsections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/files.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/files_dup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/folderclosed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/folderopen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/functions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/functions_func.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/functions_vars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/globals.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/globals_enum.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/globals_func.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/globals_vars.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/hierarchy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/hierarchy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/ids_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/ids_8h.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/ids_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/main_8cpp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/menudata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/nav_f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/nav_g.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/nav_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/navtree.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/navtree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/navtreedata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/navtreeindex0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/pch_8h.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/pch_8h_source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_a.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_b.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_c.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_d.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_e.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_f.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/all_f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/classes_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/enums_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/enums_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/files_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_a.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_b.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_c.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_d.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_e.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/functions_e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/mag_sel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/nomatches.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/search_l.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/search_m.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/search_r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/searchdata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/search/variables_6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/splitbar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/sync_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/sync_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/tab_a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/tab_b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/tab_h.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/tab_s.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/html/tabs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/_aquarium_app_8cpp.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/_aquarium_app_8h.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/_aquarium_app_8h_source.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/annotated.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/class_aquarium_app.eps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/class_aquarium_app.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/files.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/hierarchy.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/longtable_doxygen.sty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/main_8cpp.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/make.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/pch_8h.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/pch_8h_source.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/refman.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../step4/Aquarium/latex/tabu_doxygen.sty" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3562,7 +3232,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../step4/Aquarium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="structure.view.defaults.are.configured" value="true" />
   </component>
@@ -3584,11 +3254,6 @@
       </method>
     </configuration>
     <configuration name="AquariumLib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Aquarium" TARGET_NAME="AquariumLib" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -3648,6 +3313,12 @@
       <workItem from="1644615545033" duration="26000" />
       <workItem from="1644616464116" duration="112000" />
       <workItem from="1645831116681" duration="886000" />
+      <workItem from="1645908587613" duration="64000" />
+      <workItem from="1645908668005" duration="2764000" />
+      <workItem from="1645982235319" duration="2227000" />
+      <workItem from="1646067094735" duration="750000" />
+      <workItem from="1647541649785" duration="34000" />
+      <workItem from="1648152512285" duration="23000" />
     </task>
     <servers />
   </component>

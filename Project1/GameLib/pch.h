@@ -1,8 +1,7 @@
 /**
  * @file pch.h
  * @author John
- *
- *
+ * PCH File
  */
 
 #ifndef PROJECT1_PCH_H
@@ -12,5 +11,5 @@
 #ifndef WX_PRECOMP
 #include <wx/wx.h>
 #endif
-
+#include <wx/xml/xml.h>
 #endif //PROJECT1_PCH_H

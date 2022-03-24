@@ -2,7 +2,7 @@
  * @file GameApp.h
  * @author matty
  *
- *
+ * Class declaration for the GameApp class
  */
 
 #ifndef PROJECT1_GAMEAPP_H
@@ -12,8 +12,6 @@
  * Main app class
  */
 class GameApp : public wxApp{
-private:
-
 public:
     bool OnInit() override;
 

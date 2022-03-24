@@ -1,6 +1,8 @@
 /**
  * @file GameTest.cpp
  * @author Jacob Stacy
+ *
+ * Test file for the Game Class
  */
 
 #include <pch.h>

@@ -1,15 +1,23 @@
 /**
  * @file Item.h
  * @author Jacob Stacy
- *
  * Base class for items in our game.
  */
 
 #ifndef PROJECT1_ITEM_H
 #define PROJECT1_ITEM_H
 
+#include <wx/graphics.h>
+#include "ItemVisitor.h"
+#include "Vector.h"
+
 class Game;
 
+class wxXmlNode;
+
+/**
+ * The Item Class
+ */
 class Item {
 private:
     /// The game this item is contained in
@@ -18,33 +26,26 @@ private:
     // Item Location game
     double mX = 0; ///< X location for the center of the item
     double mY = 0; ///< Y location for the center of the item
-
-    /// The underlying item image
-    std::unique_ptr<wxImage> mItemImage;
-
     /// The bitmap we display for the item
-    std::unique_ptr<wxBitmap> mItemBitmap;
-
-protected:
-    /**
-     * Gets Image width
-     * @return image width
-     */
-    double GetImageWidth (){ return mItemBitmap->GetWidth();}
-
-    /**
-     * Gets Image height
-     * @return image height
-     */
-    double GetImageHeight (){ return mItemBitmap->GetHeight();}
+    std::shared_ptr<wxBitmap> mItemBitmap;
 
 public:
-    Item(Game *game, const std::wstring &filename);
+    /**
+     * Gets width to be used with collision
+     * @return width
+     */
+    virtual double GetWidth (){ return mItemBitmap->GetWidth();}
+
+    /**
+     * Gets height to be used with collision
+     * @return height
+     */
+    virtual double GetHeight (){ return mItemBitmap->GetHeight();}
 
     virtual  ~Item();
 
     /// Default constructor (disabled)
-    Item() = delete;
+    Item() = default;
 
     /// Copy constructor (disabled)
     Item(const Item &) = delete;
@@ -71,8 +72,9 @@ public:
      */
     virtual void SetLocation(double x, double y) { mX = x; mY = y; }
 
-    void Draw(wxDC *dc);
+    virtual void Draw(wxGraphicsContext *gc);
 
+    virtual bool CollisionTest(Item *item);
 
 
     /**
@@ -85,8 +87,26 @@ public:
      * Get the pointer to the Game object
      * @return Pointer to Game object
      */
-    Game *GetGame() { return mGame;  }
+    Game *GetGame() { return mGame; }
 
+    /**
+     * Accepts the visitor as Item
+     * @param visitor
+     */
+    virtual void Accept(ItemVisitor* visitor) {}
+
+    /**
+     * Load this item to an XML node
+     * @param node
+     */
+    virtual void XmlLoad(wxXmlNode *node);
+
+    /**
+     * Constructor
+     * @param game The game this item is a member of
+     * @param bitmap The bitmap of the item
+     */
+    Item(Game *game, std::shared_ptr<wxBitmap> bitmap);
 };
 
 #endif //PROJECT1_ITEM_H
