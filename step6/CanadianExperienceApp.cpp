@@ -1,7 +1,7 @@
 /**
  * @file CanadianExperienceApp.cpp
  * @author Charles B. Owen
- * @author Jacob Stacy
+ * @author Jacob R. Stacy
  */
 
 #include "pch.h"
