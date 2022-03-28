@@ -1,6 +1,7 @@
 /**
  * @file ViewEdit.h
  * @author Charles B. Owen
+ * @author Jacob R. Stacy
  *
  * Basic edit view class for the Canadian Experience
  *
@@ -11,10 +12,12 @@
 #ifndef CANADIANEXPERIENCE_VIEWEDIT_H
 #define CANADIANEXPERIENCE_VIEWEDIT_H
 
+#include "PictureObserver.h"
+
 /**
  * Basic edit view class for the Canadian Experience
  */
-class ViewEdit final : public wxWindow {
+class ViewEdit final : public wxScrolledCanvas, public PictureObserver {
 private:
     void OnLeftDown(wxMouseEvent &event);
     void OnLeftUp(wxMouseEvent& event);
@@ -23,6 +26,8 @@ private:
 
 public:
     ViewEdit(wxFrame* parent);
+
+    void UpdateObserver() override;
 };
 
 #endif //CANADIANEXPERIENCE_VIEWEDIT_H

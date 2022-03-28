@@ -1,12 +1,15 @@
 /**
  * @file ViewEdit.cpp
  * @author Charles B. Owen
+ * @author Jacob R. Stacy
  */
+
 #include "pch.h"
 
 #include <wx/dcbuffer.h>
 
 #include "ViewEdit.h"
+#include "Picture.h"
 
 using namespace std;
 
@@ -44,6 +47,7 @@ void ViewEdit::OnPaint(wxPaintEvent& event)
     auto graphics = std::shared_ptr<wxGraphicsContext>(wxGraphicsContext::Create( dc ));
 
     // Additional drawing code here
+    GetPicture()->Draw(graphics);
 }
 
 
@@ -54,7 +58,6 @@ void ViewEdit::OnPaint(wxPaintEvent& event)
  */
 void ViewEdit::OnLeftDown(wxMouseEvent &event)
 {
-
 }
 
 /**
@@ -72,5 +75,13 @@ void ViewEdit::OnLeftUp(wxMouseEvent &event)
 */
 void ViewEdit::OnMouseMove(wxMouseEvent &event)
 {
+}
+
+/**
+ * Force an update of this window when the picture changes.
+ */
+void ViewEdit::UpdateObserver()
+{
+    Refresh();
 }
 

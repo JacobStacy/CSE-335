@@ -3,13 +3,15 @@
  * @author Charles B. Owen
  * @author Jacob Stacy
  */
+
 #include "pch.h"
+
+#include <wx/xrc/xmlres.h>
 
 #include "MainFrame.h"
 #include "ViewEdit.h"
 #include "ViewTimeline.h"
-
-#include <wx/xrc/xmlres.h>
+#include "Picture.h"
 
 
 /// Directory within the resources that contains the images.
@@ -50,6 +52,15 @@ void MainFrame::OnAbout(wxCommandEvent&event)
  */
 void MainFrame::Initialize()
 {
+
+    //
+    // Create the picture
+    //
+
+    // Create a temporary picture object.
+    // We will remove this later!
+    mPicture = std::make_shared<Picture>();
+
     wxXmlResource::Get()->LoadFrame(this, nullptr, L"MainFrame");
 
     Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnExit, this, wxID_EXIT);
@@ -65,6 +76,10 @@ void MainFrame::Initialize()
 
     SetSizer( sizer );
     Layout();
+
+    // Tell the views about the picture
+    mViewEdit->SetPicture(mPicture);
+    mViewTimeline->SetPicture(mPicture);
 
 #ifdef WIN32
     // This sets the frame icon on Windows systems

@@ -10,6 +10,7 @@
 
 class ViewEdit;
 class ViewTimeline;
+class Picture;
 
 /**
  * The top-level (main) frame of the application
@@ -23,6 +24,9 @@ private:
 
     /// View class for the timeline
     ViewTimeline *mViewTimeline = nullptr;
+
+    /// The picture object we are viewing/editing
+    std::shared_ptr<Picture> mPicture;
 
 
 public:
