@@ -18,7 +18,7 @@ using namespace std;
  * Constructor
  * @param parent Pointer to wxFrame object, the main frame for the application
  */
-ViewEdit::ViewEdit(wxFrame* parent) : wxWindow(parent, wxID_ANY)
+ViewEdit::ViewEdit(wxFrame* parent) : wxScrolledCanvas(parent, wxID_ANY)
 {
     SetBackgroundStyle(wxBG_STYLE_PAINT);
 
@@ -37,7 +37,12 @@ ViewEdit::ViewEdit(wxFrame* parent) : wxWindow(parent, wxID_ANY)
  */
 void ViewEdit::OnPaint(wxPaintEvent& event)
 {
+    auto size = GetPicture()->GetSize();
+    SetVirtualSize(size.GetWidth(), size.GetHeight());
+    SetScrollRate(1, 1);
+
     wxAutoBufferedPaintDC dc(this);
+    DoPrepareDC(dc);
 
     wxBrush background(*wxWHITE);
     dc.SetBackground(background);
@@ -58,6 +63,8 @@ void ViewEdit::OnPaint(wxPaintEvent& event)
  */
 void ViewEdit::OnLeftDown(wxMouseEvent &event)
 {
+    mLastMouse = CalcUnscrolledPosition(event.GetPosition());
+    GetPicture()->UpdateObservers();
 }
 
 /**

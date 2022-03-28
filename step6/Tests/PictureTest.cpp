@@ -11,11 +11,13 @@
 #include "gtest/gtest.h"
 
 
-TEST(PictureTest, Construct) {
+TEST(PictureTest, Construct)
+{
     Picture picture;
 }
 
-TEST(PictureTest, Size) {
+TEST(PictureTest, Size)
+{
 
     Picture picture;
 

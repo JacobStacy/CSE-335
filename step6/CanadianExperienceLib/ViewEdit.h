@@ -19,6 +19,9 @@
  */
 class ViewEdit final : public wxScrolledCanvas, public PictureObserver {
 private:
+    /// The last mouse position
+    wxPoint mLastMouse = wxPoint(0, 0);
+
     void OnLeftDown(wxMouseEvent &event);
     void OnLeftUp(wxMouseEvent& event);
     void OnMouseMove(wxMouseEvent& event);
