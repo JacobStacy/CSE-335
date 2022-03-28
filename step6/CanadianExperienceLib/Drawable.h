@@ -31,6 +31,12 @@ private:
 
     /// The actor using this drawable
     Actor *mActor = nullptr;
+    
+    /// The Parent Drawable
+    Drawable *mParent = nullptr;
+    
+    /// The children of the Drawable
+    std::vector<std::shared_ptr<Drawable>> mChildren;
 
 protected:
 
@@ -109,6 +115,20 @@ public:
      * @return The rotation angle in radians
      */
     double GetRotation() const { return mRotation; }
+
+    /**
+     * Set the parent Drawable
+    * @param parent The new parent Drawable
+     */
+    void SetParent(Drawable *parent) { mParent = parent; }
+
+    /**
+     * Get the parent for the Drawable
+     * @return The parent Drawable
+     */
+    Drawable* GetParent() const { return mParent; }
+    
+    
 
 };
 

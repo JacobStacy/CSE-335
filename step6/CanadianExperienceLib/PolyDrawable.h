@@ -26,6 +26,9 @@ private:
     /// All points
     std::vector<wxPoint> mPoints;
 
+    /// Graphics Path
+    wxGraphicsPath mPath;
+
 public:
 
     PolyDrawable(const std::wstring& name);

@@ -61,3 +61,18 @@ TEST(DrawableTest, Rotation)
     ASSERT_NEAR(drawable.GetRotation(), rot, 0.00001);
 }
 
+TEST(DrawableTest, Association)
+{
+    DrawableMock body(L"Body");
+    auto arm = std::make_shared<DrawableMock>(L"Arm");
+    auto leg = std::make_shared<DrawableMock>(L"Leg");
+
+    ASSERT_EQ(nullptr, arm->GetParent());
+    ASSERT_EQ(nullptr, leg->GetParent());
+
+    body.AddChild(arm);
+    body.AddChild(leg);
+
+    ASSERT_EQ(&body, arm->GetParent());
+    ASSERT_EQ(&body, leg->GetParent());
+}
