@@ -29,6 +29,9 @@ private:
     /// Rotation of the Drawable related to it's parent
     double mRotation = 0;
 
+    /// The actor using this drawable
+    Actor *mActor = nullptr;
+
 protected:
 
     /// The postion the Drawable is placed

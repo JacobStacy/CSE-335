@@ -9,6 +9,7 @@
 #define CANADIANEXPERIENCE_ACTOR_H
 
 class Drawable;
+class Picture;
 
 /**
  * Class for actors in our drawings.
@@ -30,6 +31,15 @@ private:
 
     /// Whether the Actor is clickable or not
     bool mClickable = true;
+
+    /// The root drawable
+    std::shared_ptr<Drawable> mRoot;
+
+    /// The drawables in drawing order
+    std::vector<std::shared_ptr<Drawable>> mDrawablesInOrder;
+
+    /// The Picture the actor is part of
+    Picture *mPicture = nullptr;
 
 public:
 
@@ -91,6 +101,18 @@ public:
      * @param clickable New clickable status
      */
     void SetClickable(bool clickable) { mClickable = clickable; }
+
+    /**
+     * Set the Picture for the Actor
+     * @param picture New Picture
+     */
+    void SetPicture(Picture *picture) { mPicture = picture; }
+
+    /**
+     * Get Picture for the Actor
+     * @return Actor's Picture
+     */
+    Picture* GetPicture() { return mPicture; }
 
 };
 

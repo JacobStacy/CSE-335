@@ -1,6 +1,9 @@
 /**
  * @file Actor.cpp
- * @author Jacob Stacy
+ * @author Jacob R. Stacy
+ *
+ * Implementation of Actor class
+ *
  */
 
 #include "pch.h"
@@ -23,7 +26,7 @@ Actor::Actor(const std::wstring & name) : mName(name)
  */
 void Actor::SetRoot(std::shared_ptr<Drawable> root)
 {
-
+    mRoot = root;
 }
 
 /**
@@ -32,7 +35,20 @@ void Actor::SetRoot(std::shared_ptr<Drawable> root)
  */
 void Actor::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
+    // Don't draw if not enabled
+    if (!mEnabled)
+        return;
 
+    // This takes care of determining the absolute placement
+    // of all of the child drawables. We have to determine this
+    // in tree order, which may not be the order we draw.
+    if (mRoot != nullptr)
+        mRoot->Place(mPosition, 0);
+
+    for (auto drawable : mDrawablesInOrder)
+    {
+        drawable->Draw(graphics);
+    }
 }
 
 /**
@@ -42,6 +58,19 @@ void Actor::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 */
 std::shared_ptr<Drawable> Actor::HitTest(wxPoint pos)
 {
+    // If not enabled or not clickable, we indicate no hit.
+    if (!mClickable || !mEnabled)
+        return nullptr;
+
+    // Since this list is in drawing order, we realy want to know the last thing drawn
+    // under the mouse, since it will be on top. So, we reverse iterate over the list.
+    for (auto d = mDrawablesInOrder.rbegin(); d != mDrawablesInOrder.rend(); d++)
+    {
+        auto drawable = *d;
+        if (drawable->HitTest(pos))
+            return drawable;
+    }
+
     return nullptr;
 }
 
@@ -51,5 +80,6 @@ std::shared_ptr<Drawable> Actor::HitTest(wxPoint pos)
 */
 void Actor::AddDrawable(std::shared_ptr<Drawable> drawable)
 {
-
+    mDrawablesInOrder.push_back(drawable);
+    drawable->SetActor(this);
 }

@@ -24,7 +24,7 @@ Drawable::Drawable(const std::wstring& name) : mName(name)
  */
 void Drawable::SetActor(Actor *actor)
 {
-
+    mActor = actor;
 }
 
 /**

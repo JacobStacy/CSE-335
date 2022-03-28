@@ -7,12 +7,13 @@
 #include "pch.h"
 
 #include <wx/xrc/xmlres.h>
+#include <wx/stdpaths.h>
 
 #include "MainFrame.h"
 #include "ViewEdit.h"
 #include "ViewTimeline.h"
 #include "Picture.h"
-
+#include "PictureFactory.h"
 
 /// Directory within the resources that contains the images.
 const std::wstring ImagesDirectory = L"/images";
@@ -57,9 +58,12 @@ void MainFrame::Initialize()
     // Create the picture
     //
 
-    // Create a temporary picture object.
-    // We will remove this later!
-    mPicture = std::make_shared<Picture>();
+    wxStandardPaths& standardPaths = wxStandardPaths::Get();
+    auto imagesDir = standardPaths.GetResourcesDir().ToStdWstring() + ImagesDirectory;
+
+    // Create our picture
+    PictureFactory factory;
+    mPicture = factory.Create(imagesDir);
 
     wxXmlResource::Get()->LoadFrame(this, nullptr, L"MainFrame");
 
