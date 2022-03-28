@@ -7,9 +7,12 @@
 
 #include <cmath>
 
-#include "Drawable.h"
 #include "Actor.h"
+#include "Drawable.h"
 
+
+/// A scaling factor, converts mouse motion to rotation in radians
+const double RotationScaling = 0.02;
 
 /**
  * Constructor

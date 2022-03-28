@@ -90,7 +90,7 @@ public:
      * Is this a movable drawable?
      * @return true if movable
      */
-    bool IsMoveable() { return false; }
+    virtual bool IsMovable() { return false; }
 
     /**
      * Set the drawable position

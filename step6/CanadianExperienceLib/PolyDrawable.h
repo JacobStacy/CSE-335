@@ -17,7 +17,7 @@
  * This class has a list of points and draws a polygon
  * drawable based on those points.
  */
-class PolyDrawable : public Drawable{
+class PolyDrawable : public Drawable {
 private:
 
     /// The polygon color
