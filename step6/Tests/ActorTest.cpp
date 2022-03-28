@@ -59,8 +59,9 @@ TEST(ActorTest, Position)
 
     //Check default
     ASSERT_EQ(actor.GetPosition(), point);
+
     //Check setter
     point = wxPoint(100,100);
-    actor.SetPostion(point);
+    actor.SetPosition(point);
     ASSERT_EQ(actor.GetPosition(), point);
 }

@@ -78,7 +78,7 @@ public:
      * Set the Actor's position
      * @param pos New position
      */
-    void SetPostion(wxPoint pos) { mPosition = pos; }
+    void SetPosition(wxPoint pos) { mPosition = pos; }
 
     /**
      * Actor is clickable
