@@ -35,6 +35,14 @@ TEST(PictureTest, Size)
     ASSERT_EQ(size.GetWidth(), picture.GetSize().GetWidth());
 }
 
+TEST(PictureTest, GetTimeline)
+{
+    Picture picture;
+
+    Timeline *timeline = picture.GetTimeline();
+    ASSERT_NE(nullptr, timeline);
+}
+
 TEST(PictureTest, Iterator)
 {
     Picture picture;

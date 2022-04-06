@@ -8,6 +8,8 @@
 #ifndef CANADIANEXPERIENCE_PICTURE_H
 #define CANADIANEXPERIENCE_PICTURE_H
 
+#include "Timeline.h"
+
 class PictureObserver;
 class Actor;
 
@@ -28,6 +30,9 @@ private:
 
     /// Actors that are part of the picture
     std::vector<std::shared_ptr<Actor>> mActors;
+
+    /// The animation timeline
+    Timeline mTimeline;
 
 public:
 
@@ -53,12 +58,18 @@ public:
      */
     void SetSize(wxSize size) {mSize = size;}
 
+    /**
+     * Get a pointer to the Timeline object
+     * @return Pointer to the Timeline object
+     */
+    Timeline *GetTimeline() {return &mTimeline;}
+
     void AddObserver(PictureObserver *observer);
     void RemoveObserver(PictureObserver *observer);
     void UpdateObservers();
     void Draw(std::shared_ptr<wxGraphicsContext> graphics);
     void AddActor(std::shared_ptr<Actor> actor);
-
+    
     /** Iterator that iterates over the picture's actors */
     class Iter {
     public:

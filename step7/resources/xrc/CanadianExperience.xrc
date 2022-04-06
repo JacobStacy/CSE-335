@@ -14,13 +14,6 @@
 					<help>Exit this application</help>
 				</object>
 			</object>
-			<object class="wxMenu" name="HelpMenu">
-				<label>_Help</label>
-				<object class="wxMenuItem" name="wxID_ABOUT">
-					<label>_About\tF1</label>
-					<help>About this application</help>
-				</object>
-			</object>
 			<object class="wxMenu" name="Edit">
 				<label>_Edit</label>
 				<object class="wxMenuItem" name="EditMove">
@@ -32,6 +25,18 @@
 					<label>_Rotate</label>
 					<help>Use the mouse to rotate</help>
 					<checkable>1</checkable>
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="EditTimelineProperties">
+					<label>_Timeline Properties...</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="HelpMenu">
+				<label>_Help</label>
+				<object class="wxMenuItem" name="wxID_ABOUT">
+					<label>_About\tF1</label>
+					<help>About this application</help>
 				</object>
 			</object>
 		</object>
@@ -94,6 +99,91 @@
 					<auth_needed>0</auth_needed>
 					<markup>0</markup>
 					<bitmap />
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="TimelineDlg">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Timeline Properties</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>1</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText2">
+							<label>Number of Frames</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="TimelineDlgNumFrames">
+							<value></value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>1</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText21">
+							<label>Frame Rate:</label>
+							<wrap>-1</wrap>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_VERTICAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="TimelineDlgFrameRate">
+							<value></value>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStdDialogButtonSizer">
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_OK">
+							<label>&amp;OK</label>
+						</object>
+					</object>
+					<object class="button">
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="wxID_CANCEL">
+							<label>&amp;Cancel</label>
+						</object>
+					</object>
 				</object>
 			</object>
 		</object>
