@@ -43,7 +43,7 @@ const std::wstring PointerImageFile = L"/pointer.png";
  * @param parent The main wxFrame object
  */
 ViewTimeline::ViewTimeline(wxFrame* parent) :
-    wxWindow(parent,
+    wxScrolledCanvas(parent,
             wxID_ANY,
             wxDefaultPosition,
             wxSize(100, Height),
@@ -68,7 +68,13 @@ ViewTimeline::ViewTimeline(wxFrame* parent) :
  */
 void ViewTimeline::OnPaint(wxPaintEvent& event)
 {
+    auto timeline = GetPicture()->GetTimeline();
+
+    SetVirtualSize(BorderLeft + (timeline->GetNumFrames() * TickSpacing) + BorderRight, 0);
+    SetScrollRate(1, 0);
+
     wxAutoBufferedPaintDC dc(this);
+    DoPrepareDC(dc);
 
     wxBrush background(*wxWHITE);
     dc.SetBackground(background);
@@ -85,8 +91,6 @@ void ViewTimeline::OnPaint(wxPaintEvent& event)
             wxFONTSTYLE_NORMAL,
             wxFONTWEIGHT_NORMAL);
     graphics->SetFont(font, *wxBLACK);
-
-    auto timeline = GetPicture()->GetTimeline();
 
     for (int tickNum = 0; tickNum <= timeline->GetNumFrames(); tickNum++)
     {
