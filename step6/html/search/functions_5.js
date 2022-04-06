@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['onabout_0',['OnAbout',['../class_main_frame.html#aa6cb4bffa152fb2adad782a440af5de2',1,'MainFrame']]],
-  ['onexit_1',['OnExit',['../class_main_frame.html#af1146ec5200a7421957b143782bca765',1,'MainFrame']]],
-  ['oninit_2',['OnInit',['../class_canadian_experience_app.html#a68b33ba80d19c03af493fc637a658ebf',1,'CanadianExperienceApp']]],
-  ['onleftdown_3',['OnLeftDown',['../class_view_edit.html#a54a7b8bd3386efb1dcd39b02dcdc7c14',1,'ViewEdit::OnLeftDown()'],['../class_view_timeline.html#a49696cdceaa5c413497e1f33c4e13402',1,'ViewTimeline::OnLeftDown()']]],
-  ['onleftup_4',['OnLeftUp',['../class_view_edit.html#a81bae6b7b35dd2c43c049aad044de6ae',1,'ViewEdit::OnLeftUp()'],['../class_view_timeline.html#a8e585998262dee152ccfb27d417cf089',1,'ViewTimeline::OnLeftUp()']]],
-  ['onmousemove_5',['OnMouseMove',['../class_view_edit.html#a626eb6d63a1d009e2ef1b4b727b5bde9',1,'ViewEdit::OnMouseMove()'],['../class_view_timeline.html#adf0911956f6f5beb951117dfadeb4373',1,'ViewTimeline::OnMouseMove()']]],
-  ['onpaint_6',['OnPaint',['../class_view_edit.html#adf406a4c497b98c265ba4b35eafbc046',1,'ViewEdit::OnPaint()'],['../class_view_timeline.html#af45b30ae803c4c286611ded19445074e',1,'ViewTimeline::OnPaint()']]],
-  ['operator_3d_7',['operator=',['../class_picture.html#a76c19f353cc7f6bc89c0bf8d12f4d6e3',1,'Picture::operator=()'],['../class_picture_observer.html#a4ca83ceefb45c38ea687c43bf168ffe6',1,'PictureObserver::operator=()']]]
+  ['getcenter_0',['GetCenter',['../class_image_drawable.html#a74714a7bd21300327d71ac3e7398e45a',1,'ImageDrawable']]],
+  ['getcolor_1',['GetColor',['../class_poly_drawable.html#a788dd2969dea6fd30d4be7ff247cc677',1,'PolyDrawable']]],
+  ['getname_2',['GetName',['../class_actor.html#ad250f73ec316d1097c070168ece2299a',1,'Actor::GetName()'],['../class_drawable.html#aa382df2886879bd03e53e127dc418b8a',1,'Drawable::GetName() const']]],
+  ['getparent_3',['GetParent',['../class_drawable.html#a10bed07701cf785ceb2914855824bc85',1,'Drawable']]],
+  ['getpicture_4',['GetPicture',['../class_actor.html#a374e8fd9ad08ae3b72409e7e5f849825',1,'Actor::GetPicture()'],['../class_picture_observer.html#af8cd8dce25c5a99cabd7a13babc333c4',1,'PictureObserver::GetPicture()']]],
+  ['getposition_5',['GetPosition',['../class_actor.html#a525317db6b9fa363529675f64f4f9e09',1,'Actor::GetPosition()'],['../class_drawable.html#a58f5e614295cc42b4bc6dabdf322ce01',1,'Drawable::GetPosition() const']]],
+  ['getrotation_6',['GetRotation',['../class_drawable.html#a163d7cc82d3741a1995544e262e70aea',1,'Drawable']]],
+  ['getsize_7',['GetSize',['../class_picture.html#aea939d3ab5722f56a7a154f323cc9422',1,'Picture']]]
 ];
