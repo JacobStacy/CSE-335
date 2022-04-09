@@ -17,6 +17,10 @@
 class HeadTop : public ImageDrawable {
 private:
 
+
+    /// The animation channel for animating the move of this drawable
+    AnimChannelMove mMoveChannel;
+
 public:
 
     HeadTop(const std::wstring &name, const std::wstring &filename);
@@ -34,6 +38,16 @@ public:
     void DrawEyebrow(std::shared_ptr<wxGraphicsContext> graphics, wxPoint p, wxPoint p2);
 
     void DrawEye(std::shared_ptr<wxGraphicsContext> graphics, wxPoint p1);
+
+    void SetKeyframe() override;
+
+    void GetKeyframe() override;
+
+    void SetTimeline(Timeline* timeline) override;
+
+    AnimChannelMove *GetMoveChannel() {return &mMoveChannel;}
+
+    //void SetActor(Actor* actor) override;
 };
 
 #endif //CANADIANEXPERIENCE_HEADTOP_H

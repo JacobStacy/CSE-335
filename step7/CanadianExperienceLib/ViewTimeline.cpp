@@ -13,6 +13,10 @@
 #include "ViewTimeline.h"
 #include "TimelineDlg.h"
 #include "Picture.h"
+#include "Actor.h"
+
+/// Height to make this window
+static const int Height = 90;
 
 /// Y location for the top of a tick mark
 const int TickTop = 15;
@@ -36,13 +40,13 @@ const int BorderLeft = 10;
 const int BorderRight = 10;
 
 /// Filename for the pointer image
-const std::wstring PointerImageFile = L"/pointer.png";
+//const std::wstring PointerImageFile = L"/pointer.png";
 
 /**
  * Constructor
  * @param parent The main wxFrame object
  */
-ViewTimeline::ViewTimeline(wxFrame* parent) :
+ViewTimeline::ViewTimeline(wxFrame* parent, std::wstring imagesDir) :
     wxScrolledCanvas(parent,
             wxID_ANY,
             wxDefaultPosition,
@@ -59,6 +63,19 @@ ViewTimeline::ViewTimeline(wxFrame* parent) :
     parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
             &ViewTimeline::OnEditTimelineProperties, this,
             XRCID("EditTimelineProperties"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ViewTimeline::OnSetKeyframe, this,
+            XRCID("SetKeyframe"));
+
+    parent->Bind(wxEVT_COMMAND_MENU_SELECTED,
+            &ViewTimeline::OnDeleteKeyframe, this,
+            XRCID("DeleteKeyframe"));
+    
+
+    mPointerImage = std::make_unique<wxImage>(imagesDir + L"/pointer.png", wxBITMAP_TYPE_ANY);
+
+
 }
 
 
@@ -112,8 +129,6 @@ void ViewTimeline::OnPaint(wxPaintEvent& event)
             graphics->GetTextExtent(wstr, &numWidth, &h);
 
             graphics->DrawText(wstr, x - (numWidth / 2), TickTop + TickLong + TickSpacing);
-
-
         } else
         {
             // Draw Short Tick
@@ -121,6 +136,15 @@ void ViewTimeline::OnPaint(wxPaintEvent& event)
         }
     }
 
+    if(mPointerBitmap.IsNull())
+    {
+        mPointerBitmap = graphics->CreateBitmapFromImage(*mPointerImage);
+    }
+
+    graphics->DrawBitmap(mPointerBitmap,
+            (mPointerImage->GetWidth() / 2) + (TickSpacing * timeline->GetCurrentFrame()), TickTop,
+            mPointerImage->GetWidth(),
+            mPointerImage->GetHeight());
 
 
 
@@ -132,6 +156,18 @@ void ViewTimeline::OnPaint(wxPaintEvent& event)
  */
 void ViewTimeline::OnLeftDown(wxMouseEvent &event)
 {
+    auto click = CalcUnscrolledPosition(event.GetPosition());
+
+    int x = click.x;
+
+    // Get the timeline
+    Timeline *timeline = GetPicture()->GetTimeline();
+    int pointerX = (int)(timeline->GetCurrentTime() *
+            timeline->GetFrameRate() * TickSpacing + BorderLeft);
+
+    mMovingPointer = x >= pointerX - mPointerImage->GetWidth() / 2 &&
+            x <= pointerX + mPointerImage->GetWidth() / 2;
+
 
 }
 
@@ -150,7 +186,24 @@ void ViewTimeline::OnLeftUp(wxMouseEvent &event)
 */
 void ViewTimeline::OnMouseMove(wxMouseEvent &event)
 {
+    auto click = CalcUnscrolledPosition(event.GetPosition());
+    int x = click.x;
 
+    // Get the timeline
+    Timeline *timeline = GetPicture()->GetTimeline();
+
+    if (event.LeftIsDown())
+    {
+        if (mMovingPointer)
+        {
+            double newTime = static_cast<double>(x-BorderLeft) / (timeline->GetFrameRate()*TickSpacing);
+            if (newTime >= 0 && newTime <= timeline->GetDuration())
+            {
+                GetPicture()->SetAnimationTime(newTime);
+            }
+
+        }
+    }
 }
 
 /**
@@ -174,3 +227,34 @@ void ViewTimeline::OnEditTimelineProperties(wxCommandEvent& event)
         GetPicture()->UpdateObservers();
     }
 }
+
+/**
+ * Handle an Edit>Set Keyframe menu option
+ * @param event The menu event
+ */
+void ViewTimeline::OnSetKeyframe(wxCommandEvent& event)
+{
+    auto picture = GetPicture();
+    for (auto actor : *picture)
+    {
+        actor->SetKeyframe();
+    }
+}
+
+/**
+ * Handle an Edit>Delete Keyframe menu option
+ * @param event The menu event
+ */
+void ViewTimeline::OnDeleteKeyframe(wxCommandEvent& event)
+{
+    auto timeline = GetPicture()->GetTimeline();
+
+    auto picture = GetPicture();
+    for (auto actor : *picture)
+    {
+        actor->DeleteKeyframe();
+    }
+
+    picture->SetAnimationTime(timeline->GetCurrentTime());
+}
+

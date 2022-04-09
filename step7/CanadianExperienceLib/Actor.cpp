@@ -10,6 +10,8 @@
 
 #include "Actor.h"
 #include "Drawable.h"
+#include "Timeline.h"
+#include "Picture.h"
 
 /**
 * Constructor
@@ -83,3 +85,71 @@ void Actor::AddDrawable(std::shared_ptr<Drawable> drawable)
     mDrawablesInOrder.push_back(drawable);
     drawable->SetActor(this);
 }
+
+/**
+ * Set the picture link for this actor.
+ *
+ * This is telling the actor what
+ * picture to use.
+ *
+ * Also tells all child drawables what the timeline is.
+ * @param picture The picture we are using.
+ */
+void Actor::SetPicture(Picture *picture)
+{
+    mPicture = picture;
+
+    mPicture->GetTimeline()->AddChannel(&mMoveChannel);
+
+    // Set the timeline for all drawables. This links the channels to
+    // the timeline system.
+    for (auto drawable : mDrawablesInOrder)
+    {
+        drawable->SetTimeline(mPicture->GetTimeline());
+    }
+}
+
+/**
+ * Set a keyframe on an actor.
+ */
+void Actor::SetKeyframe()
+{
+    mMoveChannel.SetKeyframe(mPosition);
+
+    for (auto drawable : mDrawablesInOrder)
+    {
+        drawable->SetKeyframe();
+    }
+}
+
+void Actor::DeleteKeyframe()
+{
+    mMoveChannel.DeleteKeyframe();
+
+    for (auto drawable : mDrawablesInOrder)
+    {
+        drawable->GetAngleChannel()->DeleteKeyframe();
+        if (drawable->GetMoveChannel() !=nullptr)
+        {
+            drawable->GetMoveChannel()->DeleteKeyframe();
+        }
+    }
+}
+
+/**
+ * Get a keyframe for an actor.
+ */
+void Actor::GetKeyframe()
+{
+    if (mMoveChannel.IsValid())
+        mPosition = mMoveChannel.GetMove();
+
+    for (auto drawable : mDrawablesInOrder)
+    {
+        drawable->GetKeyframe();
+    }
+}
+
+
+
+

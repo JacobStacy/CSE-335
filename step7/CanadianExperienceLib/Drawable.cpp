@@ -7,8 +7,9 @@
 
 #include <cmath>
 
-#include "Actor.h"
 #include "Drawable.h"
+#include "Actor.h"
+#include "Timeline.h"
 
 
 /// A scaling factor, converts mouse motion to rotation in radians
@@ -30,6 +31,9 @@ Drawable::Drawable(const std::wstring& name) : mName(name)
 void Drawable::SetActor(Actor *actor)
 {
     mActor = actor;
+
+    // Set the channel name
+    mAngleChannel.SetName(actor->GetName() + L":" + mName);
 }
 
 /**
@@ -92,4 +96,30 @@ wxPoint Drawable::RotatePoint(wxPoint point, double angle)
 
     return wxPoint(int(cosA * point.x + sinA * point.y),
             int(-sinA * point.x + cosA * point.y));
+}
+
+/**
+ * Add the channels for this drawable to a timeline
+ * @param timeline The timeline class.
+ */
+void Drawable::SetTimeline(Timeline *timeline)
+{
+    timeline->AddChannel(&mAngleChannel);
+}
+
+/**
+ * Set a keyframe based on the current position.
+ */
+void Drawable::SetKeyframe()
+{
+    mAngleChannel.SetKeyframe(mRotation);
+}
+
+/**
+ * Get a keyframe update from the animation system.
+ */
+void Drawable::GetKeyframe()
+{
+    if (mAngleChannel.IsValid())
+        mRotation = mAngleChannel.GetAngle();
 }

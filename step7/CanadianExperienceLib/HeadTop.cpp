@@ -3,7 +3,11 @@
  * @author Jacob Stacy
  */
 
+#include "pch.h"
+
 #include "HeadTop.h"
+#include "Timeline.h"
+#include "Actor.h"
 
 /**
  * Constructor
@@ -13,6 +17,21 @@
 HeadTop::HeadTop(const std::wstring& name, const std::wstring& filename) :ImageDrawable(name, filename)
 {
 }
+
+///**
+// * Set the actor using this drawable
+// * @param actor Actor using this drawable
+// */
+//void HeadTop::SetActor(Actor *actor)
+//{
+//    mActor = actor;
+//
+//    Drawable::SetActor(actor);
+//
+//
+//    // Set the channel name
+//    mMoveChannel.SetName(actor->GetName() + L":" + mName);
+//}
 
 
 /**
@@ -82,3 +101,36 @@ wxPoint HeadTop::TransformPoint(wxPoint p)
     // Rotate as needed and offset
     return RotatePoint(p, mPlacedR) + mPlacedPosition;
 }
+
+/**
+ * Add the channels for this drawable to a timeline
+ * @param timeline The timeline class.
+ */
+void HeadTop::SetTimeline(Timeline *timeline)
+{
+    Drawable::SetTimeline(timeline);
+
+    timeline->AddChannel(&mMoveChannel);
+}
+
+/**
+ * Set a keyframe based on the current position.
+ */
+void HeadTop::SetKeyframe()
+{
+    Drawable::SetKeyframe();
+
+    mMoveChannel.SetKeyframe(mPosition);
+}
+
+/**
+ * Get a keyframe update from the animation system.
+ */
+void HeadTop::GetKeyframe()
+{
+    Drawable::GetKeyframe();
+
+    if (mMoveChannel.IsValid())
+        mPosition = mMoveChannel.GetMove();
+}
+

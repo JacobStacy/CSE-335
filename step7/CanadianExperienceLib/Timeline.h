@@ -9,6 +9,8 @@
 #ifndef CANADIANEXPERIENCE_TIMELINE_H
 #define CANADIANEXPERIENCE_TIMELINE_H
 
+class AnimChannel;
+
 /**
  * This class implements a timeline that manages the animation
  *
@@ -23,6 +25,9 @@ private:
     int mFrameRate = 30;
     double mCurrentTime = 0;
 
+    /// List of all animation channels
+    std::vector<AnimChannel *> mChannels;
+
 
 public:
 
@@ -35,6 +40,8 @@ public:
     Timeline(const Timeline &) = delete;
     /// Assignment Operator (Disabled)
     void operator=(const Timeline &) = delete;
+
+    void AddChannel(AnimChannel* channel);
 
 
     /**
@@ -74,7 +81,7 @@ public:
      * valid for that point in time.
      * @param t The new time to set
      */
-    void SetCurrentTime(double currentTime) { mCurrentTime = currentTime; }
+    void SetCurrentTime(double currentTime);
 
     /**
      * Get the animation duration

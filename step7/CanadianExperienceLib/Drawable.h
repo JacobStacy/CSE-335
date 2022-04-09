@@ -9,7 +9,11 @@
 #ifndef CANADIANEXPERIENCE_DRAWABLE_H
 #define CANADIANEXPERIENCE_DRAWABLE_H
 
+#include "AnimChannelAngle.h"
+#include "AnimChannelMove.h"
+
 class Actor;
+class Timeline;
 
 /**
  * Abstract base class for drawable elements of our picture.
@@ -23,9 +27,6 @@ private:
     /// Drawable's Name
     std::wstring mName;
 
-    /// Drawable's position related to it's parent
-    wxPoint mPosition = wxPoint(0, 0);
-
     /// Rotation of the Drawable related to it's parent
     double mRotation = 0;
 
@@ -37,6 +38,9 @@ private:
     
     /// The children of the Drawable
     std::vector<std::shared_ptr<Drawable>> mChildren;
+
+    /// The animation channel for animating the angle of this drawable
+    AnimChannelAngle mAngleChannel;
 
 protected:
 
@@ -50,6 +54,8 @@ protected:
 
     wxPoint RotatePoint(wxPoint point, double angle);
 
+/// Drawable's position related to it's parent
+wxPoint mPosition = wxPoint(0, 0);
 public:
 
     /// Default constructor (disabled)
@@ -127,9 +133,24 @@ public:
      * @return The parent Drawable
      */
     Drawable* GetParent() const { return mParent; }
-    
-    
 
+    virtual void SetTimeline(Timeline* timeline);
+
+    /**
+     * The angle animation channel
+     * @return Pointer to animation channel
+     */
+    AnimChannelAngle *GetAngleChannel() { return &mAngleChannel; }
+
+    /**
+     * The move animation channel
+     * @return Pointer to animation channel
+     */
+    virtual AnimChannelMove *GetMoveChannel() {return nullptr;}
+
+    virtual void SetKeyframe();
+
+    virtual void GetKeyframe();
 };
 
 #endif //CANADIANEXPERIENCE_DRAWABLE_H

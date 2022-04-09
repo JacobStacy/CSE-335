@@ -69,7 +69,7 @@ public:
     void UpdateObservers();
     void Draw(std::shared_ptr<wxGraphicsContext> graphics);
     void AddActor(std::shared_ptr<Actor> actor);
-    
+
     /** Iterator that iterates over the picture's actors */
     class Iter {
     public:
@@ -120,6 +120,8 @@ public:
      * @return Iter object at position past the end
      */
     Iter end() { return Iter(this, mActors.size()); }
+
+    void SetAnimationTime(double time);
 };
 
 #endif //CANADIANEXPERIENCE_PICTURE_H

@@ -59,7 +59,7 @@ void MainFrame::Initialize()
     //
 
     wxStandardPaths& standardPaths = wxStandardPaths::Get();
-    auto imagesDir = standardPaths.GetResourcesDir().ToStdWstring() + ImagesDirectory;
+    std::wstring imagesDir = standardPaths.GetResourcesDir().ToStdWstring() + ImagesDirectory;
 
     // Create our picture
     PictureFactory factory;
@@ -71,7 +71,7 @@ void MainFrame::Initialize()
     Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnAbout, this, wxID_ABOUT);
 
     mViewEdit = new ViewEdit(this);
-    mViewTimeline = new ViewTimeline(this);
+    mViewTimeline = new ViewTimeline(this, imagesDir);
 
     auto sizer = new wxBoxSizer( wxVERTICAL );
 

@@ -8,6 +8,8 @@
 #ifndef CANADIANEXPERIENCE_ACTOR_H
 #define CANADIANEXPERIENCE_ACTOR_H
 
+#include "AnimChannelMove.h"
+
 class Drawable;
 class Picture;
 
@@ -40,6 +42,9 @@ private:
 
     /// The Picture the actor is part of
     Picture *mPicture = nullptr;
+
+    /// The animation channel for animating the move of this drawable
+    AnimChannelMove mMoveChannel;
 
 public:
 
@@ -106,7 +111,7 @@ public:
      * Set the Picture for the Actor
      * @param picture New Picture
      */
-    void SetPicture(Picture *picture) { mPicture = picture; }
+    void SetPicture(Picture *picture);
 
     /**
      * Get Picture for the Actor
@@ -114,6 +119,17 @@ public:
      */
     Picture* GetPicture() { return mPicture; }
 
+    void GetKeyframe();
+
+    void SetKeyframe();
+
+    /**
+     * The Move animation channel
+     * @return Pointer to animation channel
+     */
+    AnimChannelMove *GetMoveChannel() { return &mMoveChannel; }
+
+    void DeleteKeyframe();
 };
 
 #endif //CANADIANEXPERIENCE_ACTOR_H

@@ -3,6 +3,8 @@
  * @author Jacob Stacy
  */
 
+#include "pch.h"
+
 #include "ImageDrawable.h"
 
 /**
