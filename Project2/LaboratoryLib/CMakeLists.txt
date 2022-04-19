@@ -4,7 +4,7 @@ set(SOURCE_FILES
         pch.h
         Laboratory.h Laboratory.cpp LaboratoryFactory.cpp LaboratoryFactory.h LaboratoryStandin.cpp LaboratoryStandin.h
         Polygon.cpp Polygon.h
-        LaboratoryDialog.cpp LaboratoryDialog.h include/laboratory-api.h GraphicsHelper.cpp GraphicsHelper.h Sparky.cpp Sparky.h FakeLaboratory.cpp FakeLaboratory.h LaboratoryFactoryOne.cpp LaboratoryFactoryOne.h ActualLaboratory.cpp ActualLaboratory.h Component.cpp Component.h Shape.cpp Shape.h)
+        LaboratoryDialog.cpp LaboratoryDialog.h include/laboratory-api.h GraphicsHelper.cpp GraphicsHelper.h Sparky.cpp Sparky.h FakeLaboratory.cpp FakeLaboratory.h LaboratoryFactoryOne.cpp LaboratoryFactoryOne.h ActualLaboratory.cpp ActualLaboratory.h Component.cpp Component.h Shape.cpp Shape.h EquipmentRack.cpp EquipmentRack.h ZeroPointModule.cpp ZeroPointModule.h)
 
 find_package(wxWidgets COMPONENTS core base xrc html xml REQUIRED)
 include(${wxWidgets_USE_FILE})

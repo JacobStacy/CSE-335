@@ -13,8 +13,8 @@
  */
 Shape::Shape(const std::wstring& name) : Component(name)
 {
-    mOrgin.x = 0;
-    mOrgin.y = 0;
+    mOrigin.x = 0;
+    mOrigin.y = 0;
 }
 
 /**
@@ -23,7 +23,7 @@ Shape::Shape(const std::wstring& name) : Component(name)
  */
 void Shape::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
-    mPolygon.DrawPolygon(graphics, mOrgin.x, mOrgin.y);
+    mPolygon.DrawPolygon(graphics, mOrigin.x, mOrigin.y);
 }
 
 

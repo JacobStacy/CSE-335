@@ -57,7 +57,7 @@ public:
      * Set the current time
      * @param time New time
      */
-    void SetTime (double time) { mTime = time; }
+    virtual void SetTime (double time) { mTime = time; }
 
     virtual void Reset(int frame) {}
 

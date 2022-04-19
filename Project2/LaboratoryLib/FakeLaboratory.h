@@ -30,6 +30,9 @@ private:
     /// Directory for resources | !!!! NOT IN UML !!!!!
     std::wstring mResourcesDir;
 
+    /// Frame rate in frames per second | !!!! NOT IN UML !!!!!
+    double mFrameRate = 30;
+
     /// The Actual Lab
     std::shared_ptr<ActualLaboratory> mLaboratory;
 
@@ -49,7 +52,7 @@ public:
      * Set the frame rate
      * @param rate New frame rate
      */
-    void SetFrameRate(double rate) override {}
+    void SetFrameRate(double rate) override { mFrameRate = rate; }
 
     /**
     * Set the current laboratory animation frame
@@ -81,7 +84,7 @@ public:
      * Get the current lab time
      * @return
      */
-    double GetLaboratoryTime() override { return 0;}
+    double GetLaboratoryTime() override { return mFrame / mFrameRate;}
 
 
 

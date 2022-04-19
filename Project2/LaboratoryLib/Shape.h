@@ -15,7 +15,7 @@
 class Shape : public Component{
 private:
 
-    wxPoint mOrgin;
+    wxPoint mOrigin;
 
     cse335::Polygon mPolygon;
 
@@ -38,9 +38,9 @@ public:
 
     cse335::Polygon* GetPolygon() { return &mPolygon; }
 
-    void SetOrgin(double x, double y) { mOrgin.x = x; mOrgin.y = y; }
+    void SetOrigin(double x, double y) { mOrigin.x = x; mOrigin.y = y; }
 
-    wxPoint GetOrgin() { return mOrgin; }
+    wxPoint GetOrigin() { return mOrigin; }
 
 };
 
