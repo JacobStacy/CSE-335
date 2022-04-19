@@ -7,38 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b57097dd-d2e0-4b99-b2c9-83022b3c7165" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/step3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannel.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannel.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannelAngle.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannelAngle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannelMove.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/AnimChannelMove.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../step7/Tests/AnimChannelAngleTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Actor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Actor.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Actor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Actor.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Drawable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Drawable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Drawable.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Drawable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/HeadTop.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/HeadTop.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/HeadTop.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/HeadTop.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ImageDrawable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ImageDrawable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/MainFrame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/MainFrame.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Picture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Picture.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Picture.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Picture.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/PolyDrawable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/PolyDrawable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Timeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Timeline.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Timeline.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/Timeline.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ViewTimeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ViewTimeline.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ViewTimeline.h" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/CanadianExperienceLib/ViewTimeline.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/Tests/ActorTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/Tests/ActorTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/Tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/Tests/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/Tests/PolyDrawableTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/Tests/PolyDrawableTest.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/resources/xrc/CanadianExperience.fbp" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/resources/xrc/CanadianExperience.fbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../step7/resources/xrc/CanadianExperience.xrc" beforeDir="false" afterPath="$PROJECT_DIR$/../step7/resources/xrc/CanadianExperience.xrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -79,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649282216217</updated>
       <workItem from="1649282217280" duration="1252000" />
+      <workItem from="1649792660502" duration="86000" />
     </task>
     <servers />
   </component>
