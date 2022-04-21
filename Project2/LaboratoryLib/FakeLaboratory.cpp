@@ -8,6 +8,7 @@
 #include "FakeLaboratory.h"
 #include "ActualLaboratory.h"
 #include "LaboratoryFactoryOne.h"
+#include "LaboratoryFactoryTwo.h"
 
 /**
  * Constructor
@@ -46,6 +47,10 @@ void FakeLaboratory::SetLaboratoryNumber(int laboratory)
     if (laboratory == 1)
     {
         auto factory = LaboratoryFactoryOne(mResourcesDir);
+        mLaboratory = factory.CreateLaboratory();
+    } else if (laboratory == 2)
+    {
+        auto factory = LaboratoryFactoryTwo(mResourcesDir);
         mLaboratory = factory.CreateLaboratory();
     }
 
