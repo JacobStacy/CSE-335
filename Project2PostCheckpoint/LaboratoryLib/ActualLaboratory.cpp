@@ -70,7 +70,7 @@ void ActualLaboratory::LoadScript(const std::wstring& script)
  */
 void ActualLaboratory::Update(double elapsed)
 {
-    if (elapsed >= 0)
+    if (elapsed > 0)
     {
         //
         // Send any events that become active to the components

@@ -49,6 +49,8 @@ public:
 
     void SetTime(double time) override;
 
+    void Reset(int frame) override;
+
     cse335::Polygon* GetPolygon() { return &mPolygon; }
 
     /**

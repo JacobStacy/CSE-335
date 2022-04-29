@@ -62,4 +62,5 @@ void Winch::Reset(int frame)
     mWheelPolygon.SetRotation(0);
     mDuration = 0;
     mRotation = 0;
+    mSource.Move(0,0,0);
 }

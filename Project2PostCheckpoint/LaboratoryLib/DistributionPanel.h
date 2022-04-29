@@ -23,12 +23,12 @@ private:
     PowerSink mSink;
 
     /// The PowerSources
-    std::vector<PowerSource> mSources;
+    std::vector<std::shared_ptr<PowerSource>> mSources;
 
 
 public:
 
-    DistributionPanel(const std::wstring& name, const std::wstring& image, const std::wstring& imageDir);
+    DistributionPanel(const std::wstring& name, const std::wstring& imageDir);
 
     /// Copy Constructor (Disabled)
     DistributionPanel(const DistributionPanel &) = delete;
@@ -40,6 +40,16 @@ public:
     void Update(double elapsed) override;
 
     double Power(double voltage) override;
+
+    /**
+     * Get the sink object for this component
+     * @return PowerSink object
+     */
+    PowerSink* GetSink() { return &mSink; }
+
+    std::shared_ptr<PowerSource> GetSource(int i) { return mSources[i]; }
+
+    void AddSource (const std::wstring imageDir, double capacity);
 
 };
 

@@ -43,6 +43,9 @@ const int U1Height = 10;
 /// The Height of a U2 Rack in pixels
 const int U2Height = 21;
 
+/// The Height of a U2 Rack in pixels
+const int U10Height = 104;
+
 /// X offset for the light
 const int LightXOffset = -166;
 
@@ -85,6 +88,9 @@ LaboratoryFactoryOne::LaboratoryFactoryOne(std::wstring resourcesDir) : mResourc
  */
 std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
 {
+    std::wstring imageDir = mResourcesDir + L"/images";
+    
+    
     auto labOne = make_shared<ActualLaboratory>();
 
     // The laboratory background image
@@ -94,7 +100,7 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     labOne->AddComponent(background);
 
     // Rack 1 - the left rack
-    auto rack1 = make_shared<EquipmentRack>(L"rack1", mResourcesDir + L"/images");
+    auto rack1 = make_shared<EquipmentRack>(L"rack1", imageDir);
     rack1->SetOrigin(RackX, RackY);
     labOne->AddComponent(rack1);
 
@@ -102,7 +108,7 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     // The first slot
     auto blankUTwo1 = make_shared<Shape>(L"blankUTwo1");
     blankUTwo1->GetPolygon()->SetImage(mResourcesDir + L"/images/2u.png");
-    blankUTwo1->GetPolygon()->Rectangle(SlotXOffset, 0);
+    blankUTwo1->GetPolygon()->BottomCenteredRectangle();
     blankUTwo1->SetOrigin(RackX, RackY - SlotYOffset);
     labOne->AddComponent(blankUTwo1);
 
@@ -123,46 +129,45 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
 
 
     // Rack 2 - the right rack
-    auto rack2 = make_shared<EquipmentRack>(L"rack2", mResourcesDir + L"/images");
+    auto rack2 = make_shared<EquipmentRack>(L"rack2", imageDir);
     rack2->SetOrigin(-RackX, RackY);
     labOne->AddComponent(rack2);
 
     // ZPM
-    auto zeroPointModule = make_shared<ZeroPointModule>(L"ZPM", mResourcesDir + L"/images");
+    auto zeroPointModule = make_shared<ZeroPointModule>(L"ZPM", imageDir);
     zeroPointModule->GetPolygon()->SetImage(mResourcesDir + L"/images/zpm.png");
     zeroPointModule->GetPolygon()->Rectangle(ZpmXOffset, 0);
     zeroPointModule->SetPosition(ZpmX, RackY);
     labOne->AddComponent(zeroPointModule);
 
     // Light 1
-    auto light1 = make_shared<Light>(L"", mResourcesDir + L"/images", mResourcesDir + L"/images/light1on.png",
+    auto light1 = make_shared<Light>(L"", imageDir, mResourcesDir + L"/images/light1on.png",
             mResourcesDir + L"/images/light1.png", LightXOffset);
     light1->SetPosition(LightX, LightY);
     labOne->AddComponent(light1);
 
 //    // Light 2
-//    auto light2 = make_shared<Light>(L"", mResourcesDir + L"/images", mResourcesDir + L"/images/light1on.png",
+//    auto light2 = make_shared<Light>(L"", imageDir, mResourcesDir + L"/images/light1on.png",
 //            mResourcesDir + L"/images/light1.png", LightXOffset);
 //    light2->SetPosition(-LightX, LightY);
 //    labOne->AddComponent(light2);
 
+    // The U5 Background for switches
+    auto switchUTen = make_shared<Shape>(L"blankUTwo2");
+    switchUTen->GetPolygon()->SetImage(mResourcesDir + L"/images/10u.png");
+    switchUTen->GetPolygon()->BottomCenteredRectangle();
+    switchUTen->SetOrigin(RackX, RackY - SlotYOffset - (U2Height * 2) - U1Height);
+    labOne->AddComponent(switchUTen);
+
     // The switch on the left side
-    auto switch1 = make_shared<Switch>(L"switch1", mResourcesDir + L"/images", mResourcesDir + L"/images/knifeswitch-on.png",
-            mResourcesDir + L"/images/knifeswitch-off.png", SwitchXOffset);
+    auto switch1 = make_shared<Switch>(L"switch1", imageDir, true);
     switch1->SetPosition(RackX - Switch1X, RackY - SlotYOffset - (U2Height * 2) - U1Height);
     labOne->AddComponent(switch1);
 
     // The switch on the left side
-    auto switch2 = make_shared<Switch>(L"switch2", mResourcesDir + L"/images", mResourcesDir + L"/images/knifeswitch-on.png",
-            mResourcesDir + L"/images/knifeswitch-off.png", SwitchXOffset);
+    auto switch2 = make_shared<Switch>(L"switch2", imageDir, false);
     switch2->SetPosition(RackX + Switch1X, RackY - SlotYOffset - (U2Height * 2) - U1Height);
     labOne->AddComponent(switch2);
-
-    // Connect ZPM to switch
-    zeroPointModule->GetSource()->SetSink(switch1->GetSink());
-
-    // Connect switch to lights
-    switch1->GetOffSource()->SetSink(light1->GetSink());
 
     // The winch
     auto winch = make_shared<Winch>(L"winch", mResourcesDir + L"/images/winch-12u-back.png", mResourcesDir + L"/images/winch-12u-wheel.png");
@@ -170,20 +175,35 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     labOne->AddComponent(winch);
 
     // The orbs
-    auto orbs = make_shared<Orbs>(L"orbs", mResourcesDir + L"/images", mResourcesDir + L"/images/orbs.png");
+    auto orbs = make_shared<Orbs>(L"orbs", imageDir, mResourcesDir + L"/images/orbs.png");
     orbs->SetPosition(OrbsX, OrbsY);
     labOne->AddComponent(orbs);
 
     //Connect winch to orbs
     winch->GetSource()->SetSink(orbs->GetMotionSink());
 
-    switch1->GetOnSource()->SetSink(orbs->GetPowerSink());
+
+
+    auto dist = make_shared<DistributionPanel>(L"dist",  imageDir);
+    dist->SetPosition(RackX, RackY - SlotYOffset - (U2Height * 2) - U1Height - U10Height);
+    labOne->AddComponent(dist);
+
+
+    zeroPointModule->GetSource()->SetSink(dist->GetSink());
+
+    dist->AddSource(imageDir, 200);
+    dist->AddSource(imageDir, 200);
+    dist->AddSource(imageDir, 500);
+
+    dist->GetSource(0)->SetSink(switch1->GetSink());
+    dist->GetSource(1)->SetSink(switch2->GetSink());
+
+    switch1->GetOnSource()->SetSink(light1->GetSink());
+    switch2->GetOnSource()->SetSink(orbs->GetPowerSink());
+
 
     // Load Animation Script
     labOne->LoadScript(mResourcesDir + L"/scripts/laboratory1.xml");
-
-    auto dist = make_shared<DistributionPanel>(L"dist", mResourcesDir + L"/images",  mResourcesDir + L"/images/dist-6u.png");
-
 
     return labOne;
 }

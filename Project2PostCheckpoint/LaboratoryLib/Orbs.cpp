@@ -32,6 +32,9 @@ const int SparkOffsetY = -45;
 /// The factor by which you convert the rotation number to position
 const double RotationPositionRatio = 250;
 
+/// Rotation to face left
+const double FaceLeft = .75;
+
 Orbs::Orbs(const std::wstring& name, const std::wstring& imageDir, const std::wstring& image)
         : Component(name), mMotionSink(this), mPowerSink(this, imageDir, OrbsCurrent)
 {
@@ -44,6 +47,8 @@ Orbs::Orbs(const std::wstring& name, const std::wstring& imageDir, const std::ws
 void Orbs::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y + mMovement);
+
+    mPowerSink.Draw(graphics, GetPosition().x + OrbsSinkPosition.x, GetPosition().y + OrbsSinkPosition.y + mMovement, FaceLeft);
 
     if (mVoltage > OrbsMinVoltage)
     {

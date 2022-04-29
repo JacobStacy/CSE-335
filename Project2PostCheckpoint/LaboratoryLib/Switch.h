@@ -34,10 +34,11 @@ private:
     /// Off Source
     PowerSource mOffSource;
 
+    bool mSide = true;
+
 public:
 
-    Switch(const std::wstring& name, const std::wstring& imageDir,
-            const std::wstring& onImage, const std::wstring& offImage, int xOffset);
+    Switch(const std::wstring& name, const std::wstring& imageDir, bool side);
 
     /// Copy Constructor (Disabled)
     Switch(const Switch &) = delete;

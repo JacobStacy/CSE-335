@@ -23,8 +23,12 @@ private:
     /// The postition of the PowerSource
     wxPoint mPosition;
 
-    PowerSink* mSink;
-    
+    PowerSink* mSink = nullptr;
+
+    std::wstring mImageDir;
+
+    double mCapacity;
+
 
 public:
 
@@ -37,7 +41,7 @@ public:
     /// Assignment operator
     void operator=(const PowerSource &) = delete;
 
-    PowerSource(Component* parent, std::wstring imageDir, double capacity);
+    PowerSource(Component* parent, std::wstring imageDir, double capacity) : mImageDir(imageDir), mCapacity(capacity) {}
     
     double Power(double voltage);
 
@@ -49,6 +53,7 @@ public:
 
     void SetPosition(double x, double y) { mPosition.x = x; mPosition.y = y; }
 
+    void Draw(std::shared_ptr<wxGraphicsContext> graphics, double x, double y, double rotation);
 };
 
 #endif //CANADIANEXPERIENCE_POWERSOURCE_H

@@ -15,11 +15,17 @@ const double TextOffset = 80;
 /// The ZPM output voltage
 const double ZPMVoltage = 1000;
 
+/// Location of the source on the ZPM
+const wxPoint ZPMSourcePosition = wxPoint(15, -15);
+
+/// Rotation to face right
+const double FaceRight = .25;
+
 /**
  * Constructor
  * @param name Name
  */
-ZeroPointModule::ZeroPointModule(const std::wstring& name, const std::wstring& imageDir) : Component(name), mSource(this, imageDir, ZPMVoltage)
+ZeroPointModule::ZeroPointModule(const std::wstring& name, const std::wstring& imageDir) : Component(name), mSource(this, imageDir, 100)
 {
     mAmps = 0;
 }
@@ -27,6 +33,8 @@ ZeroPointModule::ZeroPointModule(const std::wstring& name, const std::wstring& i
 void ZeroPointModule::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y); // Replace with visual shape
+
+    mSource.Draw(graphics, GetPosition().x + ZPMSourcePosition.x, GetPosition().y + ZPMSourcePosition.y, FaceRight);
 
     wxFont font(wxSize(0, 25),
             wxFONTFAMILY_SWISS,
@@ -57,7 +65,13 @@ void ZeroPointModule::Update(double elapsed)
 
 void ZeroPointModule::SetTime(double time)
 {
-    Power(ZPMVoltage);
+    if (time > 0)
+    {
+        Power(ZPMVoltage);
+    } else
+    {
+        Power(0);
+    }
 }
 
 double ZeroPointModule::Power(double voltage)
@@ -65,6 +79,11 @@ double ZeroPointModule::Power(double voltage)
     mAmps = mSource.Power(voltage);
 
     return 0;
+}
+
+void ZeroPointModule::Reset(int frame)
+{
+    Power(0);
 }
 
 
