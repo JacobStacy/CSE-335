@@ -11,6 +11,7 @@
 #include "FrankFactory.h"
 #include "Actor.h"
 #include "ImageDrawable.h"
+#include "LaboratoryAdapter.h"
 
 using namespace std;
 
@@ -28,6 +29,10 @@ std::shared_ptr<Picture> PictureFactory::Create(std::wstring resourcesDir)
     auto imagesDir = resourcesDir + ImagesDirectory;
 
     shared_ptr<Picture> picture = make_shared<Picture>();
+
+    shared_ptr<Actor> lab = make_shared<Actor>(L"Lab");
+    lab->AddDrawable(make_shared<LaboratoryAdapter>(L"LabAdaptor"));
+    picture->AddActor(lab);
 
     // Create and add Harold
     HaroldFactory haroldFactory;

@@ -11,6 +11,10 @@
 class Component;
 class Event;
 
+/**
+ * The ActualLaboratory class
+ * This class handles the actual objects in the laboratory
+ */
 class ActualLaboratory {
 private:
 

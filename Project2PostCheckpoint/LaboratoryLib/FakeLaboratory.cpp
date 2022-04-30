@@ -16,7 +16,7 @@
  */
 FakeLaboratory::FakeLaboratory(std::wstring resourcesDir) : mResourcesDir(resourcesDir)
 {
-    SetLaboratoryNumber(1);
+    SetLaboratoryNumber(2);
 }
 
 /**

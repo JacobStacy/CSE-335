@@ -10,6 +10,9 @@
 
 #include "Shape.h"
 
+/**
+ * Equipment Rack Class
+ */
 class EquipmentRack : public Shape{
 private:
     
@@ -27,8 +30,6 @@ public:
     EquipmentRack(const EquipmentRack &) = delete;
     /// Assignment Operator (Disabled)
     void operator=(const EquipmentRack &) = delete;
-
-    void Draw(std::shared_ptr<wxGraphicsContext> graphics) override;
 
 //    void AddRack(int size);
 };

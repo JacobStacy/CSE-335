@@ -30,7 +30,7 @@ private:
     double mAmps;
 
     /// The power source for this ZPM
-    PowerSource mSource;
+    std::shared_ptr<PowerSource> mSource;
 
 public:
 
@@ -51,13 +51,24 @@ public:
 
     void Reset(int frame) override;
 
+    /**
+     * Sets the position
+     * @param x X position
+     * @param y Y position
+     */
+    void SetPosition(double x, double y) override;
+
+    /**
+     * Gets the Polygon
+     * @return Polygon
+     */
     cse335::Polygon* GetPolygon() { return &mPolygon; }
 
     /**
      * Get the source object for this component
      * @return PowerSource object
      */
-    PowerSource* GetSource() { return &mSource; }
+    std::shared_ptr<PowerSource> GetSource() { return mSource; }
 
 };
 

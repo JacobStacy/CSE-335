@@ -7,6 +7,12 @@
 
 #include "Winch.h"
 
+/**
+ * Constructor
+ * @param name Name
+ * @param backImage Back Image
+ * @param wheelImage Wheel Image
+ */
 Winch::Winch(const std::wstring& name, const std::wstring& backImage, const std::wstring& wheelImage) : Component(name),
                                                                                                         mSource(this)
 {
@@ -17,6 +23,10 @@ Winch::Winch(const std::wstring& name, const std::wstring& backImage, const std:
     mWheelPolygon.CenteredSquare();
 }
 
+/**
+ * Draws the component
+ * @param graphics Graphics
+ */
 void Winch::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mBasePolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y);
@@ -25,6 +35,11 @@ void Winch::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 
 }
 
+
+/**
+ * Set the current time
+ * @param time New time
+ */
 void Winch::SetTime(double time)
 {
     if(mDuration > 0)
@@ -49,18 +64,26 @@ void Winch::SetTime(double time)
 
 }
 
+/**
+ * Loadss XML Event
+ * @param node node with event
+ */
 void Winch::XmlLoad(wxXmlNode* node)
 {
     mRotation = wxAtof(node->GetAttribute(L"rotate-to"));
     mDuration = wxAtof(node->GetAttribute(L"duration"));
 
-    mPrevTime = 2;
+    mPrevTime = wxAtof(node->GetAttribute(L"time"));
 }
 
+/**
+ * Resets the component to default
+ * @param frame Frame
+ */
 void Winch::Reset(int frame)
 {
     mWheelPolygon.SetRotation(0);
     mDuration = 0;
     mRotation = 0;
-    mSource.Move(0,0,0);
+    mSource.Move(0,0,mWheelPolygon.GetRotation());
 }

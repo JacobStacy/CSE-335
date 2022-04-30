@@ -11,9 +11,13 @@
 class MotionSink;
 class Component;
 
+/**
+ * Motion Source Class
+ */
 class MotionSource {
 private:
 
+    /// Motion Sink
     MotionSink* mSink;
 
 public:
@@ -27,6 +31,10 @@ public:
     /// Assignment operator
     void operator=(const MotionSource &) = delete;
 
+    /**
+     * Constructor
+     * @param parent Parent
+     */
     MotionSource(Component* parent) {}
 
     double Move(double time, double duration, double position);

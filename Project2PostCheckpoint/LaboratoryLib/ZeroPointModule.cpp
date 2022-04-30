@@ -24,17 +24,24 @@ const double FaceRight = .25;
 /**
  * Constructor
  * @param name Name
+ * @param imageDir Image Directory
  */
-ZeroPointModule::ZeroPointModule(const std::wstring& name, const std::wstring& imageDir) : Component(name), mSource(this, imageDir, 100)
+ZeroPointModule::ZeroPointModule(const std::wstring& name, const std::wstring& imageDir) : Component(name)
 {
+    mSource = std::make_shared<PowerSource>(this, imageDir, 100, wxPoint(0,0), FaceRight);
+    mSource->SetPosition(GetPosition().x + ZPMSourcePosition.x, GetPosition().y + ZPMSourcePosition.y);
     mAmps = 0;
 }
 
+/**
+ * Draws the component
+ * @param graphics Graphics
+ */
 void ZeroPointModule::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y); // Replace with visual shape
 
-    mSource.Draw(graphics, GetPosition().x + ZPMSourcePosition.x, GetPosition().y + ZPMSourcePosition.y, FaceRight);
+    mSource->Draw(graphics, GetPosition().x + ZPMSourcePosition.x, GetPosition().y + ZPMSourcePosition.y, FaceRight);
 
     wxFont font(wxSize(0, 25),
             wxFONTFAMILY_SWISS,
@@ -58,11 +65,19 @@ void ZeroPointModule::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 
 }
 
+/**
+ * Updates the Component
+ * @param elapsed Current Time
+ */
 void ZeroPointModule::Update(double elapsed)
 {
     Component::Update(elapsed);
 }
 
+/**
+ * Set the current time
+ * @param time New time
+ */
 void ZeroPointModule::SetTime(double time)
 {
     if (time > 0)
@@ -74,16 +89,32 @@ void ZeroPointModule::SetTime(double time)
     }
 }
 
+/**
+ * Powers the component
+ * @param voltage Voltage Supplied
+ * @return Current Drawn
+ */
 double ZeroPointModule::Power(double voltage)
 {
-    mAmps = mSource.Power(voltage);
+    mAmps = mSource->Power(voltage);
 
     return 0;
 }
 
+/**
+ * Resets the component to default
+ * @param frame Frame
+ */
 void ZeroPointModule::Reset(int frame)
 {
     Power(0);
+}
+
+void ZeroPointModule::SetPosition(double x, double y)
+{
+    Component::SetPosition(x, y);
+
+    mSource->SetPosition(GetPosition().x + ZPMSourcePosition.x, GetPosition().y + ZPMSourcePosition.y);
 }
 
 

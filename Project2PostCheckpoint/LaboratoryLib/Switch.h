@@ -13,6 +13,9 @@
 #include "PowerSink.h"
 #include "PowerSource.h"
 
+/**
+ * Switch Class
+ */
 class Switch : public Component{
 private:
 
@@ -29,11 +32,12 @@ private:
     PowerSink mSink;
 
     /// On Source
-    PowerSource mOnSource;
+    std::shared_ptr<PowerSource> mOnSource;
 
     /// Off Source
-    PowerSource mOffSource;
+    std::shared_ptr<PowerSource> mOffSource;
 
+    /// What side the connections are on, Left = True
     bool mSide = true;
 
 public:
@@ -61,16 +65,17 @@ public:
      */
     PowerSink* GetSink() { return &mSink; }
 
-    PowerSource* GetOnSource() { return &mOnSource; }
+    /**
+     * Gets Top Source
+     * @return Source
+     */
+    std::shared_ptr<PowerSource> GetOnSource() { return mOnSource; }
 
-    PowerSource* GetOffSource() { return &mOffSource; }
-
-
-//    /**
-//     * Set the switch to on or off
-//     * @param isOn Position it is being set to
-//     */
-//    void SetOn(bool isOn) { mOn = isOn; }
+    /**
+     * Gets Bottom Source
+     * @return Source
+     */
+    std::shared_ptr<PowerSource> GetOffSource() { return mOffSource; }
 
 };
 

@@ -26,10 +26,10 @@ const int SwitchRightX = 22;
 const int SwitchSinkY = -63;
 
 /// Y position for the switch down source
-const int SwitchSource0Y = -37;
+const int SwitchSource1Y = -37;
 
 /// Y position for the switch up source
-const int SwitchSource1Y = -89;
+const int SwitchSource0Y = -89;
 
 /// Rotation to face right
 const double FaceRight = .25;
@@ -45,19 +45,45 @@ const double FaceLeft = .75;
  */
 Switch::Switch(const std::wstring& name, const std::wstring& imageDir, bool side)
         : Component(name),
-        mSink(this, imageDir, SwitchCapacity),
-        mOnSource(this, imageDir, SwitchCapacity),
-        mOffSource(this, imageDir, SwitchCapacity),
+          mSink(this, imageDir, SwitchCapacity, wxPoint(0,0), 0),
         mSide(side)
 {
+    mOnSource = std::make_shared<PowerSource>(this, imageDir, SwitchCapacity, wxPoint(0,0), 0);
+    mOffSource = std::make_shared<PowerSource>(this, imageDir, SwitchCapacity, wxPoint(0,0), 0);
+
     mOn = false;
     mOnPolygon.SetImage(imageDir + SwitchOnImage);
     mOffPolygon.SetImage(imageDir + SwitchOffImage);
 
     mOnPolygon.BottomCenteredRectangle();
     mOffPolygon.BottomCenteredRectangle();
+
+    if (side)
+    {
+        mSink.SetRotation(FaceLeft);
+        mOnSource->SetRotation(FaceLeft);
+        mOffSource->SetRotation(FaceLeft);
+
+        mSink.SetPosition(GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSinkY);
+        mOnSource->SetPosition(GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource0Y);
+        mOffSource->SetPosition(GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource1Y);
+    } else
+    {
+        mSink.SetRotation(FaceRight);
+        mOnSource->SetRotation(FaceRight);
+        mOffSource->SetRotation(FaceRight);
+
+        mSink.SetPosition(GetPosition().x + SwitchRightX, GetPosition().y + SwitchSinkY);
+        mOnSource->SetPosition(GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource0Y);
+        mOffSource->SetPosition(GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource1Y);
+    }
+
 }
 
+/**
+ * Draws the switch
+ * @param graphics Graphics
+ */
 void Switch::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     if (mOn)
@@ -70,39 +96,52 @@ void Switch::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 
     if (mSide)
     {
-        mOnSource.Draw(graphics, GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource0Y, FaceLeft);
-        mOffSource.Draw(graphics, GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource1Y, FaceLeft);
+        mOnSource->Draw(graphics, GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource0Y, FaceLeft);
+        mOffSource->Draw(graphics, GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSource1Y, FaceLeft);
         mSink.Draw(graphics, GetPosition().x + SwitchLeftX, GetPosition().y + SwitchSinkY, FaceLeft);
     } else
     {
-        mOnSource.Draw(graphics, GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource0Y, FaceRight);
-        mOffSource.Draw(graphics, GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource1Y, FaceRight);
+        mOnSource->Draw(graphics, GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource0Y, FaceRight);
+        mOffSource->Draw(graphics, GetPosition().x + SwitchRightX, GetPosition().y + SwitchSource1Y, FaceRight);
         mSink.Draw(graphics, GetPosition().x + SwitchRightX, GetPosition().y + SwitchSinkY, FaceRight);
     }
 }
 
+/**
+ * Updates the Component
+ * @param elapsed Current Time
+ */
 void Switch::Update(double elapsed)
 {
     Component::Update(elapsed);
 }
 
+/**
+ * Powers the component
+ * @param voltage Voltage Supplied
+ * @return Current Drawn
+ */
 double Switch::Power(double voltage)
 {
     double amps = 0.0;
 
     if (mOn)
     {
-        amps = mOnSource.Power(voltage);
-        mOffSource.Power(0);
+        amps = mOnSource->Power(voltage);
+        mOffSource->Power(0);
     } else
     {
-        amps = mOffSource.Power(voltage);
-        mOnSource.Power(0);
+        amps = mOffSource->Power(voltage);
+        mOnSource->Power(0);
     }
 
     return amps;
 }
 
+/**
+ * Loads XML Event
+ * @param node node with event
+ */
 void Switch::XmlLoad(wxXmlNode* node)
 {
     if(node->GetAttribute(L"on") == L"true")
@@ -115,9 +154,15 @@ void Switch::XmlLoad(wxXmlNode* node)
 
 }
 
+/**
+ * Resets the component to default
+ * @param frame Frame
+ */
 void Switch::Reset(int frame)
 {
     mOn = false;
 }
+
+
 
 

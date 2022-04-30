@@ -14,9 +14,13 @@
 #include "PowerSource.h"
 #include "Polygon.h"
 
+/**
+ * DistributionPanel class
+ */
 class DistributionPanel : public Component{
 private:
 
+    /// Polygon
     cse335::Polygon mPolygon;
 
     /// The PowerSink
@@ -47,9 +51,21 @@ public:
      */
     PowerSink* GetSink() { return &mSink; }
 
+    /**
+     * Get Source
+     * @param i Which Source
+     * @return Source
+     */
     std::shared_ptr<PowerSource> GetSource(int i) { return mSources[i]; }
 
-    void AddSource (const std::wstring imageDir, double capacity);
+    /**
+     * Adds source
+     * @param imageDir Dir
+     * @param capacity Capacity
+     */
+    void AddSource (const std::wstring& imageDir, double capacity);
+
+    void SetPosition(double x, double y) override;
 
 };
 

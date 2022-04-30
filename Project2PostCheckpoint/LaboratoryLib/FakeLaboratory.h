@@ -12,6 +12,9 @@ class ActualLaboratory;
 
 #include "Laboratory.h"
 
+/**
+ * FakeLaboratory
+ */
 class FakeLaboratory : public Laboratory{
 private:
 

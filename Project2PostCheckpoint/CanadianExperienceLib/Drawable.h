@@ -46,7 +46,6 @@ protected:
     Drawable(const std::wstring &name);
     wxPoint RotatePoint(wxPoint point, double angle);
 
-
     /// The actual postion in the drawing
     wxPoint mPlacedPosition = wxPoint(0, 0);
 

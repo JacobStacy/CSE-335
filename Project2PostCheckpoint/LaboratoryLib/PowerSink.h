@@ -12,31 +12,25 @@ class PowerSource;
 
 #include "Component.h"
 #include "Polygon.h"
+#include "BezierEnd.h"
 
 /**
  * The class for our PowerSink Object
  */
-class PowerSink {
+class PowerSink : public BezierEnd {
 private:
-
-    /// Power for the sink
-    double mPower;
-
-    /// The postition of the PowerSink
-    wxPoint mPosition;
 
     /// The Component the sink belongs to
     Component* mParent;
 
+    /// Image Directory
     std::wstring mImageDir;
 
+    /// Capacity of connector
     double mCapacity;
 
-    cse335::Polygon mPolygon;
-
-//    /// Source that the sink it connected to
-//    PowerSource* mSource;
-
+    /// Voltage | This is only for the challenge task
+    double mVoltage = 0;
 
 public:
 
@@ -49,8 +43,7 @@ public:
     /// Assignment operator
     void operator=(const PowerSink &) = delete;
 
-    PowerSink(Component *parent, const std::wstring& imageDir, double capacity)
-            : mParent(parent), mImageDir(imageDir), mCapacity(capacity) {}
+    PowerSink(Component *parent, const std::wstring& imageDir, double capacity, wxPoint point, double rotation, double speed = 100);
 
     double Power(double voltage);
 
@@ -60,14 +53,22 @@ public:
 //     */
 //    void SetSource(PowerSource* source) { mSource = source; }
 
-    void SetPosition(double x, double y) { mPosition.x = x; mPosition.y = y; }
 
+    /**
+     * Gets Parent
+     * @return Parent
+     */
     Component* GetParent() { return mParent; }
 
     void Draw(std::shared_ptr<wxGraphicsContext> graphics, double x, double y, double rotation);
 
+    /**
+     * Get Voltage | Only for challenge task
+     * @return Voltage
+     */
+    double GetVoltage() { return mVoltage;}
 
-
+    wxPoint GetPosition() override;
 };
 
 #endif //CANADIANEXPERIENCE_POWERSINK_H

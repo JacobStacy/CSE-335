@@ -11,7 +11,8 @@
 
 /**
  * Constructor
-* @param name The component name */
+* @param name The component name
+ * */
 Component::Component(const std::wstring &name) : mName(name)
 {
 

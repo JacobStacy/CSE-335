@@ -8,25 +8,25 @@
 #ifndef CANADIANEXPERIENCE_POWERSOURCE_H
 #define CANADIANEXPERIENCE_POWERSOURCE_H
 
+#include "BezierEnd.h"
+
 class PowerSink;
 class Component;
 
 /**
  * The class for our PowerSource Object
  */
-class PowerSource {
+class PowerSource : public BezierEnd {
 private:
 
-    /// Power for the source
-    double mPower;
 
-    /// The postition of the PowerSource
-    wxPoint mPosition;
-
+    /// Sink connected to
     PowerSink* mSink = nullptr;
 
+    /// Image Dir
     std::wstring mImageDir;
 
+    /// Capacity
     double mCapacity;
 
 
@@ -41,7 +41,7 @@ public:
     /// Assignment operator
     void operator=(const PowerSource &) = delete;
 
-    PowerSource(Component* parent, std::wstring imageDir, double capacity) : mImageDir(imageDir), mCapacity(capacity) {}
+    PowerSource(Component* parent, std::wstring imageDir, double capacity, wxPoint point, double rotation, double speed = 100);
     
     double Power(double voltage);
 
@@ -51,9 +51,15 @@ public:
      */
     void SetSink(PowerSink* sink) { mSink = sink; }
 
-    void SetPosition(double x, double y) { mPosition.x = x; mPosition.y = y; }
-
     void Draw(std::shared_ptr<wxGraphicsContext> graphics, double x, double y, double rotation);
+
+    /**
+     * Gets Capacity
+     * @return Capacity
+     */
+    double GetCapacity() { return mCapacity; }
+
+    wxPoint GetPosition() override;
 };
 
 #endif //CANADIANEXPERIENCE_POWERSOURCE_H

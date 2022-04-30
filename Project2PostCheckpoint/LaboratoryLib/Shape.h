@@ -12,11 +12,16 @@
 #include "Component.h"
 #include "Polygon.h"
 
+/**
+ * Shape Class
+ */
 class Shape : public Component{
 private:
 
+    /// Orgin
     wxPoint mOrigin;
 
+    /// Polygon
     cse335::Polygon mPolygon;
 
 public:
@@ -36,10 +41,23 @@ public:
 
     void Draw(std::shared_ptr<wxGraphicsContext> graphics) override;
 
+    /**
+     * Gets polygon
+     * @return polygon
+     */
     cse335::Polygon* GetPolygon() { return &mPolygon; }
 
+    /**
+     * Set Origin
+     * @param x X
+     * @param y Y
+     */
     void SetOrigin(double x, double y) { mOrigin.x = x; mOrigin.y = y; }
 
+    /**
+     * Returns origin
+     * @return Origin
+     */
     wxPoint GetOrigin() { return mOrigin; }
 
 };

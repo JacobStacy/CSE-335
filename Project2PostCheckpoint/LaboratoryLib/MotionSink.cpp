@@ -7,6 +7,10 @@
 
 #include "MotionSink.h"
 
+/**
+ * Handles Movement
+ * @param position Positon
+ */
 void MotionSink::Move(double position)
 {
     mParent->Update(position);

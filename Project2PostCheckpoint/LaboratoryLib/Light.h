@@ -19,9 +19,13 @@
 class Light : public Component{
 private:
 
+    /// Is on?
     bool mOn;
 
+    /// On Polygon
     cse335::Polygon mOnPolygon;
+
+    /// Off Polygon
     cse335::Polygon mOffPolygon;
 
     /// The power sink for this Light
@@ -40,8 +44,6 @@ public:
     void operator=(const Light &) = delete;
 
     void Draw(std::shared_ptr<wxGraphicsContext> graphics) override;
-
-    void Update(double elapsed) override;
 
     double Power(double voltage) override;
 

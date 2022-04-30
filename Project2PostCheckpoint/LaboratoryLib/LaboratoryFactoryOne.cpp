@@ -15,21 +15,23 @@
 #include "Winch.h"
 #include "Orbs.h"
 #include "DistributionPanel.h"
+#include "Cable.h"
+#include "Clamp.h"
 
 /// Offset for drawing background
-double BackXOffset = -600;
+const double BackXOffset = -600;
 
 /// Offset for drawing ZPM
-int ZpmXOffset = -50;
+const int ZpmXOffset = -50;
 
 /// Offset for drawing ZPM
-double ZpmX = -550;
+const double ZpmX = -550;
 
 /// Offset for drawing Slots
-int SlotXOffset = -57;
+const int SlotXOffset = -57;
 
 /// Offset for drawing Equipment Racks
-double RackX = -350;
+const double RackX = -350;
 
 /// The Y position for the racks | website is down so need to change when I can look it up
 const double RackY = -120;
@@ -179,27 +181,34 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     orbs->SetPosition(OrbsX, OrbsY);
     labOne->AddComponent(orbs);
 
-    //Connect winch to orbs
-    winch->GetSource()->SetSink(orbs->GetMotionSink());
-
-
-
+    // Distributor
     auto dist = make_shared<DistributionPanel>(L"dist",  imageDir);
     dist->SetPosition(RackX, RackY - SlotYOffset - (U2Height * 2) - U1Height - U10Height);
     labOne->AddComponent(dist);
 
 
-    zeroPointModule->GetSource()->SetSink(dist->GetSink());
+    //Connect winch to orbs
+    winch->GetSource()->SetSink(orbs->GetMotionSink());
+
+    auto cable1 = make_shared<Cable>(L"Cable", imageDir, zeroPointModule->GetSource(), dist->GetSink(), 100, 100);
+    labOne->AddComponent(cable1);
 
     dist->AddSource(imageDir, 200);
     dist->AddSource(imageDir, 200);
     dist->AddSource(imageDir, 500);
 
-    dist->GetSource(0)->SetSink(switch1->GetSink());
-    dist->GetSource(1)->SetSink(switch2->GetSink());
+    auto cable2 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(0), switch1->GetSink(), 100, 100);
+    labOne->AddComponent(cable2);
 
-    switch1->GetOnSource()->SetSink(light1->GetSink());
-    switch2->GetOnSource()->SetSink(orbs->GetPowerSink());
+    auto cable3 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(1), switch2->GetSink(), 100, 100);
+    labOne->AddComponent(cable3);
+
+    auto cable4 = make_shared<Cable>(L"Cable", imageDir, switch1->GetOnSource(), light1->GetSink(), 100, 100);
+    labOne->AddComponent(cable4);
+
+    auto cable5 = make_shared<Cable>(L"Cable", imageDir, switch2->GetOnSource(), orbs->GetPowerSink(), 100, 100);
+    cable5->AddClamp(make_shared<Clamp>(0, 0, 0, 0));
+    labOne->AddComponent(cable5);
 
 
     // Load Animation Script

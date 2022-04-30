@@ -11,6 +11,9 @@
 #include "MotionSource.h"
 #include "Component.h"
 
+/**
+ * MotionSink
+ */
 class MotionSink {
 private:
 
@@ -28,10 +31,18 @@ public:
     /// Assignment operator
     void operator=(const MotionSink &) = delete;
 
+    /**
+     * Constructor
+     * @param parent Parent
+     */
     MotionSink(Component *parent) : mParent(parent) {}
 
     void Move(double position);
 
+    /**
+     * Gets Parent
+     * @return Parent
+     */
     Component* GetParent() { return mParent; }
 
 

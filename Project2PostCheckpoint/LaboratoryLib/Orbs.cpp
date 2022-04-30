@@ -35,15 +35,27 @@ const double RotationPositionRatio = 250;
 /// Rotation to face left
 const double FaceLeft = .75;
 
+/**
+ * Constuctor
+ * @param name Name
+ * @param imageDir Image Dir
+ * @param image Image for Orb
+ */
 Orbs::Orbs(const std::wstring& name, const std::wstring& imageDir, const std::wstring& image)
-        : Component(name), mMotionSink(this), mPowerSink(this, imageDir, OrbsCurrent)
+        : Component(name), mMotionSink(this), mPowerSink(this, imageDir, OrbsCurrent, wxPoint(0,0), FaceLeft)
 {
     mPolygon.SetImage(image);
     mPolygon.BottomCenteredRectangle();
 
+    mPowerSink.SetPosition(GetPosition().x + OrbsSinkPosition.x, GetPosition().y + OrbsSinkPosition.y + mMovement);
+
     mSparky.SetIntensity(1);
 }
 
+/**
+ * Draws Orb
+ * @param graphics Graphics
+ */
 void Orbs::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y + mMovement);
@@ -56,28 +68,44 @@ void Orbs::Draw(std::shared_ptr<wxGraphicsContext> graphics)
             GetPosition().x + SparkOffset1X, GetPosition().y + mMovement + SparkOffsetY,
             GetPosition().x + SparkOffset2X, GetPosition().y + mMovement + SparkOffsetY);
     }
+
+    mPowerSink.SetPosition(GetPosition().x + OrbsSinkPosition.x, GetPosition().y + OrbsSinkPosition.y + mMovement);
+
+
 }
 
+/**
+ * Sets time
+ * @param time Time
+ */
 void Orbs::SetTime(double time)
 {
     mSparky.SetTime(time);
 }
 
-void Orbs::XmlLoad(wxXmlNode* node)
-{
-    Component::XmlLoad(node);
-}
-
+/**
+ * Resets
+ * @param frame Frame
+ */
 void Orbs::Reset(int frame)
 {
     mSparky.Reset();
 }
 
+/**
+ * Updates Movement
+ * @param position Position
+ */
 void Orbs::Update(double position)
 {
     mMovement = position * RotationPositionRatio;
 }
 
+/**
+ * Powers orb
+ * @param voltage Votage
+ * @return Amps
+ */
 double Orbs::Power(double voltage)
 {
     mVoltage = voltage;
@@ -87,6 +115,18 @@ double Orbs::Power(double voltage)
     }
 
     return voltage / OrbsVoltage * OrbsCurrent;
+}
+
+/**
+ * Sets Position
+ * @param x X
+ * @param y Y
+ */
+void Orbs::SetPosition(double x, double y)
+{
+    Component::SetPosition(x, y);
+    mPowerSink.SetPosition(GetPosition().x + OrbsSinkPosition.x, GetPosition().y + OrbsSinkPosition.y + mMovement);
+    mPowerSink.SetRotation(FaceLeft);
 }
 
 

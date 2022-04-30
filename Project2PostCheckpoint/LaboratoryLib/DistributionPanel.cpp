@@ -28,17 +28,26 @@ const double FaceUp = 0;
 /// Rotation to face left
 const double FaceLeft = .75;
 
+/// Sink Capacity
+const double SinkCap = 1000;
+
 /**
  * Constructor
  * @param name
  * @param imageDir
  */
-DistributionPanel::DistributionPanel(const std::wstring& name, const std::wstring& imageDir) : Component(name), mSink (this, imageDir, 1000)
+DistributionPanel::DistributionPanel(const std::wstring& name, const std::wstring& imageDir) : Component(name), mSink (this, imageDir, SinkCap, wxPoint(0,0), FaceLeft)
 {
     mPolygon.SetImage(imageDir + DistributionImage);
     mPolygon.BottomCenteredRectangle();
+
+    mSink.SetPosition(GetPosition().x + DistributionSinkPosition.x, GetPosition().y + DistributionSinkPosition.y);
 }
 
+/**
+ * Draws
+ * @param graphics Graphics
+ */
 void DistributionPanel::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y);
@@ -70,12 +79,34 @@ double DistributionPanel::Power(double voltage)
     return amperage;
 }
 
+/**
+ * Updates the Panel
+ * @param elapsed Time
+ */
 void DistributionPanel::Update(double elapsed)
 {
     Component::Update(elapsed);
 }
 
-void DistributionPanel::AddSource(const std::wstring imageDir, double capacity)
+/**
+ * Adds source
+ * @param imageDir Dir
+ * @param capacity Capacity
+ */
+void DistributionPanel::AddSource(const std::wstring& imageDir, double capacity)
 {
-    mSources.push_back(std::make_shared<PowerSource>(this, imageDir, capacity));
+    mSources.push_back(std::make_shared<PowerSource>(this, imageDir, capacity, wxPoint(0,0), FaceUp));
+}
+
+/**
+ * Set Position
+ * @param x X
+ * @param y Y
+ */
+void DistributionPanel::SetPosition(double x, double y)
+{
+    Component::SetPosition(x, y);
+
+    mSink.SetPosition(GetPosition().x + DistributionSinkPosition.x, GetPosition().y + DistributionSinkPosition.y);
+    mSink.SetRotation(FaceLeft);
 }

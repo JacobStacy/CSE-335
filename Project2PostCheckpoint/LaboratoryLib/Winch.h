@@ -12,19 +12,28 @@
 #include "Polygon.h"
 #include "MotionSource.h"
 
+/**
+ * Winch Class
+ */
 class Winch : public Component {
 private:
 
+    /// Rotation
     double mRotation = 0.0;
 
+    /// Previous Time
     double mPrevTime = 0.0;
 
+    /// Duration of Animation
     double mDuration = 0.0;
 
+    /// Motion Source
     MotionSource mSource;
 
+    /// Base Polygon
     cse335::Polygon mBasePolygon;
 
+    /// Wheel Polygon
     cse335::Polygon mWheelPolygon;
 
 public:
@@ -44,6 +53,10 @@ public:
 
     void Reset(int frame) override;
 
+    /**
+     * Returns the Source
+     * @return Source
+     */
     MotionSource* GetSource() { return &mSource; }
 
 };
