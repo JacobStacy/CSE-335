@@ -10,5 +10,6 @@ var searchData=
   ['laboratoryisolator_7',['LaboratoryIsolator',['../class_laboratory_isolator.html',1,'']]],
   ['laboratorystandin_8',['LaboratoryStandin',['../class_laboratory_standin.html',1,'']]],
   ['light_9',['Light',['../class_light.html',1,'']]],
-  ['line_10',['Line',['../classcse335_1_1_sparky_1_1_line.html',1,'cse335::Sparky']]]
+  ['lightningscreen_10',['LightningScreen',['../class_lightning_screen.html',1,'']]],
+  ['line_11',['Line',['../classcse335_1_1_sparky_1_1_line.html',1,'cse335::Sparky']]]
 ];

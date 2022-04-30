@@ -16,11 +16,16 @@ var hierarchy =
       [ "Cable", "class_cable.html", null ],
       [ "DistributionPanel", "class_distribution_panel.html", null ],
       [ "Light", "class_light.html", null ],
+      [ "LightningScreen", "class_lightning_screen.html", null ],
+      [ "Meter", "class_meter.html", null ],
       [ "Orbs", "class_orbs.html", null ],
+      [ "Rheostat", "class_rheostat.html", null ],
       [ "Shape", "class_shape.html", [
         [ "EquipmentRack", "class_equipment_rack.html", null ]
       ] ],
       [ "Switch", "class_switch.html", null ],
+      [ "Transformer", "class_transformer.html", null ],
+      [ "Tubes", "class_tubes.html", null ],
       [ "Winch", "class_winch.html", null ],
       [ "ZeroPointModule", "class_zero_point_module.html", null ]
     ] ],

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cable_0',['Cable',['../class_cable.html#a2f5f048299ff3214fdb1fd9329937db6',1,'Cable::Cable(const std::wstring &amp;name, const std::wstring &amp;imageDir, PowerSource *source, PowerSink *sink, double speedSource, double speedSink)'],['../class_cable.html#ab8605859056d194b980d6a20efc0b86b',1,'Cable::Cable(const std::wstring &amp;name, const std::wstring &amp;imageDir, std::shared_ptr&lt; PowerSource &gt; source, PowerSink *sink, double speedSource, double speedSink)'],['../class_cable.html#a6e97ab80d691fb363977021f498c6d1d',1,'Cable::Cable(const Cable &amp;)=delete']]],
+  ['cable_0',['Cable',['../class_cable.html#ab8605859056d194b980d6a20efc0b86b',1,'Cable::Cable(const std::wstring &amp;name, const std::wstring &amp;imageDir, std::shared_ptr&lt; PowerSource &gt; source, PowerSink *sink, double speedSource, double speedSink)'],['../class_cable.html#a6e97ab80d691fb363977021f498c6d1d',1,'Cable::Cable(const Cable &amp;)=delete']]],
   ['centeredsquare_1',['CenteredSquare',['../classcse335_1_1_polygon.html#a59117a2598a36674c92dcc8e9a3631af',1,'cse335::Polygon']]],
   ['centeredstring_2',['CenteredString',['../class_laboratory_standin.html#adfbb4e95cd5cbdaee3febbee07e5a9d4',1,'LaboratoryStandin']]],
   ['clamp_3',['Clamp',['../class_clamp.html#aa8e782ea5270cd09f464174bc7c73101',1,'Clamp::Clamp(double x, double y, double speed, double rotation)'],['../class_clamp.html#a2ee60f1deb8dc94f26c18a1ea2b9de45',1,'Clamp::Clamp(const Clamp &amp;)=delete']]],

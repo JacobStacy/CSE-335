@@ -42,6 +42,11 @@ const double Volt2Intensity = .001;
 
 #include "Tubes.h"
 
+/**
+ * Constructor
+ * @param name Name
+ * @param ImageDir Image Directory
+ */
 Tubes::Tubes(const std::wstring& name, const std::wstring& ImageDir)
         : Component(name),
           mSinkLeft(this, ImageDir, ConnectorCapacity,wxPoint(0, 0), FaceDown),
@@ -59,6 +64,10 @@ Tubes::Tubes(const std::wstring& name, const std::wstring& ImageDir)
     mRightPolygon.BottomCenteredRectangle();
 }
 
+/**
+ * Draws
+ * @param graphics Graphics
+ */
 void Tubes::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mBackPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y);
@@ -73,7 +82,11 @@ void Tubes::Draw(std::shared_ptr<wxGraphicsContext> graphics)
     mSinkLeft.Draw(graphics, GetPosition().x + SinkRightX, GetPosition().y - SinkY, FaceDown);
 }
 
-
+/**
+ * Sets Position
+ * @param x X
+ * @param y Y
+ */
 void Tubes::SetPosition(double x, double y)
 {
     Component::SetPosition(x, y);
@@ -82,6 +95,11 @@ void Tubes::SetPosition(double x, double y)
     mSinkRight.SetPosition(GetPosition().x + SinkRightX, GetPosition().y - SinkY);
 }
 
+/**
+ * Powers
+ * @param voltage Voltage
+ * @return amps
+ */
 double Tubes::Power(double voltage)
 {
     mLeftVoltage = mSinkLeft.GetVoltage();
@@ -92,6 +110,10 @@ double Tubes::Power(double voltage)
     return current;
 }
 
+/**
+ * Resets
+ * @param frame frame
+ */
 void Tubes::Reset(int frame)
 {
     mLeftVoltage = 0;

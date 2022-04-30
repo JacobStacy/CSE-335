@@ -73,6 +73,10 @@ void PowerSink::Draw(std::shared_ptr<wxGraphicsContext> graphics, double x, doub
 //    auto vector = cse335::GraphicsHelper::ToIntVector(rotation, size);
 }
 
+/**
+ * Get Pos
+ * @return pos
+ */
 wxPoint PowerSink::GetPosition()
 {
     double originX = BezierEnd::GetPosition().x;

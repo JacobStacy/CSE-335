@@ -29,6 +29,7 @@ private:
     /// The actors associated with this picture
     std::vector<std::shared_ptr<Actor>> mActors;
 
+    /// Lab Adaptor
     std::shared_ptr<LaboratoryAdapter> mLaboratory;
 
     /// The animation timeline

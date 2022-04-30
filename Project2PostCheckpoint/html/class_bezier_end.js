@@ -1,7 +1,7 @@
 var class_bezier_end =
 [
     [ "BezierEnd", "class_bezier_end.html#ad0add42275d2e9d41926d2d42f6818b8", null ],
-    [ "GetPosition", "class_bezier_end.html#a64316785d97ee7258f9e3bcdb008d064", null ],
+    [ "GetPosition", "class_bezier_end.html#ad18a12ec570fd52e0da9fc7b939a54ad", null ],
     [ "GetRotation", "class_bezier_end.html#aad38287c266654e703f9c080221c74e3", null ],
     [ "GetSpeed", "class_bezier_end.html#aba48d0ab6b18e9b5494b74f5a056b1c9", null ],
     [ "operator=", "class_bezier_end.html#a85ac82e9e51b133e3fca438950f19173", null ],

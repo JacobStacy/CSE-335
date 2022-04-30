@@ -5,6 +5,7 @@ var class_power_source =
     [ "PowerSource", "class_power_source.html#a7136366f8ea8168ceaffd5e61e18dd0b", null ],
     [ "Draw", "class_power_source.html#a96f70640cd10cd7e8b283bd777e5e9f3", null ],
     [ "GetCapacity", "class_power_source.html#ac2faef686af9b58d32d6cd0a7c81813c", null ],
+    [ "GetPosition", "class_power_source.html#aa6a787174b227123f30356d571f87bb3", null ],
     [ "operator=", "class_power_source.html#a1b388aca385c669e7da75778815b2b14", null ],
     [ "Power", "class_power_source.html#a008d3e3052f56b6132880d2e30313725", null ],
     [ "SetSink", "class_power_source.html#a3d675b2490831b90ad374ada66599199", null ],

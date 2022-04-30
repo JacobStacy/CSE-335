@@ -106,6 +106,10 @@ void MainFrame::OnClose(wxCloseEvent& event)
     Destroy();
 }
 
+/**
+ * Set Lab
+ * @param event event
+ */
 void MainFrame::OnSetLaboratory(wxCommandEvent& event)
 {
     if (mPicture->GetLaboratory()->GetDialog(this->GetParent()))
@@ -116,6 +120,10 @@ void MainFrame::OnSetLaboratory(wxCommandEvent& event)
     mPicture->GetTimeline()->SetLabNumber(mPicture->GetLaboratory()->GetLaboratoryNumber());
 }
 
+/**
+ * Set Lab Frame
+ * @param event Event
+ */
 void MainFrame::OnSetStartLabFrame(wxCommandEvent& event)
 {
     mPicture->GetLaboratory()->SetFrame(mPicture->GetTimeline()->GetCurrentFrame());

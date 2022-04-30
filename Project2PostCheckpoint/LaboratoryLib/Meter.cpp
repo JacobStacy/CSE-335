@@ -47,6 +47,11 @@ const double AngleRatio = 0.09;
 
 #include "Meter.h"
 
+/**
+ * Constructor
+ * @param name Name
+ * @param ImageDir Image Dir
+ */
 Meter::Meter(const std::wstring& name, const std::wstring& ImageDir)
         : Component(name),
           mSink(this, ImageDir, ConnectorCapacity, wxPoint(0,0), FaceLeft)
@@ -58,6 +63,10 @@ Meter::Meter(const std::wstring& name, const std::wstring& ImageDir)
     mPolygon.BottomCenteredRectangle();
 }
 
+/**
+ * Draws
+ * @param graphics Graphics
+ */
 void Meter::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y);
@@ -103,7 +112,11 @@ void Meter::Draw(std::shared_ptr<wxGraphicsContext> graphics)
     graphics->StrokeLine(startXA, startYA, endXA, endYA);
 }
 
-
+/**
+ * Set Pos
+ * @param x X
+ * @param y Y
+ */
 void Meter::SetPosition(double x, double y)
 {
     Component::SetPosition(x, y);
@@ -113,6 +126,11 @@ void Meter::SetPosition(double x, double y)
     mSink.SetPosition(GetPosition().x - ConnectorX, GetPosition().y - ConnectorY);
 }
 
+/**
+ * Power
+ * @param voltage volt
+ * @return amps
+ */
 double Meter::Power(double voltage)
 {
     mVoltage = voltage;

@@ -15,10 +15,16 @@ var class_timeline =
     [ "Save", "class_timeline.html#aa82de0128c97c37d1f2fd591d1116141", null ],
     [ "SetCurrentTime", "class_timeline.html#aab8bb507e286d0ac6aca9bbf6ae2474f", null ],
     [ "SetFrameRate", "class_timeline.html#aba31d16561a0172620ae8863ba6e3aca", null ],
+    [ "SetLabNumber", "class_timeline.html#a2b8209f2c877d135693f930aeb0efbbe", null ],
+    [ "SetLabPos", "class_timeline.html#ab8133e62472cef4746b2cb56f88d5e09", null ],
+    [ "SetLabStartFrame", "class_timeline.html#adee717775157172e47da18df8563e7cd", null ],
     [ "SetNumFrames", "class_timeline.html#adaa877b639a4377bb1908674339d19b3", null ],
     [ "XmlChannel", "class_timeline.html#a8941df54890a7ab73143c9af8586b2e8", null ],
     [ "mChannels", "class_timeline.html#a8500e4a3b8fb51546a70587476585439", null ],
     [ "mCurrentTime", "class_timeline.html#ae44091b8a363d6372d2777c41c0647a3", null ],
     [ "mFrameRate", "class_timeline.html#ad38a7b9b7cd1f8984129fb2eb682b4d2", null ],
+    [ "mLabNumber", "class_timeline.html#a9e917a8b10506a723cee9d984fca2da0", null ],
+    [ "mLabStartFrame", "class_timeline.html#a8b27fd43817e211b58c0645f1bb5c059", null ],
+    [ "mLabStartPoint", "class_timeline.html#a5ad50d696206b6f36ef830c7c4c16dc3", null ],
     [ "mNumFrames", "class_timeline.html#a700714010719443e5e985cca810163fb", null ]
 ];

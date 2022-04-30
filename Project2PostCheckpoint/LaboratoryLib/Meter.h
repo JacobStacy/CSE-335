@@ -13,6 +13,9 @@
 #include "PowerSource.h"
 #include "PowerSink.h"
 
+/**
+ * Meter Class
+ */
 class Meter : public Component{
 private:
 

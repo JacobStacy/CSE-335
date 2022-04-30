@@ -76,6 +76,10 @@ void PowerSource::Draw(std::shared_ptr<wxGraphicsContext> graphics, double x, do
 //    auto vector = cse335::GraphicsHelper::ToIntVector(rotation, size);
 }
 
+/**
+ * Get Pos
+ * @return pos
+ */
 wxPoint PowerSource::GetPosition()
 {
     double originX = BezierEnd::GetPosition().x;

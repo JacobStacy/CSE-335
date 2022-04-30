@@ -76,6 +76,10 @@ public:
      */
     void SetFrame(int frame) { mFrame = frame; }
 
+    /**
+     * Set Posititon
+     * @param point Point
+     */
     void SetLaboratoryPosition(wxPoint point) { mCurrentPosition = point; }
 
 

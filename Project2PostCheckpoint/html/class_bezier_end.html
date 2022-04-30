@@ -104,8 +104,8 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_bezier_end.html">BezierEnd</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a85ac82e9e51b133e3fca438950f19173"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment Operator (Disabled) <br /></td></tr>
 <tr class="separator:a85ac82e9e51b133e3fca438950f19173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64316785d97ee7258f9e3bcdb008d064"><td class="memItemLeft" align="right" valign="top">wxPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#a64316785d97ee7258f9e3bcdb008d064">GetPosition</a> ()</td></tr>
-<tr class="separator:a64316785d97ee7258f9e3bcdb008d064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18a12ec570fd52e0da9fc7b939a54ad"><td class="memItemLeft" align="right" valign="top">virtual wxPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#ad18a12ec570fd52e0da9fc7b939a54ad">GetPosition</a> ()</td></tr>
+<tr class="separator:ad18a12ec570fd52e0da9fc7b939a54ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc04fb7cd3f72da72879ed2f08d5c75d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#acc04fb7cd3f72da72879ed2f08d5c75d">SetPosition</a> (double x, double y)</td></tr>
 <tr class="separator:acc04fb7cd3f72da72879ed2f08d5c75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad38287c266654e703f9c080221c74e3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#aad38287c266654e703f9c080221c74e3">GetRotation</a> ()</td></tr>
@@ -135,8 +135,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mSpeed</b> = 0</td>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Bezier End Class </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a64316785d97ee7258f9e3bcdb008d064" name="a64316785d97ee7258f9e3bcdb008d064"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64316785d97ee7258f9e3bcdb008d064">&#9670;&nbsp;</a></span>GetPosition()</h2>
+<a id="ad18a12ec570fd52e0da9fc7b939a54ad" name="ad18a12ec570fd52e0da9fc7b939a54ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad18a12ec570fd52e0da9fc7b939a54ad">&#9670;&nbsp;</a></span>GetPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,7 +145,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mSpeed</b> = 0</td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">wxPoint BezierEnd::GetPosition </td>
+          <td class="memname">virtual wxPoint BezierEnd::GetPosition </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -153,11 +153,13 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mSpeed</b> = 0</td>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p >Get Position </p><dl class="section return"><dt>Returns</dt><dd>Position </dd></dl>
+
+<p>Reimplemented in <a class="el" href="class_power_sink.html#a21a1e79c32193ba3cc7b95fb9bd2d82c">PowerSink</a>, and <a class="el" href="class_power_source.html#aa6a787174b227123f30356d571f87bb3">PowerSource</a>.</p>
 
 </div>
 </div>
@@ -329,7 +331,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mSpeed</b> = 0</td>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_bezier_end.html">BezierEnd</a></li>
-    <li class="footer">Generated on Sat Apr 30 2022 01:20:45 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sat Apr 30 2022 19:19:20 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

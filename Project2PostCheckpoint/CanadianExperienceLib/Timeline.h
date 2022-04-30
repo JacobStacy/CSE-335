@@ -25,8 +25,13 @@ private:
     int mFrameRate = 30;        ///< Animation frame rate in frames per second
     double mCurrentTime = 0;    ///< The current animation time
 
+    /// Lab Start Frame
     int mLabStartFrame = 0;
+
+    /// Lab Start Point
     wxPoint mLabStartPoint;
+
+    /// Lab Number
     int mLabNumber = 1;
 
     /// List of all animation channels

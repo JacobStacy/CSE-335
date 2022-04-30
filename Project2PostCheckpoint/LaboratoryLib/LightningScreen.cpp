@@ -160,6 +160,10 @@ void LightningScreen::SetTime(double time)
     mSparky6.SetTime(time);
 }
 
+/**
+ * Resets
+ * @param frame frame
+ */
 void LightningScreen::Reset(int frame)
 {
     mVoltage = 0;

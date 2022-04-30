@@ -5,6 +5,8 @@ var class_main_frame =
     [ "OnAbout", "class_main_frame.html#ae233e15a3da15a8003471d3fbaa8a2b7", null ],
     [ "OnClose", "class_main_frame.html#a9f6f7f89d8b9aded1334cfa6eaca22bc", null ],
     [ "OnExit", "class_main_frame.html#af1146ec5200a7421957b143782bca765", null ],
+    [ "OnSetLaboratory", "class_main_frame.html#a943221b4d0339782f2e28063b9dd6e39", null ],
+    [ "OnSetStartLabFrame", "class_main_frame.html#ae34436146eb0361faea845d3caed644a", null ],
     [ "mPicture", "class_main_frame.html#aac5bc4ad7ca163f3c698c91123d1b6ed", null ],
     [ "mViewEdit", "class_main_frame.html#a44efb5c3af1fea533198a7b6e4ffdf48", null ],
     [ "mViewTimeline", "class_main_frame.html#a54283a22d4ea1942eb3a6be0fbf700d9", null ]

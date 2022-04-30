@@ -33,6 +33,11 @@ const double WheelY = 25;
 
 #include "Rheostat.h"
 
+/**
+ * Constructor
+ * @param name Name
+ * @param ImageDir Image Directory
+ */
 Rheostat::Rheostat(const std::wstring& name, const std::wstring& ImageDir)
         : Component(name),
         mSink(this, ImageDir, ConnectorCapacity, wxPoint(0,0), FaceLeft)
@@ -46,6 +51,10 @@ Rheostat::Rheostat(const std::wstring& name, const std::wstring& ImageDir)
     mWheelPolygon.CenteredSquare(50);
 }
 
+/**
+ * Draws
+ * @param graphics Graphics
+ */
 void Rheostat::Draw(std::shared_ptr<wxGraphicsContext> graphics)
 {
     mBackPolygon.DrawPolygon(graphics, GetPosition().x, GetPosition().y);
@@ -55,6 +64,10 @@ void Rheostat::Draw(std::shared_ptr<wxGraphicsContext> graphics)
     mSink.Draw(graphics, GetPosition().x - ConnectorX, GetPosition().y - ConnectorY, FaceLeft);
 }
 
+/**
+ * Set Time
+ * @param time Time
+ */
 void Rheostat::SetTime(double time)
 {
     if(mDuration > 0)
@@ -77,6 +90,10 @@ void Rheostat::SetTime(double time)
     }
 }
 
+/**
+ * Load
+ * @param node node
+ */
 void Rheostat::XmlLoad(wxXmlNode* node)
 {
     mRotation = wxAtof(node->GetAttribute(L"rotate-to"));
@@ -85,6 +102,10 @@ void Rheostat::XmlLoad(wxXmlNode* node)
     mPrevTime = 2;
 }
 
+/**
+ * Reset
+ * @param frame
+ */
 void Rheostat::Reset(int frame)
 {
     mWheelPolygon.SetRotation(0);
@@ -92,6 +113,11 @@ void Rheostat::Reset(int frame)
     mRotation = 0;
 }
 
+/**
+ * Set pOs
+ * @param x X
+ * @param y Y
+ */
 void Rheostat::SetPosition(double x, double y)
 {
     Component::SetPosition(x, y);
@@ -101,6 +127,11 @@ void Rheostat::SetPosition(double x, double y)
     mSink.SetPosition(GetPosition().x - ConnectorX, GetPosition().y - ConnectorY);
 }
 
+/**
+ * Power
+ * @param voltage Voltage
+ * @return amps
+ */
 double Rheostat::Power(double voltage)
 {
     return mSource->Power(voltage * mResistance);

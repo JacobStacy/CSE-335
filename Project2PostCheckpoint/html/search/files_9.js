@@ -17,5 +17,7 @@ var searchData=
   ['laboratorystandin_2ecpp_14',['LaboratoryStandin.cpp',['../_laboratory_standin_8cpp.html',1,'']]],
   ['laboratorystandin_2eh_15',['LaboratoryStandin.h',['../_laboratory_standin_8h.html',1,'']]],
   ['light_2ecpp_16',['Light.cpp',['../_light_8cpp.html',1,'']]],
-  ['light_2eh_17',['Light.h',['../_light_8h.html',1,'']]]
+  ['light_2eh_17',['Light.h',['../_light_8h.html',1,'']]],
+  ['lightningscreen_2ecpp_18',['LightningScreen.cpp',['../_lightning_screen_8cpp.html',1,'']]],
+  ['lightningscreen_2eh_19',['LightningScreen.h',['../_lightning_screen_8h.html',1,'']]]
 ];

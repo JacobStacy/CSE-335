@@ -14,6 +14,15 @@ var searchData=
   ['timelinedlg_2eh_11',['TimelineDlg.h',['../_timeline_dlg_8h.html',1,'']]],
   ['tointvector_12',['ToIntVector',['../classcse335_1_1_graphics_helper.html#a5fff5dd33e020ceed8eb5df28c74f0e8',1,'cse335::GraphicsHelper']]],
   ['tovector_13',['ToVector',['../classcse335_1_1_graphics_helper.html#a5e1bba7351a3b6d95420b07f07b2ceeb',1,'cse335::GraphicsHelper']]],
-  ['transformpoint_14',['TransformPoint',['../class_head_top.html#a3a961d0d689b936d4e7eea4761342607',1,'HeadTop']]],
-  ['tween_15',['Tween',['../class_anim_channel.html#aa7c2456c737e042024dd152e808922bf',1,'AnimChannel::Tween()'],['../class_anim_channel_angle.html#a56f271eebeb7b21aadb3cd9a18ce9b05',1,'AnimChannelAngle::Tween()'],['../class_anim_channel_point.html#a9128af210dd73719389545c70332acd7',1,'AnimChannelPoint::Tween()']]]
+  ['transformer_14',['Transformer',['../class_transformer.html#aa661ad1857cd74363f72c3483941b6e7',1,'Transformer::Transformer(const std::wstring &amp;name, const std::wstring &amp;imageDir, double step)'],['../class_transformer.html#a5ebf172f24f2dc25046c37aeb0bc5b90',1,'Transformer::Transformer(const Transformer &amp;)=delete'],['../class_transformer.html',1,'Transformer']]],
+  ['transformer_2ecpp_15',['Transformer.cpp',['../_transformer_8cpp.html',1,'']]],
+  ['transformer_2eh_16',['Transformer.h',['../_transformer_8h.html',1,'']]],
+  ['transformerimage_17',['TransformerImage',['../_transformer_8cpp.html#aa7714f814b1d7825a2a081143fe5dc26',1,'Transformer.cpp']]],
+  ['transformerx_18',['TransformerX',['../_laboratory_factory_two_8cpp.html#a343844f894be0b59d665fb41f5b7e0cf',1,'LaboratoryFactoryTwo.cpp']]],
+  ['transformery_19',['TransformerY',['../_laboratory_factory_two_8cpp.html#a3d0ce7ebb634c9e7c2929421a0443dba',1,'LaboratoryFactoryTwo.cpp']]],
+  ['transformpoint_20',['TransformPoint',['../class_head_top.html#a3a961d0d689b936d4e7eea4761342607',1,'HeadTop']]],
+  ['tubes_21',['Tubes',['../class_tubes.html#af5ae20e0342739ebb786f09d7f34ac53',1,'Tubes::Tubes(const std::wstring &amp;name, const std::wstring &amp;ImageDir)'],['../class_tubes.html#ae0411d06e9e90267c9bc6293501e30f0',1,'Tubes::Tubes(const Tubes &amp;)=delete'],['../class_tubes.html',1,'Tubes']]],
+  ['tubes_2ecpp_22',['Tubes.cpp',['../_tubes_8cpp.html',1,'']]],
+  ['tubes_2eh_23',['Tubes.h',['../_tubes_8h.html',1,'']]],
+  ['tween_24',['Tween',['../class_anim_channel.html#aa7c2456c737e042024dd152e808922bf',1,'AnimChannel::Tween()'],['../class_anim_channel_angle.html#a56f271eebeb7b21aadb3cd9a18ce9b05',1,'AnimChannelAngle::Tween()'],['../class_anim_channel_point.html#a9128af210dd73719389545c70332acd7',1,'AnimChannelPoint::Tween()']]]
 ];

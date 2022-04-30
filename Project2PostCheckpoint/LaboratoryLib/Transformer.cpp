@@ -50,7 +50,8 @@ const double SparkLength = 45;
 /**
  * Constructor
  * @param name Name
- * @param ImageDir Image Directory
+ * @param imageDir Image Directory
+ * @param step How much to step up
  */
 Transformer::Transformer(const std::wstring& name, const std::wstring& imageDir, double step)
         : Component(name),

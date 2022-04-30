@@ -13,6 +13,9 @@
 #include "PowerSource.h"
 #include "PowerSink.h"
 
+/**
+ * Rheostat class
+ */
 class Rheostat : public Component{
 private:
 

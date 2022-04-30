@@ -93,13 +93,125 @@ $(document).ready(function(){initNavTree('_laboratory_factory_two_8cpp.html','')
 <code>#include &quot;<a class="el" href="_shape_8h_source.html">Shape.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_equipment_rack_8h_source.html">EquipmentRack.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_zero_point_module_8h_source.html">ZeroPointModule.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_light_8h_source.html">Light.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_switch_8h_source.html">Switch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_winch_8h_source.html">Winch.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_orbs_8h_source.html">Orbs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_distribution_panel_8h_source.html">DistributionPanel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_cable_8h_source.html">Cable.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_clamp_8h_source.html">Clamp.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_rheostat_8h_source.html">Rheostat.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_meter_8h_source.html">Meter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_tubes_8h_source.html">Tubes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_lightning_screen_8h_source.html">LightningScreen.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_transformer_8h_source.html">Transformer.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a880c3044a42f2a4a17a2de9c875dc45f"><td class="memItemLeft" align="right" valign="top"><a id="a880c3044a42f2a4a17a2de9c875dc45f" name="a880c3044a42f2a4a17a2de9c875dc45f"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>BackXOffset</b> = -600</td></tr>
+<tr class="memdesc:a880c3044a42f2a4a17a2de9c875dc45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for drawing background. <br /></td></tr>
+<tr class="separator:a880c3044a42f2a4a17a2de9c875dc45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaca95432ee96130acafaa5858a06647f"><td class="memItemLeft" align="right" valign="top"><a id="aaca95432ee96130acafaa5858a06647f" name="aaca95432ee96130acafaa5858a06647f"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>ZpmXOffset</b> = -50</td></tr>
+<tr class="memdesc:aaca95432ee96130acafaa5858a06647f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for drawing ZPM. <br /></td></tr>
+<tr class="separator:aaca95432ee96130acafaa5858a06647f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f193527da57b9145a3efe4e17fc74f"><td class="memItemLeft" align="right" valign="top"><a id="a67f193527da57b9145a3efe4e17fc74f" name="a67f193527da57b9145a3efe4e17fc74f"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>ZpmX</b> = -550</td></tr>
+<tr class="memdesc:a67f193527da57b9145a3efe4e17fc74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for drawing ZPM. <br /></td></tr>
+<tr class="separator:a67f193527da57b9145a3efe4e17fc74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af80572f8b937f96159f4ec0b6f306f90"><td class="memItemLeft" align="right" valign="top"><a id="af80572f8b937f96159f4ec0b6f306f90" name="af80572f8b937f96159f4ec0b6f306f90"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>SlotXOffset</b> = -57</td></tr>
+<tr class="memdesc:af80572f8b937f96159f4ec0b6f306f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for drawing Slots. <br /></td></tr>
+<tr class="separator:af80572f8b937f96159f4ec0b6f306f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a693499c2f955a5e43c25d0d9c1dbc054"><td class="memItemLeft" align="right" valign="top"><a id="a693499c2f955a5e43c25d0d9c1dbc054" name="a693499c2f955a5e43c25d0d9c1dbc054"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>RackX</b> = -350</td></tr>
+<tr class="memdesc:a693499c2f955a5e43c25d0d9c1dbc054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Offset for drawing Equipment Racks. <br /></td></tr>
+<tr class="separator:a693499c2f955a5e43c25d0d9c1dbc054"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5df64fa652351be0e02709d366eed95"><td class="memItemLeft" align="right" valign="top"><a id="ae5df64fa652351be0e02709d366eed95" name="ae5df64fa652351be0e02709d366eed95"></a>
 const double&#160;</td><td class="memItemRight" valign="bottom"><b>RackY</b> = -120</td></tr>
 <tr class="memdesc:ae5df64fa652351be0e02709d366eed95"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the racks | website is down so need to change when I can look it up. <br /></td></tr>
 <tr class="separator:ae5df64fa652351be0e02709d366eed95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d26812c8c45adf5f00ff58d3220278"><td class="memItemLeft" align="right" valign="top"><a id="ae9d26812c8c45adf5f00ff58d3220278" name="ae9d26812c8c45adf5f00ff58d3220278"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>SlotYOffset</b> = 15</td></tr>
+<tr class="memdesc:ae9d26812c8c45adf5f00ff58d3220278"><td class="mdescLeft">&#160;</td><td class="mdescRight">The distance off the ground for slots. <br /></td></tr>
+<tr class="separator:ae9d26812c8c45adf5f00ff58d3220278"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69eaea21a5855e97091fc554598dfd0"><td class="memItemLeft" align="right" valign="top"><a id="ae69eaea21a5855e97091fc554598dfd0" name="ae69eaea21a5855e97091fc554598dfd0"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>U1Height</b> = 10</td></tr>
+<tr class="memdesc:ae69eaea21a5855e97091fc554598dfd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Height of a U1 Rack in pixels. <br /></td></tr>
+<tr class="separator:ae69eaea21a5855e97091fc554598dfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae04eb7e2b8dc8d873f64851a10be3206"><td class="memItemLeft" align="right" valign="top"><a id="ae04eb7e2b8dc8d873f64851a10be3206" name="ae04eb7e2b8dc8d873f64851a10be3206"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>U2Height</b> = 21</td></tr>
+<tr class="memdesc:ae04eb7e2b8dc8d873f64851a10be3206"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Height of a U2 Rack in pixels. <br /></td></tr>
+<tr class="separator:ae04eb7e2b8dc8d873f64851a10be3206"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab941f13c594f25e5d391bef2935193ff"><td class="memItemLeft" align="right" valign="top"><a id="ab941f13c594f25e5d391bef2935193ff" name="ab941f13c594f25e5d391bef2935193ff"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>U5Height</b> = 52</td></tr>
+<tr class="memdesc:ab941f13c594f25e5d391bef2935193ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Height of a U5 Rack in pixels. <br /></td></tr>
+<tr class="separator:ab941f13c594f25e5d391bef2935193ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b05f405611a224afc6324f7eb14b06"><td class="memItemLeft" align="right" valign="top"><a id="af6b05f405611a224afc6324f7eb14b06" name="af6b05f405611a224afc6324f7eb14b06"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>U10Height</b> = 104</td></tr>
+<tr class="memdesc:af6b05f405611a224afc6324f7eb14b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Height of a U2 Rack in pixels. <br /></td></tr>
+<tr class="separator:af6b05f405611a224afc6324f7eb14b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71754bc65fcc295399fcce76cbf9ff3b"><td class="memItemLeft" align="right" valign="top"><a id="a71754bc65fcc295399fcce76cbf9ff3b" name="a71754bc65fcc295399fcce76cbf9ff3b"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>LightXOffset</b> = -166</td></tr>
+<tr class="memdesc:a71754bc65fcc295399fcce76cbf9ff3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">X offset for the light. <br /></td></tr>
+<tr class="separator:a71754bc65fcc295399fcce76cbf9ff3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62b1a9fb3df14c596cbc89256514e2a"><td class="memItemLeft" align="right" valign="top"><a id="ae62b1a9fb3df14c596cbc89256514e2a" name="ae62b1a9fb3df14c596cbc89256514e2a"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>LightX</b> = 100</td></tr>
+<tr class="memdesc:ae62b1a9fb3df14c596cbc89256514e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the <a class="el" href="class_light.html">Light</a>. <br /></td></tr>
+<tr class="separator:ae62b1a9fb3df14c596cbc89256514e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac240e60af8214aee1b7b18891229b231"><td class="memItemLeft" align="right" valign="top"><a id="ac240e60af8214aee1b7b18891229b231" name="ac240e60af8214aee1b7b18891229b231"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>LightY</b> = -600</td></tr>
+<tr class="memdesc:ac240e60af8214aee1b7b18891229b231"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the <a class="el" href="class_light.html">Light</a>. <br /></td></tr>
+<tr class="separator:ac240e60af8214aee1b7b18891229b231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a940f12f6ce3dfcd352055d79505ffea8"><td class="memItemLeft" align="right" valign="top"><a id="a940f12f6ce3dfcd352055d79505ffea8" name="a940f12f6ce3dfcd352055d79505ffea8"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>SwitchXOffset</b> = -23</td></tr>
+<tr class="memdesc:a940f12f6ce3dfcd352055d79505ffea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">X offset for the light. <br /></td></tr>
+<tr class="separator:a940f12f6ce3dfcd352055d79505ffea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ecfd16d2059149c1497485702338132"><td class="memItemLeft" align="right" valign="top"><a id="a6ecfd16d2059149c1497485702338132" name="a6ecfd16d2059149c1497485702338132"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>Switch1X</b> = 25</td></tr>
+<tr class="memdesc:a6ecfd16d2059149c1497485702338132"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the Switch1. <br /></td></tr>
+<tr class="separator:a6ecfd16d2059149c1497485702338132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8461c18ffd44d10d4dbb281623191e83"><td class="memItemLeft" align="right" valign="top"><a id="a8461c18ffd44d10d4dbb281623191e83" name="a8461c18ffd44d10d4dbb281623191e83"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>Switch1Y</b> = 20</td></tr>
+<tr class="memdesc:a8461c18ffd44d10d4dbb281623191e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the Switch1. <br /></td></tr>
+<tr class="separator:a8461c18ffd44d10d4dbb281623191e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61ca4c6b6ba717ac93df0549f4007fe"><td class="memItemLeft" align="right" valign="top"><a id="ad61ca4c6b6ba717ac93df0549f4007fe" name="ad61ca4c6b6ba717ac93df0549f4007fe"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>OrbsX</b> = 0</td></tr>
+<tr class="memdesc:ad61ca4c6b6ba717ac93df0549f4007fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the <a class="el" href="class_orbs.html">Orbs</a>. <br /></td></tr>
+<tr class="separator:ad61ca4c6b6ba717ac93df0549f4007fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12bdea42da630b4d565df5bd48af1562"><td class="memItemLeft" align="right" valign="top"><a id="a12bdea42da630b4d565df5bd48af1562" name="a12bdea42da630b4d565df5bd48af1562"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>OrbsY</b> = -800</td></tr>
+<tr class="memdesc:a12bdea42da630b4d565df5bd48af1562"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the Switch1. <br /></td></tr>
+<tr class="separator:a12bdea42da630b4d565df5bd48af1562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33f3bfc9c3f17ab470b41435bd6d025"><td class="memItemLeft" align="right" valign="top"><a id="ad33f3bfc9c3f17ab470b41435bd6d025" name="ad33f3bfc9c3f17ab470b41435bd6d025"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>RheoX</b> = 80</td></tr>
+<tr class="memdesc:ad33f3bfc9c3f17ab470b41435bd6d025"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the Rheo. <br /></td></tr>
+<tr class="separator:ad33f3bfc9c3f17ab470b41435bd6d025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5c98e06d88b8f5c5300178758ba395"><td class="memItemLeft" align="right" valign="top"><a id="a3e5c98e06d88b8f5c5300178758ba395" name="a3e5c98e06d88b8f5c5300178758ba395"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>RheoY</b> = 0</td></tr>
+<tr class="memdesc:a3e5c98e06d88b8f5c5300178758ba395"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the Rheo. <br /></td></tr>
+<tr class="separator:a3e5c98e06d88b8f5c5300178758ba395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56a682789cac26cf684260ddd6a1ba8"><td class="memItemLeft" align="right" valign="top"><a id="aa56a682789cac26cf684260ddd6a1ba8" name="aa56a682789cac26cf684260ddd6a1ba8"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>StandardSpeed</b> = 50</td></tr>
+<tr class="memdesc:aa56a682789cac26cf684260ddd6a1ba8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard speed of beziers. <br /></td></tr>
+<tr class="separator:aa56a682789cac26cf684260ddd6a1ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada8644b376977acbf492a265b6de092e"><td class="memItemLeft" align="right" valign="top"><a id="ada8644b376977acbf492a265b6de092e" name="ada8644b376977acbf492a265b6de092e"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenX</b> = 120</td></tr>
+<tr class="memdesc:ada8644b376977acbf492a265b6de092e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the Screen. <br /></td></tr>
+<tr class="separator:ada8644b376977acbf492a265b6de092e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0fbe24b5e5a1a968555998ed7d7ce7"><td class="memItemLeft" align="right" valign="top"><a id="a4d0fbe24b5e5a1a968555998ed7d7ce7" name="a4d0fbe24b5e5a1a968555998ed7d7ce7"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenY</b> = 0</td></tr>
+<tr class="memdesc:a4d0fbe24b5e5a1a968555998ed7d7ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the Screen. <br /></td></tr>
+<tr class="separator:a4d0fbe24b5e5a1a968555998ed7d7ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a343844f894be0b59d665fb41f5b7e0cf"><td class="memItemLeft" align="right" valign="top"><a id="a343844f894be0b59d665fb41f5b7e0cf" name="a343844f894be0b59d665fb41f5b7e0cf"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>TransformerX</b> = 120</td></tr>
+<tr class="memdesc:a343844f894be0b59d665fb41f5b7e0cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The X position for the Screen. <br /></td></tr>
+<tr class="separator:a343844f894be0b59d665fb41f5b7e0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d0ce7ebb634c9e7c2929421a0443dba"><td class="memItemLeft" align="right" valign="top"><a id="a3d0ce7ebb634c9e7c2929421a0443dba" name="a3d0ce7ebb634c9e7c2929421a0443dba"></a>
+const double&#160;</td><td class="memItemRight" valign="bottom"><b>TransformerY</b> = 0</td></tr>
+<tr class="memdesc:a3d0ce7ebb634c9e7c2929421a0443dba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Y position for the Screen. <br /></td></tr>
+<tr class="separator:a3d0ce7ebb634c9e7c2929421a0443dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Jacob Stacy </dd></dl>
@@ -109,7 +221,7 @@ const double&#160;</td><td class="memItemRight" valign="bottom"><b>RackY</b> = -
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_38ab2edef8a126406937ef8d06de047e.html">LaboratoryLib</a></li><li class="navelem"><a class="el" href="_laboratory_factory_two_8cpp.html">LaboratoryFactoryTwo.cpp</a></li>
-    <li class="footer">Generated on Sat Apr 30 2022 01:20:45 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sat Apr 30 2022 19:19:20 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

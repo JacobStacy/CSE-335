@@ -140,6 +140,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:add464fdf1d8774f0d2825e7e12cd4e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3497c29970bb3251c0814a71b05075b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a3497c29970bb3251c0814a71b05075b2">Save</a> (const wxString &amp;filename)</td></tr>
 <tr class="separator:a3497c29970bb3251c0814a71b05075b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2da6259b631a705c741ec8dd9146c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_laboratory_adapter.html">LaboratoryAdapter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a8a2da6259b631a705c741ec8dd9146c7">GetLaboratory</a> ()</td></tr>
+<tr class="separator:a8a2da6259b631a705c741ec8dd9146c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83603b50922c322ae326d348edee6576"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_picture.html#a83603b50922c322ae326d348edee6576">SetLaboratory</a> (std::shared_ptr&lt; <a class="el" href="class_laboratory_adapter.html">LaboratoryAdapter</a> &gt; lab)</td></tr>
+<tr class="separator:a83603b50922c322ae326d348edee6576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -155,6 +159,10 @@ std::vector&lt; <a class="el" href="class_picture_observer.html">PictureObserver
 std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_actor.html">Actor</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mActors</b></td></tr>
 <tr class="memdesc:a5fbdc20c20bcec513c6ad828a52630e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actors associated with this picture. <br /></td></tr>
 <tr class="separator:a5fbdc20c20bcec513c6ad828a52630e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b69f1028e21a99989bfffe3742a4bd"><td class="memItemLeft" align="right" valign="top"><a id="a28b69f1028e21a99989bfffe3742a4bd" name="a28b69f1028e21a99989bfffe3742a4bd"></a>
+std::shared_ptr&lt; <a class="el" href="class_laboratory_adapter.html">LaboratoryAdapter</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>mLaboratory</b></td></tr>
+<tr class="memdesc:a28b69f1028e21a99989bfffe3742a4bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lab Adaptor. <br /></td></tr>
+<tr class="separator:a28b69f1028e21a99989bfffe3742a4bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae257292ec3edca611326c8486b28e438"><td class="memItemLeft" align="right" valign="top"><a id="ae257292ec3edca611326c8486b28e438" name="ae257292ec3edca611326c8486b28e438"></a>
 <a class="el" href="class_timeline.html">Timeline</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mTimeline</b></td></tr>
 <tr class="memdesc:ae257292ec3edca611326c8486b28e438"><td class="mdescLeft">&#160;</td><td class="mdescRight">The animation timeline. <br /></td></tr>
@@ -350,6 +358,32 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_actor.html">Actor<
 
 </div>
 </div>
+<a id="a8a2da6259b631a705c741ec8dd9146c7" name="a8a2da6259b631a705c741ec8dd9146c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2da6259b631a705c741ec8dd9146c7">&#9670;&nbsp;</a></span>GetLaboratory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="class_laboratory_adapter.html">LaboratoryAdapter</a> &gt; Picture::GetLaboratory </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Gets Lab </p><dl class="section return"><dt>Returns</dt><dd>Lab </dd></dl>
+
+</div>
+</div>
 <a id="aea939d3ab5722f56a7a154f323cc9422" name="aea939d3ab5722f56a7a154f323cc9422"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea939d3ab5722f56a7a154f323cc9422">&#9670;&nbsp;</a></span>GetSize()</h2>
 
@@ -499,6 +533,38 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_actor.html">Actor<
 
 </div>
 </div>
+<a id="a83603b50922c322ae326d348edee6576" name="a83603b50922c322ae326d348edee6576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83603b50922c322ae326d348edee6576">&#9670;&nbsp;</a></span>SetLaboratory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Picture::SetLaboratory </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_laboratory_adapter.html">LaboratoryAdapter</a> &gt;&#160;</td>
+          <td class="paramname"><em>lab</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Sets Lab </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lab</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8c4f0513c261407775e8b3b77507983a" name="a8c4f0513c261407775e8b3b77507983a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c4f0513c261407775e8b3b77507983a">&#9670;&nbsp;</a></span>SetSize()</h2>
 
@@ -559,7 +625,7 @@ std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_actor.html">Actor<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_picture.html">Picture</a></li>
-    <li class="footer">Generated on Sat Apr 30 2022 01:20:45 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sat Apr 30 2022 19:19:20 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>

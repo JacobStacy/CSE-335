@@ -13,6 +13,9 @@
 #include "PowerSource.h"
 #include "PowerSink.h"
 
+/**
+ * Tubes Class
+ */
 class Tubes : public Component{
 private:
 

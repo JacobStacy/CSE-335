@@ -118,6 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 <tr class="separator:a96f70640cd10cd7e8b283bd777e5e9f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2faef686af9b58d32d6cd0a7c81813c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_power_source.html#ac2faef686af9b58d32d6cd0a7c81813c">GetCapacity</a> ()</td></tr>
 <tr class="separator:ac2faef686af9b58d32d6cd0a7c81813c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6a787174b227123f30356d571f87bb3"><td class="memItemLeft" align="right" valign="top">wxPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_power_source.html#aa6a787174b227123f30356d571f87bb3">GetPosition</a> () override</td></tr>
+<tr class="separator:aa6a787174b227123f30356d571f87bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_bezier_end"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_bezier_end')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_bezier_end.html">BezierEnd</a></td></tr>
 <tr class="memitem:ad0add42275d2e9d41926d2d42f6818b8 inherit pub_methods_class_bezier_end"><td class="memItemLeft" align="right" valign="top"><a id="ad0add42275d2e9d41926d2d42f6818b8" name="ad0add42275d2e9d41926d2d42f6818b8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BezierEnd</b> (const <a class="el" href="class_bezier_end.html">BezierEnd</a> &amp;)=delete</td></tr>
@@ -127,8 +129,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_bezier_end.html">BezierEnd</a> &amp;)=delete</td></tr>
 <tr class="memdesc:a85ac82e9e51b133e3fca438950f19173 inherit pub_methods_class_bezier_end"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment Operator (Disabled) <br /></td></tr>
 <tr class="separator:a85ac82e9e51b133e3fca438950f19173 inherit pub_methods_class_bezier_end"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64316785d97ee7258f9e3bcdb008d064 inherit pub_methods_class_bezier_end"><td class="memItemLeft" align="right" valign="top">wxPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#a64316785d97ee7258f9e3bcdb008d064">GetPosition</a> ()</td></tr>
-<tr class="separator:a64316785d97ee7258f9e3bcdb008d064 inherit pub_methods_class_bezier_end"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad18a12ec570fd52e0da9fc7b939a54ad inherit pub_methods_class_bezier_end"><td class="memItemLeft" align="right" valign="top">virtual wxPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#ad18a12ec570fd52e0da9fc7b939a54ad">GetPosition</a> ()</td></tr>
+<tr class="separator:ad18a12ec570fd52e0da9fc7b939a54ad inherit pub_methods_class_bezier_end"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc04fb7cd3f72da72879ed2f08d5c75d inherit pub_methods_class_bezier_end"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#acc04fb7cd3f72da72879ed2f08d5c75d">SetPosition</a> (double x, double y)</td></tr>
 <tr class="separator:acc04fb7cd3f72da72879ed2f08d5c75d inherit pub_methods_class_bezier_end"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad38287c266654e703f9c080221c74e3 inherit pub_methods_class_bezier_end"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bezier_end.html#aad38287c266654e703f9c080221c74e3">GetRotation</a> ()</td></tr>
@@ -297,6 +299,34 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mCapacity</b></td><
 
 </div>
 </div>
+<a id="aa6a787174b227123f30356d571f87bb3" name="aa6a787174b227123f30356d571f87bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6a787174b227123f30356d571f87bb3">&#9670;&nbsp;</a></span>GetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">wxPoint PowerSource::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Get Pos </p><dl class="section return"><dt>Returns</dt><dd>pos </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_bezier_end.html#ad18a12ec570fd52e0da9fc7b939a54ad">BezierEnd</a>.</p>
+
+</div>
+</div>
 <a id="a008d3e3052f56b6132880d2e30313725" name="a008d3e3052f56b6132880d2e30313725"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a008d3e3052f56b6132880d2e30313725">&#9670;&nbsp;</a></span>Power()</h2>
 
@@ -364,7 +394,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>mCapacity</b></td><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_power_source.html">PowerSource</a></li>
-    <li class="footer">Generated on Sat Apr 30 2022 01:20:45 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Sat Apr 30 2022 19:19:20 for CSE 335 Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
