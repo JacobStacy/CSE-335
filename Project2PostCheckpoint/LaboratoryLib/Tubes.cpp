@@ -91,3 +91,9 @@ double Tubes::Power(double voltage)
     current += mRightVoltage / LightVoltage * LightCurrent;
     return current;
 }
+
+void Tubes::Reset(int frame)
+{
+    mLeftVoltage = 0;
+    mRightVoltage = 0;
+}

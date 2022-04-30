@@ -25,6 +25,10 @@ private:
     int mFrameRate = 30;        ///< Animation frame rate in frames per second
     double mCurrentTime = 0;    ///< The current animation time
 
+    int mLabStartFrame = 0;
+    wxPoint mLabStartPoint;
+    int mLabNumber = 1;
+
     /// List of all animation channels
     std::vector<AnimChannel *> mChannels;
 
@@ -91,6 +95,24 @@ public:
     void Save(wxXmlNode* root);
 
     void Load(wxXmlNode* root);
+
+    /**
+     * Start Frame
+     * @param frame frame
+     */
+    void SetLabStartFrame(int frame) {mLabStartFrame = frame;}
+
+    /**
+     * Set Num
+     * @param i num
+     */
+    void SetLabNumber(int i) { mLabNumber = i;}
+
+    /**
+     * Set point
+     * @param point Point
+     */
+    void SetLabPos(wxPoint point) { mLabStartPoint = point; }
 
 
 };

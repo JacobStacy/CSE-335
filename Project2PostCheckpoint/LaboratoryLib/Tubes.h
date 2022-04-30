@@ -52,7 +52,7 @@ public:
 //
 //    void XmlLoad(wxXmlNode* node) override;
 //
-//    void Reset(int frame) override;
+    void Reset(int frame) override;
 
     double Power(double voltage) override;
 

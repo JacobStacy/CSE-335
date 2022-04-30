@@ -8,6 +8,7 @@
 #include "Picture.h"
 #include "PictureObserver.h"
 #include "Actor.h"
+#include "LaboratoryAdapter.h"
 
 using namespace std;
 
@@ -149,6 +150,32 @@ void Picture::Load(const wxString& filename)
 
     // Load the animation from the XML
     mTimeline.Load(root);
+
+    auto child = root->GetChildren();
+    for( ; child; child=child->GetNext())
+    {
+        auto name = child->GetName();
+        if(name == L"lab")
+        {
+            wxString str = child->GetAttribute(L"frame");
+            int i = wxAtoi(str);
+            mLaboratory->SetFrame(i);
+            mTimeline.SetLabStartFrame(wxAtoi(child->GetAttribute(L"frame", L"0")));
+
+            mLaboratory->SetPosition(wxPoint(
+                    wxAtoi(child->GetAttribute(L"x", L"600")),
+                    wxAtoi(child->GetAttribute(L"y", L"800"))));
+
+            mTimeline.SetLabPos(wxPoint(
+                    wxAtoi(child->GetAttribute(L"x", L"600")),
+                    wxAtoi(child->GetAttribute(L"y", L"800"))));
+
+            mLaboratory->SetLaboratoryNumber(wxAtoi(child->GetAttribute(L"number", L"1")));
+            mTimeline.SetLabNumber(wxAtoi(child->GetAttribute(L"number", L"1")));
+
+
+        }
+    }
 
     //
     // It is possible to load attributes from the root node here

@@ -6,6 +6,8 @@
 
 #include <wx/xrc/xmlres.h>
 #include <wx/stdpaths.h>
+#include <laboratory-api.h>
+
 
 #include "MainFrame.h"
 
@@ -13,6 +15,7 @@
 #include "ViewTimeline.h"
 #include "Picture.h"
 #include "PictureFactory.h"
+#include "LaboratoryAdapter.h"
 
 /// Directory within resources that contains the images.
 const std::wstring ImagesDirectory = L"/images";
@@ -55,10 +58,10 @@ void MainFrame::Initialize()
     Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnExit, this, wxID_EXIT);
     Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnAbout, this, wxID_ABOUT);
     Bind(wxEVT_CLOSE_WINDOW, &MainFrame::OnClose, this);
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnSetLaboratory, this, XRCID("SetLab"));
+    Bind(wxEVT_COMMAND_MENU_SELECTED, &MainFrame::OnSetStartLabFrame, this, XRCID("SetLabStart"));
 
-    //
-    // Create the picture
-    //
+
 
 
     // Create our picture
@@ -103,4 +106,21 @@ void MainFrame::OnClose(wxCloseEvent& event)
     Destroy();
 }
 
+void MainFrame::OnSetLaboratory(wxCommandEvent& event)
+{
+    if (mPicture->GetLaboratory()->GetDialog(this->GetParent()))
+    {
+        mPicture->UpdateObservers();
+    }
+
+    mPicture->GetTimeline()->SetLabNumber(mPicture->GetLaboratory()->GetLaboratoryNumber());
+}
+
+void MainFrame::OnSetStartLabFrame(wxCommandEvent& event)
+{
+    mPicture->GetLaboratory()->SetFrame(mPicture->GetTimeline()->GetCurrentFrame());
+    mPicture->UpdateObservers();
+
+    mPicture->GetTimeline()->SetLabStartFrame(mPicture->GetTimeline()->GetCurrentFrame());
+}
 

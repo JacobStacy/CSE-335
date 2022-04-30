@@ -18,6 +18,9 @@
 #include "Cable.h"
 #include "Clamp.h"
 
+/// Standard speed of beziers
+const double StandardSpeed = 50;
+
 /// Offset for drawing background
 const double BackXOffset = -600;
 
@@ -52,7 +55,7 @@ const int U10Height = 104;
 const int LightXOffset = -166;
 
 /// The X position for the Light
-const double LightX = 100;
+const double LightX = StandardSpeed;
 
 /// The Y position for the Light
 const double LightY = -600;
@@ -100,6 +103,12 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     background->GetPolygon()->SetImage(mResourcesDir + L"/images/laboratory.jpg");
     background->GetPolygon()->Rectangle(BackXOffset, 0);
     labOne->AddComponent(background);
+
+    // The laboratory bed image
+    auto bed = make_shared<Shape>(L"bed");
+    bed->GetPolygon()->SetImage(mResourcesDir + L"/images/bed.png");
+    bed->GetPolygon()->BottomCenteredRectangle();
+    labOne->AddComponent(bed);
 
     // Rack 1 - the left rack
     auto rack1 = make_shared<EquipmentRack>(L"rack1", imageDir);
@@ -190,23 +199,23 @@ std::shared_ptr<ActualLaboratory> LaboratoryFactoryOne::CreateLaboratory()
     //Connect winch to orbs
     winch->GetSource()->SetSink(orbs->GetMotionSink());
 
-    auto cable1 = make_shared<Cable>(L"Cable", imageDir, zeroPointModule->GetSource(), dist->GetSink(), 100, 100);
+    auto cable1 = make_shared<Cable>(L"Cable", imageDir, zeroPointModule->GetSource(), dist->GetSink(), StandardSpeed, StandardSpeed);
     labOne->AddComponent(cable1);
 
     dist->AddSource(imageDir, 200);
     dist->AddSource(imageDir, 200);
     dist->AddSource(imageDir, 500);
 
-    auto cable2 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(0), switch1->GetSink(), 100, 100);
+    auto cable2 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(0), switch1->GetSink(), StandardSpeed, StandardSpeed);
     labOne->AddComponent(cable2);
 
-    auto cable3 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(1), switch2->GetSink(), 100, 100);
+    auto cable3 = make_shared<Cable>(L"Cable", imageDir, dist->GetSource(1), switch2->GetSink(), StandardSpeed, StandardSpeed);
     labOne->AddComponent(cable3);
 
-    auto cable4 = make_shared<Cable>(L"Cable", imageDir, switch1->GetOnSource(), light1->GetSink(), 100, 100);
+    auto cable4 = make_shared<Cable>(L"Cable", imageDir, switch1->GetOnSource(), light1->GetSink(), StandardSpeed, StandardSpeed);
     labOne->AddComponent(cable4);
 
-    auto cable5 = make_shared<Cable>(L"Cable", imageDir, switch2->GetOnSource(), orbs->GetPowerSink(), 100, 100);
+    auto cable5 = make_shared<Cable>(L"Cable", imageDir, switch2->GetOnSource(), orbs->GetPowerSink(), StandardSpeed, StandardSpeed);
     cable5->AddClamp(make_shared<Clamp>(0, 0, 0, 0));
     labOne->AddComponent(cable5);
 

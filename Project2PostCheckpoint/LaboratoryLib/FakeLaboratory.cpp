@@ -16,7 +16,7 @@
  */
 FakeLaboratory::FakeLaboratory(std::wstring resourcesDir) : mResourcesDir(resourcesDir)
 {
-    SetLaboratoryNumber(2);
+    SetLaboratoryNumber(1);
 }
 
 /**
@@ -70,6 +70,7 @@ void FakeLaboratory::SetLaboratoryFrame(int frame)
         mFrame = -1;
         mLaboratory->Update(-1);
     }
+
 
     while (mFrame < frame)
     {

@@ -17,7 +17,7 @@ const int SourcesY = -35;
 const int SourcesX = -35;
 
 /// Spacing between the sources in pixels
-const int SourcesSpacing = 15;
+const int SourcesSpacing = 20;
 
 /// Location of the sink on the
 const wxPoint DistributionSinkPosition = wxPoint(-48, -20);

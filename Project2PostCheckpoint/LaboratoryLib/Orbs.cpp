@@ -89,7 +89,7 @@ void Orbs::SetTime(double time)
  */
 void Orbs::Reset(int frame)
 {
-    mSparky.Reset();
+    mVoltage = 0;
 }
 
 /**

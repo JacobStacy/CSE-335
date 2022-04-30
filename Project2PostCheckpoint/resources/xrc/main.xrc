@@ -65,6 +65,17 @@
 					<help>Stop playing</help>
 				</object>
 			</object>
+			<object class="wxMenu" name="LabMenu">
+				<label>_Lab</label>
+				<object class="wxMenuItem" name="SetLab">
+					<label>Set the Lab Number</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="SetLabStart">
+					<label>Set start frame</label>
+					<help></help>
+				</object>
+			</object>
 			<object class="wxMenu" name="HelpMenu">
 				<label>_Help</label>
 				<object class="wxMenuItem" name="wxID_ABOUT">

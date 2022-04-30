@@ -12,6 +12,7 @@
 
 class PictureObserver;
 class Actor;
+class LaboratoryAdapter;
 
 /**
  *  Class that represents our animation picture
@@ -27,6 +28,8 @@ private:
 
     /// The actors associated with this picture
     std::vector<std::shared_ptr<Actor>> mActors;
+
+    std::shared_ptr<LaboratoryAdapter> mLaboratory;
 
     /// The animation timeline
     Timeline mTimeline;
@@ -129,5 +132,17 @@ public:
     void Load(const wxString& filename);
 
     void Save(const wxString& filename);
+
+    /**
+     * Gets Lab
+     * @return Lab
+     */
+    std::shared_ptr<LaboratoryAdapter> GetLaboratory () { return mLaboratory; }
+
+    /**
+     * Sets Lab
+     * @param lab
+     */
+    void SetLaboratory (std::shared_ptr<LaboratoryAdapter> lab) { mLaboratory = lab; }
 };
 

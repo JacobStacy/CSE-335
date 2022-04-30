@@ -4,6 +4,7 @@
  */
 
 #include "pch.h"
+
 #include "PictureFactory.h"
 #include "Picture.h"
 #include "HaroldFactory.h"
@@ -30,9 +31,23 @@ std::shared_ptr<Picture> PictureFactory::Create(std::wstring resourcesDir)
 
     shared_ptr<Picture> picture = make_shared<Picture>();
 
-    shared_ptr<Actor> lab = make_shared<Actor>(L"Lab");
-    lab->AddDrawable(make_shared<LaboratoryAdapter>(L"LabAdaptor"));
-    picture->AddActor(lab);
+    /// Creat Lab
+    auto labActor = make_shared<Actor>(L"Lab");
+    auto labDrawable = make_shared<LaboratoryAdapter>(L"LabAdaptor");
+
+    labActor->AddDrawable(labDrawable);
+    labActor->SetRoot(labDrawable);
+
+    labDrawable->SetLaboratoryPosition(wxPoint(600, 800));
+    labDrawable->SetLaboratoryNumber(1);
+
+    picture->GetTimeline()->SetLabPos(wxPoint(600, 800));
+    picture->GetTimeline()->SetLabNumber(1);
+
+    picture->SetLaboratory(labDrawable);
+    picture->AddActor(labActor);
+
+
 
     // Create and add Harold
     HaroldFactory haroldFactory;

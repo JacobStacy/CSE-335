@@ -69,6 +69,16 @@ void Timeline::Save(wxXmlNode* root)
     {
        channel->XmlSave(root);
     }
+
+    auto itemNode = new wxXmlNode(wxXML_ELEMENT_NODE, L"lab");
+    root->AddChild(itemNode);
+
+    itemNode->AddAttribute(L"frame", wxString::Format(wxT("%i"), mLabStartFrame));
+    itemNode->AddAttribute(L"x", wxString::Format(wxT("%i"), mLabStartPoint.x));
+    itemNode->AddAttribute(L"y", wxString::Format(wxT("%i"), mLabStartPoint.y));
+    itemNode->AddAttribute(L"number", wxString::Format(wxT("%i"), mLabNumber));
+
+
 }
 
 

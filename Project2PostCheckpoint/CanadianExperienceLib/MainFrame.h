@@ -35,6 +35,10 @@ public:
     MainFrame();
 
     void Initialize();
+
+    void OnSetLaboratory(wxCommandEvent& event);
+
+    void OnSetStartLabFrame(wxCommandEvent& event);
 };
 
 #endif //_MAINFRAME_H_
